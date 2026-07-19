@@ -59,14 +59,16 @@ export function classifyWind(windFrom, facing, mph) {
   return WIND_BANDS.find((b) => delta <= b.max).cls;
 }
 
-// Rate a swell's "coming from" direction against the spot's known-good windows.
-// Returns "optimal" | "fair" | "poor".
+// Rate a swell's "coming from" direction against the spot's banded windows
+// (narrowest first). Returns "prime" | "good" | "fair" | "marginal" | "poor",
+// mirroring the five wind classes so both use the same color ramp.
 export function classifySwell(deg, spot) {
   if (!spot.swell || deg == null) return "fair";
   const d = ((deg % 360) + 360) % 360;
   const inArc = ([a, b]) => d >= a && d <= b;
-  if (inArc(spot.swell.optimal)) return "optimal";
-  if (inArc(spot.swell.fair)) return "fair";
+  for (const tier of ["prime", "good", "fair", "marginal"]) {
+    if (spot.swell[tier] && inArc(spot.swell[tier])) return tier;
+  }
   return "poor";
 }
 
@@ -82,9 +84,11 @@ export function selfTest() {
   console.assert(classifyWind(0, 170, 3) === "light", "wind < 5 mph should be light");
   console.assert(compass(190) === "S", `compass(190): expected S, got ${compass(190)}`);
   console.assert(compass(200) === "SSW", `compass(200): expected SSW, got ${compass(200)}`);
-  const rock = { swell: { optimal: [95, 170], fair: [80, 205] } };
-  console.assert(classifySwell(135, rock) === "optimal", "SE at Rockaway should be optimal");
-  console.assert(classifySwell(190, rock) === "fair", "S at Rockaway should be fair");
+  const rock = { swell: { prime: [100, 130], good: [90, 145], fair: [80, 165], marginal: [70, 205] } };
+  console.assert(classifySwell(112, rock) === "prime", "ESE at Rockaway should be prime");
+  console.assert(classifySwell(140, rock) === "good", "SE at Rockaway should be good");
+  console.assert(classifySwell(160, rock) === "fair", "SSE at Rockaway should be fair");
+  console.assert(classifySwell(180, rock) === "marginal", "S at Rockaway should be marginal");
   console.assert(classifySwell(250, rock) === "poor", "WSW at Rockaway should be poor");
   console.log("selfTest done (failures would appear above as assertion errors)");
 }
@@ -240,7 +244,7 @@ function synthesizeCurve(hiloJson) {
 
 const memCache = new Map();
 // bump the version when the model shape changes so stale cached models are ignored
-const lsKey = (spotId) => `surfcast:v4:${spotId}`;
+const lsKey = (spotId) => `surfcast:v5:${spotId}`;
 
 function isFresh(model) {
   return (

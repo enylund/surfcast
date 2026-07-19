@@ -98,7 +98,10 @@ function renderNowCard(model, spot) {
 
   const blocks = [];
   if (hr.swellHt != null) {
-    const lined = hr.swellClass === "optimal" ? " · lined up" : hr.swellClass === "poor" ? " · wrong angle" : "";
+    const lined = hr.swellClass === "prime" ? " · prime angle"
+      : hr.swellClass === "good" ? " · good angle"
+      : hr.swellClass === "marginal" ? " · junky angle"
+      : hr.swellClass === "poor" ? " · wrong angle" : "";
     blocks.push(["Swell", `${hr.swellHt} ft @ ${Math.round(hr.swellPer)}s`,
       `${compass(hr.swellDir)} (${Math.round(hr.swellDir)}°)${lined}`, null, `sw-${hr.swellClass || "fair"}`]);
   }

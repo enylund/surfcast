@@ -118,12 +118,16 @@ h1 { font-size: 22px; margin: 0; letter-spacing: 0.5px; }
 .bar-solid { fill: var(--bar-solid); }
 
 .swell-arrow { fill: var(--text-muted); }
-/* swell direction quality (mirrors wind-class coloring: green = lined up) */
-.swell-arrow.sw-optimal { fill: var(--wc-offshore); }
-.swell-arrow.sw-fair    { fill: var(--text-muted); }
-.swell-arrow.sw-poor    { fill: #8a5f63; }
-.now-sub.sw-optimal { color: var(--wc-offshore); }
-.now-sub.sw-poor    { color: var(--wc-onshore); }
+/* swell direction quality — exact same tint ramp as the wind classes */
+.swell-arrow.sw-prime    { fill: var(--wc-offshore); }
+.swell-arrow.sw-good     { fill: var(--wc-cross-off); }
+.swell-arrow.sw-fair     { fill: var(--wc-cross); }
+.swell-arrow.sw-marginal { fill: var(--wc-cross-on); }
+.swell-arrow.sw-poor     { fill: var(--wc-onshore); }
+.now-sub.sw-prime    { color: var(--wc-offshore); }
+.now-sub.sw-good     { color: var(--wc-cross-off); }
+.now-sub.sw-marginal { color: var(--wc-cross-on); }
+.now-sub.sw-poor     { color: var(--wc-onshore); }
 .period-label { font-size: 9px; }
 
 .wind-speed { font-size: 10px; }
