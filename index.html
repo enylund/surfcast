@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Surfcast</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-row">
+      <h1>Surfcast</h1>
+      <div class="meta">
+        <span id="updated"></span>
+        <button id="refresh" title="Force refresh (bypass cache)">↻</button>
+      </div>
+    </div>
+    <nav id="tabs" aria-label="Spots"></nav>
+  </header>
+
+  <main id="main">
+    <section id="now-card" class="now-card" hidden></section>
+    <div id="errors"></div>
+    <section id="days"></section>
+  </main>
+
+  <footer>
+    <p>Data: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (swell &amp; wind forecast) ·
+    <a href="https://tidesandcurrents.noaa.gov/" target="_blank" rel="noopener">NOAA CO-OPS</a> (tide predictions). Personal use.</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
