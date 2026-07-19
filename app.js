@@ -2,7 +2,7 @@
 
 import { SPOTS, DEFAULT_VISIBLE_DAYS } from "./config.js";
 import { getSpotData, nyNow, nyToday, compass, selfTest } from "./data.js";
-import { renderSwellChart, renderWindRow, renderTideChart } from "./charts.js";
+import { renderSwellChart, renderWindRow, renderTideChart, renderSpotMap } from "./charts.js";
 
 const $ = (sel) => document.querySelector(sel);
 const tabsEl = $("#tabs");
@@ -131,6 +131,9 @@ function renderNowCard(model, spot) {
     }
     nowEl.append(div);
   }
+
+  // Map rail: zoomed coastline with the current swell/wind arrows overlaid.
+  nowEl.append(renderSpotMap(spot, hr));
 }
 
 // AI-generated report, produced twice daily by a GitHub Action

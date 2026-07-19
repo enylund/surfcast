@@ -65,6 +65,82 @@ function nowLine(nowMin, plotTop, plotBottom) {
 }
 
 // ---------------------------------------------------------------------------
+// Spot map: OSM tiles centered on the spot with current swell/wind arrows
+// approaching from their true compass bearings. North-up, no libraries.
+// ---------------------------------------------------------------------------
+
+const TILE = 256, MAP_Z = 12, MAP_W = 180, MAP_H = 180;
+
+function mercatorPx(lat, lon, z) {
+  const scale = TILE * 2 ** z;
+  const x = ((lon + 180) / 360) * scale;
+  const rad = (lat * Math.PI) / 180;
+  const y = ((1 - Math.log(Math.tan(rad) + 1 / Math.cos(rad)) / Math.PI) / 2) * scale;
+  return { x, y };
+}
+
+const cssVar = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+const SWELL_COLORS = { prime: "--wc-offshore", good: "--wc-cross-off", fair: "--wc-cross", marginal: "--wc-cross-on", poor: "--wc-onshore" };
+const WIND_COLORS = { offshore: "--wc-offshore", "cross-off": "--wc-cross-off", cross: "--wc-cross", "cross-on": "--wc-cross-on", onshore: "--wc-onshore", light: "--wc-light" };
+
+export function renderSpotMap(spot, hr) {
+  const wrap = document.createElement("div");
+  wrap.className = "now-map";
+
+  const { x, y } = mercatorPx(spot.lat, spot.lon, MAP_Z);
+  const left = x - MAP_W / 2, top = y - MAP_H / 2;
+  for (let tx = Math.floor(left / TILE); tx <= Math.floor((left + MAP_W) / TILE); tx++) {
+    for (let ty = Math.floor(top / TILE); ty <= Math.floor((top + MAP_H) / TILE); ty++) {
+      const img = document.createElement("img");
+      img.src = `https://tile.openstreetmap.org/${MAP_Z}/${tx}/${ty}.png`;
+      img.alt = "";
+      img.loading = "lazy";
+      img.style.left = `${tx * TILE - left}px`;
+      img.style.top = `${ty * TILE - top}px`;
+      wrap.append(img);
+    }
+  }
+
+  const svg = svgEl("svg", { viewBox: `0 0 ${MAP_W} ${MAP_H}`, class: "map-overlay" });
+  const cx = MAP_W / 2, cy = MAP_H / 2;
+
+  // An arrow sliding in from the bearing it comes FROM, pointing at the spot.
+  // In the unrotated frame the arrow comes from the north (top); rotating the
+  // group by fromDeg puts it on the correct side of a north-up map.
+  const approach = (fromDeg, offset, len, color, label) => {
+    const g = svgEl("g", {
+      transform: `rotate(${fromDeg} ${cx} ${cy})`,
+      style: "filter: drop-shadow(0 0 2px rgba(0,0,0,0.85))",
+    });
+    const ax = cx + offset;
+    g.append(svgEl("line", { x1: ax, y1: cy - len, x2: ax, y2: cy - 17, stroke: color, "stroke-width": 3, "stroke-linecap": "round" }));
+    g.append(svgEl("path", { d: `M${ax},${cy - 9} L${ax - 5.5},${cy - 18} L${ax + 5.5},${cy - 18} Z`, fill: color }));
+    const ly = cy - len - 6;
+    g.append(svgEl("text", {
+      x: ax, y: ly, "text-anchor": "middle", class: "map-label",
+      transform: `rotate(${-fromDeg} ${ax} ${ly})`, // keep text upright
+    }, label));
+    return g;
+  };
+
+  if (hr?.swellDir != null)
+    svg.append(approach(hr.swellDir, -9, 66, cssVar(SWELL_COLORS[hr.swellClass] || "--wc-cross"), "swell"));
+  if (hr?.windDir != null && hr?.windClass)
+    svg.append(approach(hr.windDir, 9, 52, cssVar(WIND_COLORS[hr.windClass] || "--wc-cross"), "wind"));
+
+  svg.append(svgEl("circle", { cx, cy, r: 4, class: "map-spot" }));
+  svg.append(svgEl("text", { x: 7, y: 14, class: "map-label" }, "N ↑"));
+  wrap.append(svg);
+
+  const attr = document.createElement("div");
+  attr.className = "map-attr";
+  attr.innerHTML = `<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a>`;
+  wrap.append(attr);
+  return wrap;
+}
+
+// ---------------------------------------------------------------------------
 // Swell chart: hourly bars + direction arrows + period labels
 // ---------------------------------------------------------------------------
 
