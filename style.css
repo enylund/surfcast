@@ -115,6 +115,14 @@ h1 { font-size: 22px; margin: 0; letter-spacing: 0.5px; }
 .tide-dot { fill: #ffd166; }
 .tide-label { font-size: 10px; fill: var(--text); }
 
+.load-more {
+  display: block; width: 100%; padding: 10px;
+  background: var(--card); color: var(--text-muted);
+  border: 1px solid var(--card-edge); border-radius: 12px;
+  font-size: 14px; cursor: pointer;
+}
+.load-more:hover { border-color: var(--accent); color: var(--text); }
+
 /* ------- errors / footer ------- */
 .error-chip {
   background: #3a1f22; border: 1px solid #6b3238; color: #f3c2c2;

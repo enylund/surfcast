@@ -223,7 +223,7 @@ function synthesizeCurve(hiloJson) {
 
 const memCache = new Map();
 // bump the version when the model shape changes so stale cached models are ignored
-const lsKey = (spotId) => `surfcast:v2:${spotId}`;
+const lsKey = (spotId) => `surfcast:v3:${spotId}`;
 
 function isFresh(model) {
   return (

@@ -1,6 +1,6 @@
 // Entry point: spot tabs (hash-routed), data orchestration, Now card, day cards.
 
-import { SPOTS } from "./config.js";
+import { SPOTS, DEFAULT_VISIBLE_DAYS } from "./config.js";
 import { getSpotData, nyNow, nyToday, compass, selfTest } from "./data.js";
 import { renderSwellChart, renderWindRow, renderTideChart } from "./charts.js";
 
@@ -18,6 +18,7 @@ const WIND_CLASS_LABEL = {
 
 let currentSpot = null;
 let renderSeq = 0; // ignore stale async renders after quick tab switches
+const expandedSpots = new Set(); // spots showing the full week this session
 
 function spotFromHash() {
   const id = location.hash.slice(1);
@@ -124,18 +125,22 @@ function renderNowCard(model, spot) {
 }
 
 function renderDays(model, spot) {
-  const allHours = model.days.flatMap((d) => d.hours);
+  const expanded = expandedSpots.has(spot.id);
+  const visibleDays = expanded ? model.days : model.days.slice(0, DEFAULT_VISIBLE_DAYS);
+
+  // scales are computed over the visible window so days stay comparable
+  const allHours = visibleDays.flatMap((d) => d.hours);
   const maxSwell = Math.max(0, ...allHours.map((h) => h.swellHt ?? 0));
   const yMax = Math.max(4, Math.ceil(maxSwell));
 
-  const tideVals = model.tide.curve.map((p) => p.ft);
+  const tideVals = model.tide.curve.filter((p) => p.dayIndex < visibleDays.length).map((p) => p.ft);
   const tideMin = tideVals.length ? Math.min(...tideVals) - 0.5 : 0;
   const tideMax = tideVals.length ? Math.max(...tideVals) + 0.5 : 5;
 
   const now = nyNow();
   daysEl.replaceChildren();
 
-  model.days.forEach((day, i) => {
+  visibleDays.forEach((day, i) => {
     const card = document.createElement("div");
     card.className = "day-card";
 
@@ -165,6 +170,19 @@ function renderDays(model, spot) {
     card.append(scroll);
     daysEl.append(card);
   });
+
+  if (model.days.length > DEFAULT_VISIBLE_DAYS) {
+    const btn = document.createElement("button");
+    btn.className = "load-more";
+    btn.textContent = expanded
+      ? "Show fewer days"
+      : `Load full week (+${model.days.length - DEFAULT_VISIBLE_DAYS} days)`;
+    btn.addEventListener("click", () => {
+      expandedSpots.has(spot.id) ? expandedSpots.delete(spot.id) : expandedSpots.add(spot.id);
+      renderDays(model, spot); // data is already fetched; expanding is instant
+    });
+    daysEl.append(btn);
+  }
 }
 
 async function render(spot, { force = false } = {}) {
