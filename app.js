@@ -6,6 +6,7 @@ import { renderSwellChart, renderWindRow, renderTideChart } from "./charts.js";
 
 const $ = (sel) => document.querySelector(sel);
 const tabsEl = $("#tabs");
+const reportEl = $("#report");
 const nowEl = $("#now-card");
 const daysEl = $("#days");
 const errorsEl = $("#errors");
@@ -60,6 +61,7 @@ function dayTitle(dateStr, idx) {
 function skeleton() {
   daysEl.replaceChildren();
   nowEl.hidden = true;
+  reportEl.hidden = true;
   errorsEl.replaceChildren();
   for (let i = 0; i < 4; i++) {
     const d = document.createElement("div");
@@ -122,6 +124,60 @@ function renderNowCard(model, spot) {
     }
     nowEl.append(div);
   }
+}
+
+// AI-generated report, produced twice daily by a GitHub Action
+// (scripts/generate-reports.mjs) and committed as reports/{id}.json.
+// Missing file (e.g. running locally before the first generation) → section hidden.
+async function loadReport(spot) {
+  try {
+    const res = await fetch(`reports/${spot.id}.json`, { cache: "no-cache" });
+    if (!res.ok) return null;
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
+function reportAge(generatedAt) {
+  const mins = Math.round((Date.now() - Date.parse(generatedAt)) / 60000);
+  if (mins < 60) return `${Math.max(1, mins)} min ago`;
+  const hours = Math.round(mins / 60);
+  return hours < 48 ? `${hours}h ago` : `${Math.round(hours / 24)} days ago`;
+}
+
+function renderReport(report) {
+  reportEl.replaceChildren();
+  if (!report) { reportEl.hidden = true; return; }
+  reportEl.hidden = false;
+
+  const headline = document.createElement("h3");
+  headline.textContent = report.headline;
+  const body = document.createElement("p");
+  body.textContent = report.today;
+  reportEl.append(headline, body);
+
+  if (report.daysToWatch?.length) {
+    const h4 = document.createElement("h4");
+    h4.textContent = "Days to watch";
+    const list = document.createElement("ul");
+    list.className = "dtw";
+    for (const d of report.daysToWatch) {
+      const li = document.createElement("li");
+      const day = document.createElement("span");
+      day.className = "dtw-day";
+      day.textContent = d.day;
+      li.append(day, ` ${d.note}`);
+      list.append(li);
+    }
+    reportEl.append(h4, list);
+  }
+
+  const meta = document.createElement("div");
+  meta.className = "report-meta";
+  const stale = Date.now() - Date.parse(report.generatedAt) > 36 * 3600 * 1000;
+  meta.textContent = `AI-generated forecast · updated ${reportAge(report.generatedAt)}${stale ? " · may be out of date" : ""}`;
+  reportEl.append(meta);
 }
 
 function renderDays(model, spot) {
@@ -191,10 +247,11 @@ async function render(spot, { force = false } = {}) {
   markActiveTab();
   skeleton();
   try {
-    const model = await getSpotData(spot, { force });
+    const [model, report] = await Promise.all([getSpotData(spot, { force }), loadReport(spot)]);
     if (seq !== renderSeq) return; // user switched tabs mid-fetch
     renderErrors(model, spot);
     renderNowCard(model, spot);
+    renderReport(report);
     renderDays(model, spot);
     updatedEl.textContent = `updated ${new Date(model.fetchedAt).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}`;
     if (new URLSearchParams(location.search).has("debug")) {

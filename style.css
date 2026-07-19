@@ -70,6 +70,24 @@ h1 { font-size: 22px; margin: 0; letter-spacing: 0.5px; }
 .wc-bg-onshore   { background: var(--wc-onshore); }
 .wc-bg-light     { background: var(--wc-light); }
 
+/* ------- AI report card ------- */
+.report-card {
+  background: var(--card); border: 1px solid var(--card-edge); border-radius: 12px;
+  padding: 14px 16px; margin: 0 0 14px;
+}
+.report-card h3 { margin: 0 0 6px; font-size: 16px; }
+.report-card p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--text); }
+.report-card h4 {
+  margin: 14px 0 6px; font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--text-muted);
+}
+.dtw { list-style: none; margin: 0; padding: 0; }
+.dtw li { font-size: 13.5px; line-height: 1.5; margin-bottom: 6px; color: var(--text); }
+.dtw-day {
+  display: inline-block; min-width: 38px; font-weight: 650; color: var(--accent);
+}
+.report-meta { margin-top: 12px; font-size: 11px; color: var(--text-muted); }
+
 /* ------- day cards ------- */
 .day-card {
   background: var(--card); border: 1px solid var(--card-edge); border-radius: 12px;

@@ -26,7 +26,7 @@ export function nyNow() {
   };
 }
 
-function addDays(dateStr, n) {
+export function addDays(dateStr, n) {
   const d = new Date(Date.parse(`${dateStr}T00:00:00Z`) + n * 86400000);
   return d.toISOString().slice(0, 10);
 }
@@ -78,7 +78,8 @@ export function selfTest() {
 // URL builders
 // ---------------------------------------------------------------------------
 
-function marineUrl(spot) {
+// URL builders are exported for reuse by scripts/generate-reports.mjs (Node).
+export function marineUrl(spot) {
   const p = new URLSearchParams({
     latitude: spot.lat, longitude: spot.lon,
     hourly: "swell_wave_height,swell_wave_period,swell_wave_direction,wind_wave_height,wave_height,wave_period,wave_direction,sea_surface_temperature",
@@ -87,7 +88,7 @@ function marineUrl(spot) {
   return `https://marine-api.open-meteo.com/v1/marine?${p}`;
 }
 
-function windUrl(spot) {
+export function windUrl(spot) {
   const p = new URLSearchParams({
     latitude: spot.lat, longitude: spot.lon,
     hourly: "wind_speed_10m,wind_direction_10m,wind_gusts_10m",
@@ -97,7 +98,7 @@ function windUrl(spot) {
   return `https://api.open-meteo.com/v1/forecast?${p}`;
 }
 
-function tideUrl(spot, interval, begin, end) {
+export function tideUrl(spot, interval, begin, end) {
   const p = new URLSearchParams({
     station: spot.tideStation, product: "predictions", datum: "MLLW",
     time_zone: "lst_ldt", units: "english", format: "json",

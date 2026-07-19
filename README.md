@@ -31,6 +31,16 @@ so its curve is synthesized with cosine interpolation between H/L events.
 - `CACHE_TTL_MS` — forecast cache lifetime (default 30 min; data is cached in
   localStorage, the ↻ button forces a refetch).
 
+## AI surf report
+
+A GitHub Action ([.github/workflows/reports.yml](.github/workflows/reports.yml)) runs
+twice daily (~5am and ~11am ET), sends a condensed forecast digest to the Claude API
+(`claude-opus-4-8`), and commits `reports/{spot}.json` — a headline, a "today" writeup,
+and "Days to watch" — which the app renders at the top of each spot. Requires the
+`ANTHROPIC_API_KEY` repo secret (`gh secret set ANTHROPIC_API_KEY`). Trigger manually with
+`gh workflow run reports.yml`. Test the digest locally without a key:
+`DIGEST_ONLY=1 node scripts/generate-reports.mjs`.
+
 ## Debugging
 
 Open with `?debug=1` to run the wind-classification self-test and dump the

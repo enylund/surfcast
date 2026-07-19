@@ -1,0 +1,9 @@
+{
+  "name": "surfcast",
+  "private": true,
+  "type": "module",
+  "description": "Deps are only for scripts/generate-reports.mjs (CI report generation). The web app itself has no dependencies.",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.112.3"
+  }
+}

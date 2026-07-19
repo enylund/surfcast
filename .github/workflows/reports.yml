@@ -1,0 +1,44 @@
+name: Generate surf reports
+
+on:
+  schedule:
+    # ~5am and ~11am Eastern during EDT (9:00/15:00 UTC). During EST these
+    # land at 4am/10am ET — close enough for a surf report.
+    - cron: "0 9,15 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: surf-reports
+  cancel-in-progress: false
+
+jobs:
+  reports:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm install
+
+      - name: Generate reports
+        run: node scripts/generate-reports.mjs
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports
+          if git diff --cached --quiet; then
+            echo "No report changes to commit"
+          else
+            git commit -m "Update surf reports (automated)"
+            git push
+          fi
