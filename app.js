@@ -141,10 +141,15 @@ function renderDays(model, spot) {
 
     const h2 = document.createElement("h2");
     h2.textContent = dayTitle(day.date, i);
-    if (day.sunrise != null) {
+    const extras = [];
+    // midday water temp as the day's representative value
+    const waterTemp = day.hours[12]?.waterTemp ?? day.hours.find((h) => h.waterTemp != null)?.waterTemp;
+    if (waterTemp != null) extras.push(`💧 ${waterTemp}°F`);
+    if (day.sunrise != null) extras.push(`☀ ${fmtClock(day.sunrise)} – ${fmtClock(day.sunset)}`);
+    if (extras.length) {
       const sun = document.createElement("span");
       sun.className = "sun-times";
-      sun.textContent = `☀ ${fmtClock(day.sunrise)} – ${fmtClock(day.sunset)}`;
+      sun.textContent = extras.join("   ");
       h2.append(sun);
     }
     card.append(h2);

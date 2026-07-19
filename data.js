@@ -81,8 +81,8 @@ export function selfTest() {
 function marineUrl(spot) {
   const p = new URLSearchParams({
     latitude: spot.lat, longitude: spot.lon,
-    hourly: "swell_wave_height,swell_wave_period,swell_wave_direction,wind_wave_height,wave_height,wave_period,wave_direction",
-    length_unit: "imperial", timezone: TZ, forecast_days: FORECAST_DAYS,
+    hourly: "swell_wave_height,swell_wave_period,swell_wave_direction,wind_wave_height,wave_height,wave_period,wave_direction,sea_surface_temperature",
+    length_unit: "imperial", temperature_unit: "fahrenheit", timezone: TZ, forecast_days: FORECAST_DAYS,
   });
   return `https://marine-api.open-meteo.com/v1/marine?${p}`;
 }
@@ -159,6 +159,7 @@ function buildModel(spot, marine, wind, tideHilo, tideCurve, errors) {
       swellDir: mh?.swell_wave_direction?.[i] ?? null,
       waveHt: round1(mh?.wave_height?.[i]),
       windWaveHt: round1(mh?.wind_wave_height?.[i]),
+      waterTemp: mh?.sea_surface_temperature?.[i] != null ? Math.round(mh.sea_surface_temperature[i]) : null,
       windSpd,
       windGust: wi != null ? round1(wind.hourly.wind_gusts_10m[wi]) : null,
       windDir,
@@ -221,7 +222,8 @@ function synthesizeCurve(hiloJson) {
 }
 
 const memCache = new Map();
-const lsKey = (spotId) => `surfcast:v1:${spotId}`;
+// bump the version when the model shape changes so stale cached models are ignored
+const lsKey = (spotId) => `surfcast:v2:${spotId}`;
 
 function isFresh(model) {
   return (
