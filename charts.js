@@ -105,29 +105,36 @@ export function renderSpotMap(spot, hr) {
   const svg = svgEl("svg", { viewBox: `0 0 ${MAP_W} ${MAP_H}`, class: "map-overlay" });
   const cx = MAP_W / 2, cy = MAP_H / 2;
 
-  // An arrow sliding in from the bearing it comes FROM, pointing at the spot.
-  // In the unrotated frame the arrow comes from the north (top); rotating the
-  // group by fromDeg puts it on the correct side of a north-up map.
-  const approach = (fromDeg, offset, len, color, label) => {
+  // A dart triangle whose tip aims exactly at the spot along the direction of
+  // travel. Rotation uses the raw (unrounded) "coming from" bearing; in the
+  // unrotated frame the dart approaches from the north (top) pointing down, so
+  // rotating the group by fromDeg puts it on the correct side of a north-up
+  // map with the tip on the spot-center ray. tipR = gap between tip and spot.
+  const dart = (fromDeg, tipR, size, color, label) => {
     const g = svgEl("g", {
       transform: `rotate(${fromDeg} ${cx} ${cy})`,
       style: "filter: drop-shadow(0 0 2px rgba(0,0,0,0.85))",
     });
-    const ax = cx + offset;
-    g.append(svgEl("line", { x1: ax, y1: cy - len, x2: ax, y2: cy - 17, stroke: color, "stroke-width": 3, "stroke-linecap": "round" }));
-    g.append(svgEl("path", { d: `M${ax},${cy - 9} L${ax - 5.5},${cy - 18} L${ax + 5.5},${cy - 18} Z`, fill: color }));
-    const ly = cy - len - 6;
+    const tipY = cy - tipR;
+    const halfW = size * 0.3;
+    const backY = tipY - size;
+    const notchY = tipY - size * 0.72;
+    g.append(svgEl("path", {
+      d: `M${cx},${tipY} L${cx - halfW},${backY} L${cx},${notchY} L${cx + halfW},${backY} Z`,
+      fill: color,
+    }));
+    const ly = backY - 7;
     g.append(svgEl("text", {
-      x: ax, y: ly, "text-anchor": "middle", class: "map-label",
-      transform: `rotate(${-fromDeg} ${ax} ${ly})`, // keep text upright
+      x: cx, y: ly, "text-anchor": "middle", class: "map-label",
+      transform: `rotate(${-fromDeg} ${cx} ${ly})`, // keep text upright
     }, label));
     return g;
   };
 
   if (hr?.swellDir != null)
-    svg.append(approach(hr.swellDir, -9, 66, cssVar(SWELL_COLORS[hr.swellClass] || "--wc-cross"), "swell"));
+    svg.append(dart(hr.swellDir, 9, 30, cssVar(SWELL_COLORS[hr.swellClass] || "--wc-cross"), "swell"));
   if (hr?.windDir != null && hr?.windClass)
-    svg.append(approach(hr.windDir, 9, 52, cssVar(WIND_COLORS[hr.windClass] || "--wc-cross"), "wind"));
+    svg.append(dart(hr.windDir, 48, 24, cssVar(WIND_COLORS[hr.windClass] || "--wc-cross"), "wind"));
 
   svg.append(svgEl("circle", { cx, cy, r: 4, class: "map-spot" }));
   svg.append(svgEl("text", { x: 7, y: 14, class: "map-label" }, "N ↑"));
