@@ -94,11 +94,13 @@ export function renderSwellChart(day, { yMax, nowMin }) {
     });
     bar.append(svgEl("title", {},
       `${fmtTime(hr.min)} — swell ${hr.swellHt} ft @ ${hr.swellPer}s from ${compass(hr.swellDir)} (${Math.round(hr.swellDir)}°)` +
+      (hr.swellClass ? ` — ${hr.swellClass} direction for this spot` : "") +
       (hr.waveHt != null ? `\ntotal wave ${hr.waveHt} ft` : "")));
     svg.append(bar);
 
     const cx = x(hr.min) + plotW / 48;
-    if (i % 2 === 0 && hr.swellDir != null) svg.append(arrow(cx, 10, hr.swellDir, { size: 5, cls: "swell-arrow" }));
+    if (i % 2 === 0 && hr.swellDir != null)
+      svg.append(arrow(cx, 10, hr.swellDir, { size: 5, cls: `swell-arrow sw-${hr.swellClass || "fair"}` }));
     if (i % 3 === 0 && hr.swellPer != null)
       svg.append(svgEl("text", { x: cx, y: 27, "text-anchor": "middle", class: "period-label" }, `${Math.round(hr.swellPer)}s`));
   }

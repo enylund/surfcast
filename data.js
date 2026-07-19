@@ -59,6 +59,17 @@ export function classifyWind(windFrom, facing, mph) {
   return WIND_BANDS.find((b) => delta <= b.max).cls;
 }
 
+// Rate a swell's "coming from" direction against the spot's known-good windows.
+// Returns "optimal" | "fair" | "poor".
+export function classifySwell(deg, spot) {
+  if (!spot.swell || deg == null) return "fair";
+  const d = ((deg % 360) + 360) % 360;
+  const inArc = ([a, b]) => d >= a && d <= b;
+  if (inArc(spot.swell.optimal)) return "optimal";
+  if (inArc(spot.swell.fair)) return "fair";
+  return "poor";
+}
+
 export function selfTest() {
   // Rockaway faces 170 -> offshore wind comes from 350.
   const cases = [
@@ -71,6 +82,10 @@ export function selfTest() {
   console.assert(classifyWind(0, 170, 3) === "light", "wind < 5 mph should be light");
   console.assert(compass(190) === "S", `compass(190): expected S, got ${compass(190)}`);
   console.assert(compass(200) === "SSW", `compass(200): expected SSW, got ${compass(200)}`);
+  const rock = { swell: { optimal: [95, 170], fair: [80, 205] } };
+  console.assert(classifySwell(135, rock) === "optimal", "SE at Rockaway should be optimal");
+  console.assert(classifySwell(190, rock) === "fair", "S at Rockaway should be fair");
+  console.assert(classifySwell(250, rock) === "poor", "WSW at Rockaway should be poor");
   console.log("selfTest done (failures would appear above as assertion errors)");
 }
 
@@ -158,6 +173,7 @@ function buildModel(spot, marine, wind, tideHilo, tideCurve, errors) {
       swellHt: round1(mh?.swell_wave_height?.[i]),
       swellPer: round1(mh?.swell_wave_period?.[i]),
       swellDir: mh?.swell_wave_direction?.[i] ?? null,
+      swellClass: mh?.swell_wave_direction?.[i] != null ? classifySwell(mh.swell_wave_direction[i], spot) : null,
       waveHt: round1(mh?.wave_height?.[i]),
       windWaveHt: round1(mh?.wind_wave_height?.[i]),
       waterTemp: mh?.sea_surface_temperature?.[i] != null ? Math.round(mh.sea_surface_temperature[i]) : null,
@@ -224,7 +240,7 @@ function synthesizeCurve(hiloJson) {
 
 const memCache = new Map();
 // bump the version when the model shape changes so stale cached models are ignored
-const lsKey = (spotId) => `surfcast:v3:${spotId}`;
+const lsKey = (spotId) => `surfcast:v4:${spotId}`;
 
 function isFresh(model) {
   return (

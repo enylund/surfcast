@@ -8,10 +8,20 @@ export const LIGHT_WIND_MPH = 5; // below this, wind class is "light" (glassy) r
 
 // facing = compass azimuth (degrees true) pointing from the sand straight out to sea.
 // Tune these if the offshore/onshore calls feel off for a spot.
+//
+// swell = direction-quality bands (degrees true, "coming from", [start, end] arcs).
+//   optimal: the window the break likes best; fair: still delivers; anything else: poor.
+// Sourced from Surfline / surf-forecast / deepswell spot guides (2026-07):
+//   Rockaway: E/ESE-SSE best (hurricane SE + nor'easter E swells), S windswell workable.
+//   Lido: faces due south, loves S and SE, E works.
+//   Ditch: works on anything SW through E, SE/SSE ideal; wraps summer SW groundswell.
 export const SPOTS = [
-  { id: "rockaway", name: "Rockaway 67th St", lat: 40.582, lon: -73.818, tideStation: "8516881", facing: 170 },
-  { id: "lido",     name: "Lido Beach",       lat: 40.588, lon: -73.625, tideStation: "8516385", facing: 175 },
-  { id: "ditch",    name: "Ditch Plains",     lat: 41.033, lon: -71.919, tideStation: "8510560", facing: 165 },
+  { id: "rockaway", name: "Rockaway 67th St", lat: 40.582, lon: -73.818, tideStation: "8516881", facing: 170,
+    swell: { optimal: [95, 165], fair: [80, 205] } },
+  { id: "lido",     name: "Lido Beach",       lat: 40.588, lon: -73.625, tideStation: "8516385", facing: 175,
+    swell: { optimal: [120, 190], fair: [85, 215] } },
+  { id: "ditch",    name: "Ditch Plains",     lat: 41.033, lon: -71.919, tideStation: "8510560", facing: 165,
+    swell: { optimal: [110, 200], fair: [60, 240] } },
 ];
 
 // Wind class band edges: angular distance (degrees) between the wind's "from"

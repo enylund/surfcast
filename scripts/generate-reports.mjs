@@ -6,7 +6,7 @@ import fs from "node:fs";
 import { fileURLToPath } from "node:url";
 import Anthropic from "@anthropic-ai/sdk";
 import { SPOTS } from "../config.js";
-import { classifyWind, compass, nyToday, addDays, marineUrl, windUrl, tideUrl } from "../data.js";
+import { classifyWind, classifySwell, compass, nyToday, addDays, marineUrl, windUrl, tideUrl } from "../data.js";
 
 const OUT_DIR = fileURLToPath(new URL("../reports/", import.meta.url));
 
@@ -103,7 +103,8 @@ function buildDigest(spot, marine, wind, hilo) {
 
     lines.push(
       `${label}: swell ${round1(Math.min(...hts))}-${round1(Math.max(...hts))}ft @ ` +
-      `${round1(Math.min(...pers))}-${round1(Math.max(...pers))}s from ${compass(dir)} (${Math.round(dir)}deg), ` +
+      `${round1(Math.min(...pers))}-${round1(Math.max(...pers))}s from ${compass(dir)} (${Math.round(dir)}deg, ` +
+      `${classifySwell(dir, spot)} angle for this spot), ` +
       `total wave to ${round1(Math.max(...totals))}ft. Wind: ${windParts.join("; ")}. ` +
       `Tides: ${(tidesByDate.get(date) || []).join(", ")}.${water}`,
     );
@@ -116,7 +117,7 @@ const SYSTEM_PROMPT = `You are the forecaster for a personal surf app covering t
 
 Voice: a local forecaster talking to fellow surfers. Casual, direct, practical, a little dry. Reference board choice (log, groveler, fish, shortboard), tide windows, and wind timing. Recommend the best window of the day when there is one. Be honest when it's flat, junky, or blown out — never oversell. No emoji, no exclamation marks.
 
-Calibration for these spots (model swell heights, ft): under ~1.5ft at short period (<6s) is flat to barely surfable; ~2ft at 6-8s is loggable; 2-3ft at 8s+ is fun for most boards; 3ft+ at 9s+ is a solid day worth rearranging plans for. Short-period S windswell is typical summer junk; SE/ESE swells at longer periods are the good ones. Wind classes in the digest (offshore/cross-off/cross/cross-on/onshore/light) are computed per beach orientation — trust them. Light wind = glassy.
+Calibration for these spots (model swell heights, ft): under ~1.5ft at short period (<6s) is flat to barely surfable; ~2ft at 6-8s is loggable; 2-3ft at 8s+ is fun for most boards; 3ft+ at 9s+ is a solid day worth rearranging plans for. Short-period S windswell is typical summer junk; SE/ESE swells at longer periods are the good ones. Wind classes in the digest (offshore/cross-off/cross/cross-on/onshore/light) are computed per beach orientation — trust them. Light wind = glassy. Each swell line also carries a direction-quality tag (optimal/fair/poor angle) computed from that spot's known best swell windows — an "optimal" angle at decent period and size is exactly the kind of day to flag.
 
 For each spot produce:
 - headline: one punchy sentence summarizing today (e.g. "Knee-high windswell leftovers — log it or skip it.").

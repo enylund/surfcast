@@ -98,7 +98,9 @@ function renderNowCard(model, spot) {
 
   const blocks = [];
   if (hr.swellHt != null) {
-    blocks.push(["Swell", `${hr.swellHt} ft @ ${Math.round(hr.swellPer)}s`, `${compass(hr.swellDir)} (${Math.round(hr.swellDir)}°)`]);
+    const lined = hr.swellClass === "optimal" ? " · lined up" : hr.swellClass === "poor" ? " · wrong angle" : "";
+    blocks.push(["Swell", `${hr.swellHt} ft @ ${Math.round(hr.swellPer)}s`,
+      `${compass(hr.swellDir)} (${Math.round(hr.swellDir)}°)${lined}`, null, `sw-${hr.swellClass || "fair"}`]);
   }
   if (hr.windSpd != null) {
     blocks.push(["Wind", `${Math.round(hr.windSpd)} mph ${compass(hr.windDir)}`, null, hr.windClass]);
@@ -107,7 +109,7 @@ function renderNowCard(model, spot) {
     blocks.push(["Next tide", `${nextTide.type === "H" ? "High" : "Low"} ${fmtClock(nextTide.min)}`, `${nextTide.ft} ft`]);
   }
 
-  for (const [label, big, sub, windClass] of blocks) {
+  for (const [label, big, sub, windClass, subClass] of blocks) {
     const div = document.createElement("div");
     div.className = "now-block";
     const l = document.createElement("div"); l.className = "now-label"; l.textContent = label;
@@ -119,7 +121,9 @@ function renderNowCard(model, spot) {
       badge.textContent = WIND_CLASS_LABEL[windClass];
       div.append(badge);
     } else if (sub) {
-      const s = document.createElement("div"); s.className = "now-sub"; s.textContent = sub;
+      const s = document.createElement("div");
+      s.className = `now-sub${subClass ? " " + subClass : ""}`;
+      s.textContent = sub;
       div.append(s);
     }
     nowEl.append(div);
