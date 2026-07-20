@@ -51,6 +51,7 @@
     "ratings": {
       "swellSize": 2,
       "swellDirection": 3,
+      "wind": 5,
       "crowd": 5,
       "overall": 2.5
     },

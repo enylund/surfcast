@@ -86,6 +86,7 @@ function sessionCard(s) {
   const ratings = el("div", "sess-ratings");
   ratings.append(ratingRow("Size/period", s.ratings?.swellSize));
   ratings.append(ratingRow("Direction", s.ratings?.swellDirection));
+  if (s.ratings?.wind != null) ratings.append(ratingRow("Wind", s.ratings.wind));
   ratings.append(ratingRow("Emptiness", s.ratings?.crowd));
   card.append(ratings);
 

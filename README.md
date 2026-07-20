@@ -52,10 +52,10 @@ and swell per spot, and appends the record to `sessions.json`. The app's
 
 Log a session:
 ```sh
-node scripts/log-session.mjs '{"date":"2026-07-19","spotId":"rockaway","start":"07:00","end":"09:00","label":"7–9am","ratings":{"swellSize":3,"swellDirection":4,"crowd":2,"overall":4},"gear":{"board":"fish","wetsuit":"3/2 full","gloves":false,"booties":false,"hood":false},"comfort":{"tooCold":false,"tooWarm":false},"comments":"..."}'
+node scripts/log-session.mjs '{"date":"2026-07-19","spotId":"rockaway","start":"07:00","end":"09:00","label":"7–9am","ratings":{"swellSize":3,"swellDirection":4,"wind":5,"crowd":2,"overall":4},"gear":{"board":"fish","wetsuit":"3/2 full","gloves":false,"booties":false,"hood":false},"comfort":{"tooCold":false,"tooWarm":false},"comments":"..."}'
 ```
 Fields: `board` = longboard|midlength|fish|short; `wetsuit` = none|top|2mm spring|
-2/2 full|3/2 full|4/3 full|5/4 full|6/5 full; ratings 0–5 (crowd: 5 = empty).
+2/2 full|3/2 full|4/3 full|5/4 full|6/5 full; ratings 0–5 (crowd: 5 = empty; wind: 5 = ideal).
 The fingerprint uses recent-past forecast data, so log within ~3 months of the date.
 Note: the repo is public, so keep `comments` non-sensitive.
 

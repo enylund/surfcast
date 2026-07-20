@@ -12,7 +12,8 @@
 //   spotId      one of config.js SPOTS ids (rockaway | lido | ditch)
 //   start,end   "HH:MM" 24h local (e.g. "07:00","09:00")
 //   label       optional display label (e.g. "7–9am")
-//   ratings     { swellSize, swellDirection, crowd, overall }  each 0–5
+//   ratings     { swellSize, swellDirection, wind, crowd, overall }  each 0–5
+//                 (crowd: 5 = empty/great; wind: 5 = ideal wind for surfing)
 //   gear        { board, wetsuit, gloves, booties, hood }
 //                 board:   longboard | midlength | fish | short
 //                 wetsuit: none | top | 2mm spring | 2/2 full | 3/2 full |
