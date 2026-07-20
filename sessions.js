@@ -2,6 +2,9 @@
 // and renders each logged session with its objective conditions fingerprint
 // alongside the subjective ratings.
 
+import { SPOTS } from "./config.js";
+import { renderSessionChart, renderSpotMap } from "./charts.js";
+
 const WX = {
   0: "clear", 1: "clear", 2: "partly cloudy", 3: "overcast", 45: "fog", 48: "fog",
   51: "drizzle", 53: "drizzle", 55: "drizzle", 61: "rain", 63: "rain", 65: "heavy rain",
@@ -74,6 +77,24 @@ function sessionCard(s) {
   overall.append(starsEl(s.ratings?.overall));
   head.append(overall);
   card.append(head);
+
+  // Visual snapshot: the session window's own bar charts + a map of the
+  // coastline with the swell/wind arrows. Raw-data chips stay below.
+  const visual = el("div", "sess-visual");
+  const chart = renderSessionChart(fp.hours);
+  if (chart) {
+    const scroll = el("div", "sess-chart-scroll");
+    scroll.append(chart);
+    visual.append(scroll);
+  }
+  const spot = SPOTS.find((sp) => sp.id === s.spotId);
+  if (spot) {
+    visual.append(renderSpotMap(spot, {
+      swellDir: fp.swellDir_deg, swellClass: fp.swellClass,
+      windDir: fp.windDir_deg, windClass: fp.windClass,
+    }));
+  }
+  if (visual.childElementCount) card.append(visual);
 
   // Objective conditions fingerprint
   const cond = el("div", "sess-cond");

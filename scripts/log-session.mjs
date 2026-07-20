@@ -148,7 +148,24 @@ async function fingerprint(spot, date, startMin, endMin) {
     tide_prev: ev(prev),
     tide_next: ev(next),
     spotFacing_deg: spot.facing,
-    sampleHours: idxs.map((i) => mh.time[i].slice(11, 16)),
+    // per-hour samples for the session window, so the card can chart exactly
+    // the hours you were in the water.
+    hours: idxs.map((i) => {
+      const w = wIdx.get(mh.time[i]);
+      const sd = mh.swell_wave_direction[i];
+      const wd = w != null ? wj.wind_direction_10m[w] : null;
+      const ws = w != null ? round(wj.wind_speed_10m[w]) : null;
+      return {
+        time: mh.time[i].slice(11, 16),
+        swellHt: round(mh.swell_wave_height[i], 1),
+        swellPer: round(mh.swell_wave_period[i], 1),
+        swellDir: sd == null ? null : Math.round(sd),
+        swellClass: sd == null ? null : classifySwell(sd, spot),
+        windSpd: ws,
+        windDir: wd == null ? null : Math.round(wd),
+        windClass: wd == null || ws == null ? null : classifyWind(wd, spot.facing, ws),
+      };
+    }),
   };
 }
 

@@ -148,6 +148,54 @@ export function renderSpotMap(spot, hr) {
 }
 
 // ---------------------------------------------------------------------------
+// Session chart: compact swell bars + wind arrows for just the hours surfed
+// (used on session-log cards). One column per sampled hour.
+// ---------------------------------------------------------------------------
+
+export function renderSessionChart(hours) {
+  if (!hours || !hours.length) return null;
+  const n = hours.length;
+  const colW = 54, padL = 8, padR = 8;
+  const arrowY = 10, perY = 24, plotTop = 30, plotBottom = 78;
+  const windArrowY = 98, mphY = 114, hourY = 130;
+  const H = 136, W = padL + n * colW + padR;
+  const cx = (i) => padL + i * colW + colW / 2;
+
+  const svg = svgEl("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}`, class: "sess-chart" });
+  const yMax = Math.max(3, Math.ceil(Math.max(...hours.map((h) => h.swellHt || 0))));
+  const y = (ft) => plotBottom - (ft / yMax) * (plotBottom - plotTop);
+
+  // arrow pointing where the flow is GOING (fromDeg + 180), matching the app
+  const arrowAt = (px, py, fromDeg, size, color) => {
+    const g = svgEl("g", { transform: `translate(${px},${py}) rotate(${(fromDeg + 180) % 360})` });
+    g.append(svgEl("path", { d: `M0,${-size} L${size * 0.55},${size * 0.5} L0,${size * 0.15} L${-size * 0.55},${size * 0.5} Z`, fill: color }));
+    return g;
+  };
+
+  svg.append(svgEl("line", { x1: padL, y1: plotBottom, x2: W - padR, y2: plotBottom, class: "sess-axis" }));
+
+  hours.forEach((h, i) => {
+    const swColor = cssVar(SWELL_COLORS[h.swellClass] || "--wc-cross");
+    if (h.swellHt != null) {
+      const by = y(h.swellHt);
+      svg.append(svgEl("rect", { x: cx(i) - 10, y: by, width: 20, height: Math.max(2, plotBottom - by), rx: 2, fill: swColor }));
+      svg.append(svgEl("text", { x: cx(i), y: by - 4, "text-anchor": "middle", class: "sess-chart-ht" }, `${h.swellHt}`));
+    }
+    if (h.swellDir != null) svg.append(arrowAt(cx(i), arrowY, h.swellDir, 5, swColor));
+    if (h.swellPer != null) svg.append(svgEl("text", { x: cx(i), y: perY, "text-anchor": "middle", class: "sess-chart-lbl" }, `${Math.round(h.swellPer)}s`));
+
+    if (h.windDir != null) svg.append(arrowAt(cx(i), windArrowY, h.windDir, 7, cssVar(WIND_COLORS[h.windClass] || "--wc-cross")));
+    if (h.windSpd != null) svg.append(svgEl("text", { x: cx(i), y: mphY, "text-anchor": "middle", class: "sess-mph" }, `${Math.round(h.windSpd)}`));
+
+    const hr = Number(h.time.slice(0, 2));
+    const label = `${hr % 12 || 12}${hr < 12 ? "a" : "p"}`;
+    svg.append(svgEl("text", { x: cx(i), y: hourY, "text-anchor": "middle", class: "sess-hour" }, label));
+  });
+
+  return svg;
+}
+
+// ---------------------------------------------------------------------------
 // Swell chart: hourly bars + direction arrows + period labels
 // ---------------------------------------------------------------------------
 
