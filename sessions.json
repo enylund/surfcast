@@ -1,1 +1,70 @@
-[]
+[
+  {
+    "id": "2026-07-20T0700-rockaway",
+    "date": "2026-07-20",
+    "spotId": "rockaway",
+    "spotName": "Rockaway 67th St",
+    "timeRange": {
+      "start": "07:00",
+      "end": "09:00",
+      "label": "7–9am"
+    },
+    "loggedAt": "2026-07-20T14:06:44.196Z",
+    "fingerprint": {
+      "capturedAt": "2026-07-20T14:06:44.196Z",
+      "source": "open-meteo forecast+marine, noaa tide predictions",
+      "swellHt_ft": 1.7,
+      "swellPer_s": 5.6,
+      "swellDir_deg": 165,
+      "swellDir_compass": "SSE",
+      "swellClass": "fair",
+      "waveHt_ft": 1.8,
+      "windWaveHt_ft": 0.3,
+      "windSpd_mph": 6,
+      "windGust_mph": 10,
+      "windDir_deg": 347,
+      "windDir_compass": "NNW",
+      "windClass": "offshore",
+      "airTemp_f": 66,
+      "waterTemp_f": 70,
+      "weatherCode": 0,
+      "tide_ft_start": 0.2,
+      "tide_ft_end": 1.3,
+      "tide_state": "rising",
+      "tide_prev": {
+        "type": "low",
+        "time": "6:51a",
+        "ft": 0.2
+      },
+      "tide_next": {
+        "type": "high",
+        "time": "1:19p",
+        "ft": 4.7
+      },
+      "spotFacing_deg": 170,
+      "sampleHours": [
+        "07:00",
+        "08:00",
+        "09:00"
+      ]
+    },
+    "ratings": {
+      "swellSize": 2,
+      "swellDirection": 3,
+      "crowd": 5,
+      "overall": 2.5
+    },
+    "gear": {
+      "board": "longboard",
+      "wetsuit": "3/2 full",
+      "gloves": false,
+      "booties": false,
+      "hood": false
+    },
+    "comfort": {
+      "tooCold": false,
+      "tooWarm": false
+    },
+    "comments": "Worth going. Right at the border of swell height and period being worth it. Wind was perfect."
+  }
+]
