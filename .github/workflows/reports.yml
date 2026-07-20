@@ -2,9 +2,9 @@ name: Generate surf reports
 
 on:
   schedule:
-    # ~5am and ~11am Eastern during EDT (9:00/15:00 UTC). During EST these
-    # land at 4am/10am ET — close enough for a surf report.
-    - cron: "0 9,15 * * *"
+    # One morning report: ~5am Eastern during EDT (9:00 UTC). During EST this
+    # lands at 4am ET — close enough for a surf report.
+    - cron: "0 9 * * *"
   workflow_dispatch:
 
 permissions:
