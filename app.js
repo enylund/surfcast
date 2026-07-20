@@ -134,6 +134,25 @@ function renderNowCard(model, spot) {
 
   // Map rail: zoomed coastline with the current swell/wind arrows overlaid.
   nowEl.append(renderSpotMap(spot, hr));
+
+  // Webcams at or near the spot (★ = Surfline, needs premium for full view).
+  if (spot.cams?.length) {
+    const row = document.createElement("div");
+    row.className = "cam-row";
+    const label = document.createElement("span");
+    label.className = "cam-label";
+    label.textContent = "Cams";
+    row.append(label);
+    for (const cam of spot.cams) {
+      const a = document.createElement("a");
+      a.href = cam.url;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.textContent = cam.name;
+      row.append(a);
+    }
+    nowEl.append(row);
+  }
 }
 
 // AI-generated report, produced twice daily by a GitHub Action
