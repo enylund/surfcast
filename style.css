@@ -21,6 +21,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 
 body {
   margin: 0 auto;
@@ -36,11 +37,51 @@ header { padding: 16px 0 4px; }
 .header-row { display: flex; align-items: baseline; justify-content: space-between; }
 h1 { font-size: 22px; margin: 0; letter-spacing: 0.5px; }
 .meta { color: var(--text-muted); font-size: 12px; display: flex; gap: 8px; align-items: center; }
-#refresh {
+#refresh, #sessions-btn {
   background: var(--card); color: var(--text); border: 1px solid var(--card-edge);
   border-radius: 6px; cursor: pointer; font-size: 14px; padding: 2px 8px;
 }
-#refresh:hover { border-color: var(--accent); }
+#refresh:hover, #sessions-btn:hover { border-color: var(--accent); }
+#sessions-btn { font-size: 13px; }
+#sessions-btn.active { background: var(--accent); border-color: var(--accent); color: #06222f; font-weight: 600; }
+#tabs button.dimmed { opacity: 0.4; }
+
+/* ------- session log ------- */
+.sess-view-head { display: flex; align-items: baseline; gap: 10px; margin: 14px 2px; }
+.sess-view-title { font-size: 18px; margin: 0; }
+.sess-count { font-size: 12px; color: var(--text-muted); }
+.sess-empty { color: var(--text-muted); font-size: 14px; line-height: 1.5; padding: 8px 2px; }
+
+.sess-card {
+  background: var(--card); border: 1px solid var(--card-edge); border-radius: 12px;
+  padding: 12px 14px; margin-bottom: 12px;
+}
+.sess-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+.sess-title { display: flex; flex-direction: column; }
+.sess-date { font-weight: 650; font-size: 14px; }
+.sess-spot { font-size: 12px; color: var(--text-muted); }
+.sess-overall { color: #ffd166; font-size: 14px; letter-spacing: 1px; white-space: nowrap; }
+
+.sess-cond { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 4px; }
+.sess-chip {
+  font-size: 12px; padding: 2px 8px; border-radius: 999px;
+  background: rgba(255,255,255,0.06); border: 1px solid var(--card-edge); color: var(--text);
+}
+.sess-chip.sw-prime, .sess-chip.wc-fg-offshore { border-color: var(--wc-offshore); color: var(--wc-offshore); }
+.sess-chip.sw-good, .sess-chip.wc-fg-cross-off { border-color: var(--wc-cross-off); color: var(--wc-cross-off); }
+.sess-chip.sw-fair, .sess-chip.wc-fg-cross { border-color: var(--wc-cross); color: var(--wc-cross); }
+.sess-chip.sw-marginal, .sess-chip.wc-fg-cross-on { border-color: var(--wc-cross-on); color: var(--wc-cross-on); }
+.sess-chip.sw-poor, .sess-chip.wc-fg-onshore { border-color: var(--wc-onshore); color: var(--wc-onshore); }
+.sess-chip.wc-fg-light { border-color: var(--wc-light); color: var(--wc-light); }
+.sess-tide-detail { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; }
+
+.sess-ratings { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 8px 0; }
+.sess-rating { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+.sess-rating-label { color: var(--text-muted); }
+.sess-stars { color: #ffd166; letter-spacing: 1px; }
+.sess-gear { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12.5px; color: var(--text); margin-top: 6px; }
+.sess-comfort { color: var(--wc-cross-on); }
+.sess-comments { font-size: 13px; line-height: 1.5; margin-top: 8px; color: var(--text); font-style: italic; }
 
 #tabs { display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap; }
 #tabs button {

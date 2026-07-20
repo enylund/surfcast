@@ -3,10 +3,12 @@
 import { SPOTS, DEFAULT_VISIBLE_DAYS } from "./config.js";
 import { getSpotData, nyNow, nyToday, compass, selfTest } from "./data.js";
 import { renderSwellChart, renderWindRow, renderTideChart, renderWeatherRow, renderSpotMap } from "./charts.js";
+import { loadSessions, renderSessionsView } from "./sessions.js";
 
 const $ = (sel) => document.querySelector(sel);
 const tabsEl = $("#tabs");
 const reportEl = $("#report");
+const sessionsEl = $("#sessions-view");
 const nowEl = $("#now-card");
 const daysEl = $("#days");
 const errorsEl = $("#errors");
@@ -303,12 +305,39 @@ async function render(spot, { force = false } = {}) {
   }
 }
 
+// Toggle between the forecast view and the session-log view.
+function setView(mode) {
+  const sessions = mode === "sessions";
+  for (const el of [nowEl, reportEl, errorsEl, daysEl]) el.hidden = sessions;
+  sessionsEl.hidden = !sessions;
+  $("#sessions-btn").classList.toggle("active", sessions);
+  for (const btn of tabsEl.children) btn.classList.toggle("dimmed", sessions);
+}
+
+async function renderSessions() {
+  renderSeq++; // cancel any in-flight forecast render
+  setView("sessions");
+  renderSessionsView(sessionsEl, []); // instant shell
+  const sessions = await loadSessions();
+  renderSessionsView(sessionsEl, sessions);
+}
+
+function route() {
+  if (location.hash.slice(1) === "sessions") return renderSessions();
+  setView("forecast");
+  render(spotFromHash());
+}
+
 buildTabs();
-window.addEventListener("hashchange", () => render(spotFromHash()));
-$("#refresh").addEventListener("click", () => render(currentSpot, { force: true }));
+window.addEventListener("hashchange", route);
+$("#sessions-btn").addEventListener("click", () => { location.hash = "sessions"; });
+$("#refresh").addEventListener("click", () => {
+  if (location.hash.slice(1) === "sessions") renderSessions();
+  else render(currentSpot, { force: true });
+});
 
 // Keep the now-marker and "Today" boundary honest without user interaction.
-setInterval(() => { if (currentSpot) render(currentSpot); }, 5 * 60 * 1000);
+setInterval(() => { if (currentSpot && location.hash.slice(1) !== "sessions") render(currentSpot); }, 5 * 60 * 1000);
 
 if (new URLSearchParams(location.search).has("debug")) selfTest();
-render(spotFromHash());
+route();
