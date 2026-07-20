@@ -173,6 +173,9 @@ h1 { font-size: 22px; margin: 0; letter-spacing: 0.5px; }
 .wc-onshore   { fill: var(--wc-onshore); }
 .wc-light     { fill: var(--wc-light); }
 
+.wx-icon { font-size: 13px; }
+.wx-temp { font-size: 10.5px; fill: var(--text); }
+
 .tide-line { fill: none; stroke: var(--accent); stroke-width: 2; }
 .tide-fill { fill: var(--accent); opacity: 0.15; }
 .tide-dot { fill: #ffd166; }

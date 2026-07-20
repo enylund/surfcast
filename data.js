@@ -110,9 +110,9 @@ export function marineUrl(spot) {
 export function windUrl(spot) {
   const p = new URLSearchParams({
     latitude: spot.lat, longitude: spot.lon,
-    hourly: "wind_speed_10m,wind_direction_10m,wind_gusts_10m",
+    hourly: "wind_speed_10m,wind_direction_10m,wind_gusts_10m,temperature_2m,weather_code",
     daily: "sunrise,sunset",
-    wind_speed_unit: "mph", timezone: TZ, forecast_days: FORECAST_DAYS,
+    wind_speed_unit: "mph", temperature_unit: "fahrenheit", timezone: TZ, forecast_days: FORECAST_DAYS,
   });
   return `https://api.open-meteo.com/v1/forecast?${p}`;
 }
@@ -184,6 +184,8 @@ function buildModel(spot, marine, wind, tideHilo, tideCurve, errors) {
       windSpd,
       windGust: wi != null ? round1(wind.hourly.wind_gusts_10m[wi]) : null,
       windDir,
+      airTemp: wi != null && wind.hourly.temperature_2m?.[wi] != null ? Math.round(wind.hourly.temperature_2m[wi]) : null,
+      weatherCode: wi != null ? wind.hourly.weather_code?.[wi] ?? null : null,
       windClass: windSpd != null && windDir != null ? classifyWind(windDir, spot.facing, windSpd) : null,
     });
   });
@@ -244,7 +246,7 @@ function synthesizeCurve(hiloJson) {
 
 const memCache = new Map();
 // bump the version when the model shape changes so stale cached models are ignored
-const lsKey = (spotId) => `surfcast:v5:${spotId}`;
+const lsKey = (spotId) => `surfcast:v6:${spotId}`;
 
 function isFresh(model) {
   return (

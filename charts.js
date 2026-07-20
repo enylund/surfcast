@@ -221,6 +221,48 @@ export function renderWindRow(day, { nowMin }) {
 }
 
 // ---------------------------------------------------------------------------
+// Weather row: icon + air temp every 3 hours (bottom rail of each day card)
+// ---------------------------------------------------------------------------
+
+// WMO weather codes → emoji, day/night aware.
+function wxIcon(code, isDay) {
+  if (code == null) return "";
+  if (code <= 1) return isDay ? "☀️" : "🌙";
+  if (code === 2) return isDay ? "⛅" : "🌙";
+  if (code === 3) return "☁️";
+  if (code === 45 || code === 48) return "🌫️";
+  if (code >= 51 && code <= 57) return isDay ? "🌦️" : "🌧️";
+  if ((code >= 61 && code <= 67) || (code >= 80 && code <= 82)) return "🌧️";
+  if ((code >= 71 && code <= 77) || code === 85 || code === 86) return "🌨️";
+  if (code >= 95) return "⛈️";
+  return "☁️";
+}
+
+export function renderWeatherRow(day, { nowMin }) {
+  const H = LAYOUT.wxH;
+  const svg = svgEl("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}`, class: "chart wx-chart" });
+  svg.append(svgEl("text", { x: gutter - 6, y: 30, "text-anchor": "end", class: "axis-label" }, "temp"));
+  svg.append(hourGrid(4, H - 6));
+
+  const rise = day.sunrise, set = day.sunset;
+  for (const hr of day.hours) {
+    const h = Math.floor(hr.min / 60);
+    if (h % 3 !== 0 || hr.airTemp == null) continue;
+    const cx = x(hr.min) + plotW / 48;
+    const isDay = rise != null ? hr.min >= rise && hr.min < set : h >= 6 && h < 20;
+    const g = svgEl("g", {});
+    g.append(svgEl("text", { x: cx, y: 22, "text-anchor": "middle", class: "wx-icon" }, wxIcon(hr.weatherCode, isDay)));
+    g.append(svgEl("text", { x: cx, y: 44, "text-anchor": "middle", class: "wx-temp" }, `${hr.airTemp}°`));
+    g.append(svgEl("title", {}, `${fmtTime(hr.min)} — ${hr.airTemp}°F air`));
+    svg.append(g);
+  }
+
+  svg.append(...nightRects(day, 4, H - 10));
+  if (nowMin != null) svg.append(nowLine(nowMin, 4, H - 6));
+  return svg;
+}
+
+// ---------------------------------------------------------------------------
 // Tide chart: smoothed curve + H/L markers + hour axis labels
 // ---------------------------------------------------------------------------
 

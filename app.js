@@ -2,7 +2,7 @@
 
 import { SPOTS, DEFAULT_VISIBLE_DAYS } from "./config.js";
 import { getSpotData, nyNow, nyToday, compass, selfTest } from "./data.js";
-import { renderSwellChart, renderWindRow, renderTideChart, renderSpotMap } from "./charts.js";
+import { renderSwellChart, renderWindRow, renderTideChart, renderWeatherRow, renderSpotMap } from "./charts.js";
 
 const $ = (sel) => document.querySelector(sel);
 const tabsEl = $("#tabs");
@@ -251,6 +251,7 @@ function renderDays(model, spot) {
       renderSwellChart(day, { yMax, nowMin }),
       renderWindRow(day, { nowMin }),
       renderTideChart(day, i, model.tide, { tideMin, tideMax, nowMin, clipId: `tclip-${spot.id}-${i}` }),
+      renderWeatherRow(day, { nowMin }),
     );
     card.append(scroll);
     daysEl.append(card);

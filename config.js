@@ -63,6 +63,7 @@ export const LAYOUT = {
   swellH: 148,
   windH: 64,
   tideH: 108,
+  wxH: 54,
 };
 
 // If sunrise/sunset data is missing, dim outside this window (hours, 24h clock).
