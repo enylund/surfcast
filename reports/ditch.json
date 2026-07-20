@@ -1,25 +1,21 @@
 {
   "spotId": "ditch",
   "spotName": "Ditch Plains",
-  "generatedAt": "2026-07-19T18:19:41.211Z",
-  "headline": "Best spot today — chest-high SSW with clean cross-off wind.",
-  "today": "Ditch is the pick of the three: 2-3.5ft SSW swell with W/WNW cross-off wind grooming it clean through the morning and afternoon. Tides are on the small side but there's enough push to work. Shortboard or fish and enjoy it — this is the fun window before the weather gets busier midweek.",
+  "generatedAt": "2026-07-20T11:48:48.857Z",
+  "headline": "Chest-high S swell with light wind — cleanest it'll be all week, go surf.",
+  "today": "Solid little day for Ditch: 2-2.6ft from due S at 6s, and the wind stays light-to-glassy from dawn through the afternoon before a light S onshore nudges in the evening. Fish or shortboard, work the incoming tide toward the 2:42p high. Easy call — this is your window before it gets windy midweek.",
   "daysToWatch": [
     {
-      "day": "Mon",
-      "note": "Waist-high but light winds all morning means glassy, playful conditions. Log session if you want a mellow one."
-    },
-    {
-      "day": "Tue",
-      "note": "Onshore SE 18mph most of the day — swell's there but it'll be rough and crumbly. Not the day."
-    },
-    {
       "day": "Wed",
-      "note": "Big one incoming: 4-6ft-plus S swell, but SW cross-on wind in the morning keeps it messy. Powerful but not clean — for the experienced only."
+      "note": "Big on paper, up to 5-6ft at 7s, but SW cross-on wind blowing 19-21mph all day. Blown out — size you can't use."
     },
     {
       "day": "Thu",
-      "note": "The standout — 3-5ft S at longer period with cross-off NNE dawn. Get there early for the cleanest, best waves of the week."
+      "note": "The one to rearrange for. Overhead-ish S swell at 6s+ with NNW offshore dawn and morning — solid, clean, worth it. Shortboard weather."
+    },
+    {
+      "day": "Fri",
+      "note": "Prime SSE angle at chest-high with light ENE cross in the morning — fun secondary option as it drops from Thursday."
     }
   ]
 }
