@@ -11,9 +11,22 @@ const WX = {
 
 const BOARD = { longboard: "Longboard", midlength: "Mid-length", fish: "Fish", short: "Shortboard" };
 
-function stars(n) {
-  const v = Math.max(0, Math.min(5, Math.round(n || 0)));
-  return "★".repeat(v) + "☆".repeat(5 - v);
+// Fractional stars: a gold ★★★★★ layer clipped to (rating/5) width over a gray
+// ★★★★★ track, so 2.5 reads as exactly half of the third star.
+function starsEl(n) {
+  const v = Math.max(0, Math.min(5, Number(n) || 0));
+  const wrap = document.createElement("span");
+  wrap.className = "stars";
+  wrap.title = `${v} / 5`;
+  const bg = document.createElement("span");
+  bg.className = "stars-bg";
+  bg.textContent = "★★★★★";
+  const fg = document.createElement("span");
+  fg.className = "stars-fg";
+  fg.textContent = "★★★★★";
+  fg.style.width = `${(v / 5) * 100}%`;
+  wrap.append(bg, fg);
+  return wrap;
 }
 
 export async function loadSessions() {
@@ -36,7 +49,7 @@ function el(tag, cls, text) {
 function ratingRow(label, n, extra) {
   const div = el("div", "sess-rating");
   div.append(el("span", "sess-rating-label", label));
-  div.append(el("span", "sess-stars", stars(n)));
+  div.append(starsEl(n));
   if (extra) div.append(el("span", "sess-rating-x", extra));
   return div;
 }
@@ -57,7 +70,9 @@ function sessionCard(s) {
   title.append(el("span", "sess-date", `${date} · ${s.timeRange?.label || ""}`));
   title.append(el("span", "sess-spot", s.spotName));
   head.append(title);
-  head.append(el("div", "sess-overall", stars(s.ratings?.overall)));
+  const overall = el("div", "sess-overall");
+  overall.append(starsEl(s.ratings?.overall));
+  head.append(overall);
   card.append(head);
 
   // Objective conditions fingerprint
