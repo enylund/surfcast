@@ -1,21 +1,25 @@
 {
   "spotId": "ditch",
   "spotName": "Ditch Plains",
-  "generatedAt": "2026-07-20T11:48:48.857Z",
-  "headline": "Chest-high S swell with light wind — cleanest it'll be all week, go surf.",
-  "today": "Solid little day for Ditch: 2-2.6ft from due S at 6s, and the wind stays light-to-glassy from dawn through the afternoon before a light S onshore nudges in the evening. Fish or shortboard, work the incoming tide toward the 2:42p high. Easy call — this is your window before it gets windy midweek.",
+  "generatedAt": "2026-07-21T11:11:37.259Z",
+  "headline": "Building S swell but onshore today — the good stuff lands midweek.",
+  "today": "Swell's on the way up, 1-3ft this morning, but SSE wind is onshore early and swings to SE cross-on and stronger by afternoon. Morning before the wind piles on is your least-junky bet on a shortboard. Not a day to rearrange plans for.",
   "daysToWatch": [
     {
       "day": "Wed",
-      "note": "Big on paper, up to 5-6ft at 7s, but SW cross-on wind blowing 19-21mph all day. Blown out — size you can't use."
+      "note": "Big — 4-6ft-plus at 6-7s from a good S angle. Downside is SSW cross-on all day, so it'll be sizable and a touch bumpy. Fun for confident surfers."
     },
     {
       "day": "Thu",
-      "note": "The one to rearrange for. Overhead-ish S swell at 6s+ with NNW offshore dawn and morning — solid, clean, worth it. Shortboard weather."
+      "note": "The day to circle. Head-high 3.7-5ft at good angle with N offshore at dawn going cross-off morning. Clean and solid — shortboard, get there early before the SE swings onshore."
     },
     {
       "day": "Fri",
-      "note": "Prime SSE angle at chest-high with light ENE cross in the morning — fun secondary option as it drops from Thursday."
+      "note": "Prime SSE angle, chest-high at 6s, with NNW offshore and light morning wind. Excellent clean window before afternoon onshore."
+    },
+    {
+      "day": "Sun",
+      "note": "Smaller but prime SE angle at 6-7s with N offshore at dawn. Worth a morning log or fish before the S onshore comes up."
     }
   ]
 }

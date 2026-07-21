@@ -1,21 +1,21 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-07-20T11:48:48.857Z",
-  "headline": "Knee-to-waist SSE on a glassy morning — log it early or skip it.",
-  "today": "Small but decent angle, and the morning is your only clean shot with light NE and offshore-ish flow before the SSE onshore builds in the afternoon. It's a mellow longboard roll, best around the midday high pushing in. Nothing pumping, but surfable if you're not picky.",
+  "generatedAt": "2026-07-21T11:11:37.259Z",
+  "headline": "Onshore slop on a weak short-period pulse — not worth the paddle.",
+  "today": "SSE wind is on it all day, 15-21mph, and the swell is a mush of short-period SSE. It'll be bumpy and disorganized wherever you look. Wait it out.",
   "daysToWatch": [
     {
-      "day": "Tue",
-      "note": "Building but SE cross-on 16mph most of the day keeps it choppy and disorganized."
-    },
-    {
       "day": "Wed",
-      "note": "Chest-high-plus at a good S angle, but SW turns cross-on to onshore. Size is there, cleanliness isn't."
+      "note": "Chest-high-plus at a good S angle, best in the morning when the SW cross-on eases to around 10mph. Shortboard or fish, get it before afternoon onshore."
     },
     {
       "day": "Thu",
-      "note": "The day to target. Chest-high SSE at 6-6.5s with N offshore holding all day — clean and fun, groveler or fish."
+      "note": "Solid pick — 2.4-3.3ft at 6s with NNE cross-off through morning. Cleanest, most rideable window of the stretch."
+    },
+    {
+      "day": "Fri",
+      "note": "Small but prime SE angle with near-glassy dawn. Waist-high log session early before the afternoon SSE onshore fills in."
     }
   ]
 }

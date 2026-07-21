@@ -1,21 +1,21 @@
 {
   "spotId": "rockaway",
   "spotName": "Rockaway 67th St",
-  "generatedAt": "2026-07-20T11:48:48.857Z",
-  "headline": "Small SSE windswell, glassy dawn — a log session before the onshore fills in.",
-  "today": "Waist-high at best on a short-ish 5-6s SSE, fair angle, so nothing to write home about. The play is early: dawn is offshore and the morning goes light and glassy before the S onshore shows up around midday and mushes it out. Grab the log, ride the incoming tide toward that 1:19p high if you can beat the wind, otherwise it's a skip.",
+  "generatedAt": "2026-07-21T11:11:37.259Z",
+  "headline": "Small SE junk under all-day onshore — one to skip.",
+  "today": "Nothing but leftover windswell knee-to-waist and the SSE stays onshore dawn to dark, building to 23mph by evening. No clean window today, it's textured and closing out. Save your energy for later in the week.",
   "daysToWatch": [
     {
-      "day": "Tue",
-      "note": "Swell builds but SE cross-on wind runs 17-18mph all day — junky and bumpy, not worth much."
-    },
-    {
       "day": "Wed",
-      "note": "Chest-high but from due S at a marginal angle with WSW cross wind. Size without shape."
+      "note": "Real size shows up, 3.5-4.5ft, but it's S at a marginal angle so expect closeouts. SW cross-on softens midmorning if you want to poke at it."
     },
     {
       "day": "Thu",
-      "note": "Best of the week here. Chest-high SSE at 6s with N offshore dawn through morning — clean window, bring the groveler or fish early."
+      "note": "Best window of the week here. Waist-to-chest at 6s with NNE cross-off in the morning — dawn patrol on a shortboard or fish before the SE fills in afternoon."
+    },
+    {
+      "day": "Fri",
+      "note": "Glassy dawn with light wind and clean 2ft SE. Log or groveler session before the afternoon onshore turns it on."
     }
   ]
 }
