@@ -1,6 +1,6 @@
 // Logs a surf session with an objective conditions "fingerprint" (chat path).
 // The in-app form (logform.js) shares the same fingerprint logic via
-// ../fingerprint.js. Run when Eric describes a session in chat:
+// ../conditions.js. Run when Eric describes a session in chat:
 //   node scripts/log-session.mjs '{"date":"2026-07-19","spotId":"rockaway","start":"07:00","end":"09:00", ...}'
 //
 // Expected input JSON:
@@ -20,7 +20,7 @@
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
 import { SPOTS } from "../config.js";
-import { buildRecord } from "../fingerprint.js";
+import { buildRecord } from "../conditions.js";
 
 const SESSIONS_FILE = fileURLToPath(new URL("../sessions.json", import.meta.url));
 

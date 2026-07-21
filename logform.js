@@ -6,7 +6,7 @@
 
 import { SPOTS, REPO, SESSIONS_PATH } from "./config.js";
 import { nyToday } from "./data.js";
-import { buildRecord } from "./fingerprint.js";
+import { buildRecord } from "./conditions.js";
 
 // ---------------------------------------------------------------------------
 // Token storage: encrypt the GitHub token with a password (AES-GCM/PBKDF2)

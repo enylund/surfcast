@@ -46,7 +46,7 @@ and "Days to watch" — which the app renders at the top of each spot. Requires 
 Tracks surfed sessions with an objective conditions fingerprint. Two ways to log:
 
 **In-app form (`#log`, the "+ Log" header button).** Fill the form on the site; it
-runs the same fingerprint capture in the browser ([fingerprint.js](fingerprint.js))
+runs the same fingerprint capture in the browser ([conditions.js](conditions.js))
 and commits the session to `sessions.json` via the GitHub API. Gated by a GitHub
 fine-grained token (Contents: read/write on this repo) stored **encrypted behind a
 password** in your browser (Web Crypto, AES-GCM/PBKDF2 — see [logform.js](logform.js)).
@@ -56,7 +56,7 @@ Vercel backend later, only `saveSession()` in logform.js changes (swap the GitHu
 commit for a `fetch()` to your API route).
 
 **Chat.** Describe a session to Claude; it runs
-[scripts/log-session.mjs](scripts/log-session.mjs) (same [fingerprint.js](fingerprint.js))
+[scripts/log-session.mjs](scripts/log-session.mjs) (same [conditions.js](conditions.js))
 and commits the record.
 
 Either way: Open-Meteo marine + forecast + NOAA tides for that spot/date/time
