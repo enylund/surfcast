@@ -1,6 +1,11 @@
 // All tunable knobs live here.
 
 export const TZ = "America/New_York";
+
+// Where sessions are stored. When you move to a Vercel backend later, only the
+// save adapter (logform.js → saveSession) needs to change; this stays the source.
+export const REPO = "enylund/surfcast";
+export const SESSIONS_PATH = "sessions.json";
 export const FORECAST_DAYS = 7;        // fetched (full week)
 export const DEFAULT_VISIBLE_DAYS = 4; // shown before "Load full week"
 export const CACHE_TTL_MS = 30 * 60 * 1000;

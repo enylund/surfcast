@@ -9,20 +9,20 @@
       "end": "09:00",
       "label": "7–9am"
     },
-    "loggedAt": "2026-07-20T14:31:01.694Z",
+    "loggedAt": "2026-07-21T20:40:49.704Z",
     "fingerprint": {
-      "capturedAt": "2026-07-20T14:31:01.693Z",
+      "capturedAt": "2026-07-21T20:40:49.704Z",
       "source": "open-meteo forecast+marine, noaa tide predictions",
-      "swellHt_ft": 1.7,
+      "swellHt_ft": 1.6,
       "swellPer_s": 5.6,
       "swellDir_deg": 165,
       "swellDir_compass": "SSE",
       "swellClass": "fair",
-      "waveHt_ft": 1.8,
+      "waveHt_ft": 1.7,
       "windWaveHt_ft": 0.3,
-      "windSpd_mph": 5,
+      "windSpd_mph": 6,
       "windGust_mph": 11,
-      "windDir_deg": 354,
+      "windDir_deg": 1,
       "windDir_compass": "N",
       "windClass": "offshore",
       "airTemp_f": 66,
@@ -45,8 +45,8 @@
       "hours": [
         {
           "time": "07:00",
-          "swellHt": 1.7,
-          "swellPer": 5.7,
+          "swellHt": 1.6,
+          "swellPer": 5.6,
           "swellDir": 165,
           "swellClass": "fair",
           "windSpd": 5,
@@ -55,8 +55,8 @@
         },
         {
           "time": "08:00",
-          "swellHt": 1.7,
-          "swellPer": 5.6,
+          "swellHt": 1.6,
+          "swellPer": 5.5,
           "swellDir": 165,
           "swellClass": "fair",
           "windSpd": 6,
@@ -65,13 +65,13 @@
         },
         {
           "time": "09:00",
-          "swellHt": 1.7,
-          "swellPer": 5.5,
+          "swellHt": 1.6,
+          "swellPer": 5.6,
           "swellDir": 165,
           "swellClass": "fair",
-          "windSpd": 5,
-          "windDir": 351,
-          "windClass": "offshore"
+          "windSpd": 7,
+          "windDir": 13,
+          "windClass": "cross-off"
         }
       ]
     },

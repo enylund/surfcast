@@ -43,12 +43,25 @@ and "Days to watch" — which the app renders at the top of each spot. Requires 
 
 ## Session log
 
-Tracks surfed sessions with an objective conditions fingerprint. Eric describes a
-session in chat; Claude runs [scripts/log-session.mjs](scripts/log-session.mjs),
-which fetches the actual conditions for that spot/date/time window (Open-Meteo
-marine + forecast, NOAA tides), averages them over the session, classifies wind
-and swell per spot, and appends the record to `sessions.json`. The app's
-**Sessions** view (header button) reads and displays them.
+Tracks surfed sessions with an objective conditions fingerprint. Two ways to log:
+
+**In-app form (`#log`, the "+ Log" header button).** Fill the form on the site; it
+runs the same fingerprint capture in the browser ([fingerprint.js](fingerprint.js))
+and commits the session to `sessions.json` via the GitHub API. Gated by a GitHub
+fine-grained token (Contents: read/write on this repo) stored **encrypted behind a
+password** in your browser (Web Crypto, AES-GCM/PBKDF2 — see [logform.js](logform.js)).
+First use: paste the token + set a password; after that, just enter the password.
+Saved sessions appear in the log ~1 min later (after Pages rebuilds). To move to a
+Vercel backend later, only `saveSession()` in logform.js changes (swap the GitHub
+commit for a `fetch()` to your API route).
+
+**Chat.** Describe a session to Claude; it runs
+[scripts/log-session.mjs](scripts/log-session.mjs) (same [fingerprint.js](fingerprint.js))
+and commits the record.
+
+Either way: Open-Meteo marine + forecast + NOAA tides for that spot/date/time
+window, averaged over the session, wind/swell classified per spot, appended to
+`sessions.json`. The **Sessions** view reads and displays them.
 
 Log a session:
 ```sh

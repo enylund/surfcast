@@ -4,11 +4,13 @@ import { SPOTS, DEFAULT_VISIBLE_DAYS } from "./config.js";
 import { getSpotData, nyNow, nyToday, compass, selfTest } from "./data.js";
 import { renderSwellChart, renderWindRow, renderTideChart, renderWeatherRow, renderSpotMap } from "./charts.js";
 import { loadSessions, renderSessionsView } from "./sessions.js";
+import { renderLogForm } from "./logform.js";
 
 const $ = (sel) => document.querySelector(sel);
 const tabsEl = $("#tabs");
 const reportEl = $("#report");
 const sessionsEl = $("#sessions-view");
+const logEl = $("#log-view");
 const nowEl = $("#now-card");
 const daysEl = $("#days");
 const errorsEl = $("#errors");
@@ -305,13 +307,15 @@ async function render(spot, { force = false } = {}) {
   }
 }
 
-// Toggle between the forecast view and the session-log view.
+// Toggle between forecast / session-log / log-form views.
 function setView(mode) {
-  const sessions = mode === "sessions";
-  for (const el of [nowEl, reportEl, errorsEl, daysEl]) el.hidden = sessions;
-  sessionsEl.hidden = !sessions;
-  $("#sessions-btn").classList.toggle("active", sessions);
-  for (const btn of tabsEl.children) btn.classList.toggle("dimmed", sessions);
+  const forecast = mode === "forecast";
+  for (const el of [nowEl, reportEl, errorsEl, daysEl]) el.hidden = !forecast;
+  sessionsEl.hidden = mode !== "sessions";
+  logEl.hidden = mode !== "log";
+  $("#sessions-btn").classList.toggle("active", mode === "sessions");
+  $("#log-btn").classList.toggle("active", mode === "log");
+  for (const btn of tabsEl.children) btn.classList.toggle("dimmed", !forecast);
 }
 
 async function renderSessions() {
@@ -323,7 +327,9 @@ async function renderSessions() {
 }
 
 function route() {
-  if (location.hash.slice(1) === "sessions") return renderSessions();
+  const hash = location.hash.slice(1);
+  if (hash === "sessions") return renderSessions();
+  if (hash === "log") { renderSeq++; setView("log"); return renderLogForm(logEl); }
   setView("forecast");
   render(spotFromHash());
 }
@@ -331,13 +337,15 @@ function route() {
 buildTabs();
 window.addEventListener("hashchange", route);
 $("#sessions-btn").addEventListener("click", () => { location.hash = "sessions"; });
+$("#log-btn").addEventListener("click", () => { location.hash = "log"; });
 $("#refresh").addEventListener("click", () => {
-  if (location.hash.slice(1) === "sessions") renderSessions();
-  else render(currentSpot, { force: true });
+  const hash = location.hash.slice(1);
+  if (hash === "sessions") renderSessions();
+  else if (hash !== "log") render(currentSpot, { force: true });
 });
 
 // Keep the now-marker and "Today" boundary honest without user interaction.
-setInterval(() => { if (currentSpot && location.hash.slice(1) !== "sessions") render(currentSpot); }, 5 * 60 * 1000);
+setInterval(() => { if (currentSpot && !["sessions", "log"].includes(location.hash.slice(1))) render(currentSpot); }, 5 * 60 * 1000);
 
 if (new URLSearchParams(location.search).has("debug")) selfTest();
 route();
