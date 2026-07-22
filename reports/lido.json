@@ -1,21 +1,17 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-07-21T11:11:37.259Z",
-  "headline": "Onshore slop on a weak short-period pulse — not worth the paddle.",
-  "today": "SSE wind is on it all day, 15-21mph, and the swell is a mush of short-period SSE. It'll be bumpy and disorganized wherever you look. Wait it out.",
+  "generatedAt": "2026-07-22T11:12:23.650Z",
+  "headline": "Sizey S swell at a good angle, but cross-on wind keeps it textured.",
+  "today": "Best size of the region at 3.6-4ft and the angle's actually decent, but the SW cross-on is on it from dawn and only gets worse into the onshore evening. No clean window really — earliest morning is your best shot before it deteriorates. Fish or shortboard if you want to make something of the bump.",
   "daysToWatch": [
     {
-      "day": "Wed",
-      "note": "Chest-high-plus at a good S angle, best in the morning when the SW cross-on eases to around 10mph. Shortboard or fish, get it before afternoon onshore."
-    },
-    {
       "day": "Thu",
-      "note": "Solid pick — 2.4-3.3ft at 6s with NNE cross-off through morning. Cleanest, most rideable window of the stretch."
+      "note": "The one to plan around: 2.5-3ft at a good angle with N offshore dawn and morning. Clean and fun early — get it before the afternoon onshore. Shortboard or fish."
     },
     {
       "day": "Fri",
-      "note": "Small but prime SE angle with near-glassy dawn. Waist-high log session early before the afternoon SSE onshore fills in."
+      "note": "Smaller at 1.3-2ft but prime SSE angle and light dawn wind. Loggable glass early; onshore-ish by afternoon."
     }
   ]
 }

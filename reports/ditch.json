@@ -1,25 +1,25 @@
 {
   "spotId": "ditch",
   "spotName": "Ditch Plains",
-  "generatedAt": "2026-07-21T11:11:37.259Z",
-  "headline": "Building S swell but onshore today — the good stuff lands midweek.",
-  "today": "Swell's on the way up, 1-3ft this morning, but SSE wind is onshore early and swings to SE cross-on and stronger by afternoon. Morning before the wind piles on is your least-junky bet on a shortboard. Not a day to rearrange plans for.",
+  "generatedAt": "2026-07-22T11:12:23.650Z",
+  "headline": "Head-high-plus S swell but cross-on wind all day keeps it rough.",
+  "today": "Plenty of size, pushing 5ft-plus at times with a good angle, so there's real energy. Problem is the SW/SSW cross-on blows all day, so it'll be bumpy and disorganized. Surfable on a shortboard for the committed, but no glass to be found.",
   "daysToWatch": [
     {
-      "day": "Wed",
-      "note": "Big — 4-6ft-plus at 6-7s from a good S angle. Downside is SSW cross-on all day, so it'll be sizable and a touch bumpy. Fun for confident surfers."
-    },
-    {
       "day": "Thu",
-      "note": "The day to circle. Head-high 3.7-5ft at good angle with N offshore at dawn going cross-off morning. Clean and solid — shortboard, get there early before the SE swings onshore."
+      "note": "Flag this one hard: 3.6-4.7ft at a good angle with N offshore morning going near-glassy light NW in the afternoon. Solid, clean, worth rearranging plans. Shortboard day."
     },
     {
       "day": "Fri",
-      "note": "Prime SSE angle, chest-high at 6s, with NNW offshore and light morning wind. Excellent clean window before afternoon onshore."
+      "note": "Still fun at 2.2-3.2ft, prime SSE angle with N offshore dawn. Get the early window before the SE cross-on builds through the day."
     },
     {
-      "day": "Sun",
-      "note": "Smaller but prime SE angle at 6-7s with N offshore at dawn. Worth a morning log or fish before the S onshore comes up."
+      "day": "Sat",
+      "note": "Prime angle but small and windy — 15-17mph NE/E cross running all day. Choppy and marginal, probably a skip unless you like sideshore chop."
+    },
+    {
+      "day": "Mon",
+      "note": "Small swell and wind ramping to 19-23mph cross-on by afternoon — blown out later in the day."
     }
   ]
 }
