@@ -1,5 +1,91 @@
 [
   {
+    "id": "2026-07-23T0630-rockaway",
+    "date": "2026-07-23",
+    "spotId": "rockaway",
+    "spotName": "Rockaway 67th St",
+    "timeRange": {
+      "start": "06:30",
+      "end": "08:30",
+      "label": "6:30a–8:30a"
+    },
+    "loggedAt": "2026-07-23T13:58:41.662Z",
+    "fingerprint": {
+      "capturedAt": "2026-07-23T13:58:41.662Z",
+      "source": "open-meteo forecast+marine, noaa tide predictions",
+      "swellHt_ft": 2.6,
+      "swellPer_s": 6.2,
+      "swellDir_deg": 159,
+      "swellDir_compass": "SSE",
+      "swellClass": "fair",
+      "waveHt_ft": 2.8,
+      "windWaveHt_ft": 0.6,
+      "windSpd_mph": 6,
+      "windGust_mph": 12,
+      "windDir_deg": 336,
+      "windDir_compass": "NNW",
+      "windClass": "offshore",
+      "airTemp_f": 65,
+      "waterTemp_f": 70,
+      "weatherCode": 0,
+      "tide_ft_start": 2.1,
+      "tide_ft_end": 1,
+      "tide_state": "falling",
+      "tide_prev": {
+        "type": "high",
+        "time": "3:19a",
+        "ft": 3.6
+      },
+      "tide_next": {
+        "type": "low",
+        "time": "9:20a",
+        "ft": 0.8
+      },
+      "spotFacing_deg": 170,
+      "hours": [
+        {
+          "time": "07:00",
+          "swellHt": 2.6,
+          "swellPer": 6.2,
+          "swellDir": 159,
+          "swellClass": "fair",
+          "windSpd": 6,
+          "windDir": 345,
+          "windClass": "offshore"
+        },
+        {
+          "time": "08:00",
+          "swellHt": 2.5,
+          "swellPer": 6.2,
+          "swellDir": 158,
+          "swellClass": "fair",
+          "windSpd": 7,
+          "windDir": 327,
+          "windClass": "cross-off"
+        }
+      ]
+    },
+    "ratings": {
+      "overall": 3,
+      "swellSize": 3,
+      "swellDirection": 2.5,
+      "wind": 4,
+      "crowd": 4
+    },
+    "gear": {
+      "board": "longboard",
+      "wetsuit": "2/2 full",
+      "booties": false,
+      "gloves": false,
+      "hood": false
+    },
+    "comfort": {
+      "tooCold": false,
+      "tooWarm": false
+    },
+    "comments": "Fun log day for the summer. Seemed like a few swells were mixing. the waves with the most ESE were fun. Would not have been fun on anything other than a log."
+  },
+  {
     "id": "2026-07-20T0700-rockaway",
     "date": "2026-07-20",
     "spotId": "rockaway",
