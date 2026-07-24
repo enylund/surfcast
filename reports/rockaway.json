@@ -1,13 +1,25 @@
 {
   "spotId": "rockaway",
   "spotName": "Rockaway 67th St",
-  "generatedAt": "2026-07-23T11:13:49.369Z",
-  "headline": "Waist-to-chest SSE windswell with a clean offshore morning — get it early.",
-  "today": "Best window is dawn through late morning while the NNW stays offshore and the swell holds around 3ft at 6s. It's only a fair angle so expect some closeouts, but it's the biggest, cleanest look you'll get for a while. Grab a fish or groveler and ride the incoming toward the 3:55p high. Evening SE goes cross-on and wrecks it.",
+  "generatedAt": "2026-07-24T11:07:12.368Z",
+  "headline": "Waist-high SE windswell, clean early then cross-on by lunch — log it at dawn.",
+  "today": "Short-period SE at good angle giving you 2ft on the sets, and the N/ENE early wind keeps it clean through the morning. Get on it dawn to mid-morning around that outgoing tide before the ESE fills in and puts it cross-on for the afternoon and evening. Log or groveler, nothing you need to paddle hard for.",
   "daysToWatch": [
     {
+      "day": "Sun",
+      "note": "Light ENE morning wind means glassy conditions on a prime angle — small at 1.5-2ft but the cleanest window before SSE onshore ruins the afternoon. Log session."
+    },
+    {
+      "day": "Tue",
+      "note": "Onshore SSE all day and building junk — skip unless you just want to get wet."
+    },
+    {
       "day": "Wed",
-      "note": "Biggest of the stretch at 3-4ft and strong N offshore all morning. Fair angle and short period so it'll be a bit lumpy, but size plus clean wind makes it the one to rearrange for."
+      "note": "The one to rearrange for: 2.6-3.9ft at 5.5-6s and light winds dawn to afternoon. Fair angle but the size and glass make it the best day of the stretch. Bring the shortboard."
+    },
+    {
+      "day": "Thu",
+      "note": "N offshore all day holding 2ft-plus clean. Fun follow-up session, groveler or log."
     }
   ]
 }

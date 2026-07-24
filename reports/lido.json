@@ -1,17 +1,21 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-07-23T11:13:49.369Z",
-  "headline": "Solid SSE swell to 3ft with an offshore morning — the pick of the three days ahead.",
-  "today": "Dawn and morning are glassy-ish with N offshore and a good-angle swell pushing 3ft at 6s — that's the window. Afternoon swings SSE cross-on and it'll get bumpy, so be out before lunch. Fish or groveler; log if it drops off.",
+  "generatedAt": "2026-07-24T11:07:12.368Z",
+  "headline": "Waist-high on a prime SSE angle, glassy at dawn — early log session.",
+  "today": "Prime angle at 5-6s giving a clean 2ft, and the dawn wind is basically light before ENE cross builds. First light is your window here — get it before the ESE turns cross-on in the afternoon. Log or fish, mellow conditions.",
   "daysToWatch": [
     {
-      "day": "Fri",
-      "note": "Small at roughly waist-high but a prime angle and glassy light-NNE dawn. Worth a dawn log session before the afternoon ESE fills in."
+      "day": "Tue",
+      "note": "Onshore SSE all day, junky and windblown despite the size bump. Not worth it."
     },
     {
       "day": "Wed",
-      "note": "Solid 3-4ft-plus with strong N offshore morning. Good angle, cleanest of the week — the day to plan around."
+      "note": "Best day of the run: 2.8-3.5ft at good angle with light dawn winds before it goes cross-on. Early session, step up to a shortboard."
+    },
+    {
+      "day": "Thu",
+      "note": "Prime angle 2ft with NNW offshore and light morning wind — clean and fun. Log it early before any afternoon E cross."
     }
   ]
 }

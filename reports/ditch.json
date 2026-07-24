@@ -1,17 +1,21 @@
 {
   "spotId": "ditch",
   "spotName": "Ditch Plains",
-  "generatedAt": "2026-07-23T11:13:49.369Z",
-  "headline": "Chest-to-head-high S swell, offshore all morning — best day of the week, go.",
-  "today": "This is the standout: 4ft-plus at 6-7s on a good angle with NNW offshore holding into the afternoon. Fire off dawn and ride it as long as the wind stays clean, tide bottoming around 11a. Shortboard or fish weather. Evening SW nudges cross-on so no need to stay late.",
+  "generatedAt": "2026-07-24T11:07:12.368Z",
+  "headline": "Chest-high SSE on a prime angle, clean morning — the pick of the three today.",
+  "today": "Solid 2-3ft at prime angle with light dawn wind and cross-off through the morning, so this is your best bet in the area. Ride the morning before the E cross and evening ESE cross-on soften it up. Shortboard or fish will have fun; not a log day.",
   "daysToWatch": [
     {
-      "day": "Fri",
-      "note": "Prime-angle SSE around 3ft with a light NW dawn — clean and fun before the afternoon E cross moves in. Solid backup to today."
+      "day": "Sun",
+      "note": "18mph NNE at dawn easing through the morning — cross-off so surfable but breezy, and only knee-to-waist high. Marginal."
     },
     {
       "day": "Wed",
-      "note": "Big on paper to near 6ft but hammered by 27-28mph N wind in the morning. It knocks slightly offshore in the afternoon, so watch for a cleaner late window if you're chasing size."
+      "note": "Big swell on paper: up to 5-6ft-plus at prime angle, but onshore/cross-on wind all day makes it a messy, sizey mixed bag. Check it if the wind backs off but temper expectations."
+    },
+    {
+      "day": "Thu",
+      "note": "3ft-plus prime angle with wind going light to NNE cross-off by afternoon — the clean window to target. Afternoon shortboard session."
     }
   ]
 }
