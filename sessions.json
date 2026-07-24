@@ -9,9 +9,9 @@
       "end": "08:00",
       "label": "6:30a–8:00a"
     },
-    "loggedAt": "2026-07-24T16:05:53.924Z",
+    "loggedAt": "2026-07-24T16:14:57.036Z",
     "fingerprint": {
-      "capturedAt": "2026-07-24T16:05:53.923Z",
+      "capturedAt": "2026-07-24T16:14:57.035Z",
       "source": "open-meteo forecast+marine, noaa tide predictions",
       "swellHt_ft": 1.8,
       "swellPer_s": 5.7,
@@ -68,8 +68,8 @@
     "ratings": {
       "overall": 2.5,
       "swellSize": 2,
-      "swellDirection": 2.5,
-      "wind": 4.5,
+      "swellDirection": 3,
+      "wind": 3.5,
       "crowd": 3
     },
     "gear": {
@@ -83,7 +83,7 @@
       "tooCold": false,
       "tooWarm": false
     },
-    "comments": "Pretty fun for summer logging. A bit lully."
+    "comments": "Fun summer logging day"
   },
   {
     "id": "2026-07-23T0630-rockaway",
