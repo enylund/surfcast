@@ -1,25 +1,25 @@
 {
   "spotId": "rockaway",
   "spotName": "Rockaway 67th St",
-  "generatedAt": "2026-07-24T11:07:12.368Z",
-  "headline": "Waist-high SE windswell, clean early then cross-on by lunch — log it at dawn.",
-  "today": "Short-period SE at good angle giving you 2ft on the sets, and the N/ENE early wind keeps it clean through the morning. Get on it dawn to mid-morning around that outgoing tide before the ESE fills in and puts it cross-on for the afternoon and evening. Log or groveler, nothing you need to paddle hard for.",
+  "generatedAt": "2026-07-25T10:37:05.661Z",
+  "headline": "Waist-high SE windswell on a prime angle — morning log session before the sea breeze wrecks it.",
+  "today": "Short-period stuff but it's coming in on the money angle, and the NE cross-off holds through morning so it'll have some shape. Get in early on a log or fish around the incoming push before the low at 11a bottoms out. By afternoon that 16mph ESE goes cross-on and turns it to slop, so dawn patrol or don't bother.",
   "daysToWatch": [
     {
       "day": "Sun",
-      "note": "Light ENE morning wind means glassy conditions on a prime angle — small at 1.5-2ft but the cleanest window before SSE onshore ruins the afternoon. Log session."
-    },
-    {
-      "day": "Tue",
-      "note": "Onshore SSE all day and building junk — skip unless you just want to get wet."
+      "note": "Another prime ESE angle around 2.5ft with light NE cross-off at dawn — clean small log window before the afternoon SE onshore fills in."
     },
     {
       "day": "Wed",
-      "note": "The one to rearrange for: 2.6-3.9ft at 5.5-6s and light winds dawn to afternoon. Fair angle but the size and glass make it the best day of the stretch. Bring the shortboard."
+      "note": "Biggest of the week to near 3.8ft, but only a fair angle and short period, with ENE cross most of the day. Rideable and worth a look, not a rearrange-your-plans day."
     },
     {
       "day": "Thu",
-      "note": "N offshore all day holding 2ft-plus clean. Fun follow-up session, groveler or log."
+      "note": "Chest-high on a fair angle with NE cross-off through the morning — the cleanest-looking session of the stretch. Ride it before the SE cross-on shows in the afternoon."
+    },
+    {
+      "day": "Fri",
+      "note": "Glassy dawn with light wind and waist-to-chest SSE swell at a longer 6.5s — grab the early window before the S onshore ramps up midday."
     }
   ]
 }

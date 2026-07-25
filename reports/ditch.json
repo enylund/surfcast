@@ -1,21 +1,21 @@
 {
   "spotId": "ditch",
   "spotName": "Ditch Plains",
-  "generatedAt": "2026-07-24T11:07:12.368Z",
-  "headline": "Chest-high SSE on a prime angle, clean morning — the pick of the three today.",
-  "today": "Solid 2-3ft at prime angle with light dawn wind and cross-off through the morning, so this is your best bet in the area. Ride the morning before the E cross and evening ESE cross-on soften it up. Shortboard or fish will have fun; not a log day.",
+  "generatedAt": "2026-07-25T10:37:05.661Z",
+  "headline": "Clean waist-high morning on a prime angle — log it early, then watch midweek light up.",
+  "today": "Small but well-shaped SE swell on the prime angle, and the NNE-to-NE cross-off holds through the morning so it'll be groomed. Log or fish on the early side; the tide range out here is tiny so don't overthink windows. Afternoon ENE goes cross and softens it — morning's your session.",
   "daysToWatch": [
     {
-      "day": "Sun",
-      "note": "18mph NNE at dawn easing through the morning — cross-off so surfable but breezy, and only knee-to-waist high. Marginal."
-    },
-    {
       "day": "Wed",
-      "note": "Big swell on paper: up to 5-6ft-plus at prime angle, but onshore/cross-on wind all day makes it a messy, sizey mixed bag. Check it if the wind backs off but temper expectations."
+      "note": "This is the one. Well overhead-plus to 5.5ft on a prime SSE angle. Wind is cross to cross-on rather than clean, but that's a real swell — shortboard day, rearrange plans and be there early before it builds through onshore E."
     },
     {
       "day": "Thu",
-      "note": "3ft-plus prime angle with wind going light to NNE cross-off by afternoon — the clean window to target. Afternoon shortboard session."
+      "note": "Still solid at 3-4ft on a prime angle with NE cross-off at dawn, though it's a stiff 18mph. Early morning before the wind swings E is the play — shortboard."
+    },
+    {
+      "day": "Fri",
+      "note": "Overhead-ish 3.5-4ft at a longer 6.5s on a good angle, NNE cross-off at dawn easing to lighter ENE morning. Clean size — surf early before the afternoon SSE onshore turns it."
     }
   ]
 }
