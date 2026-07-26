@@ -1,21 +1,25 @@
 {
   "spotId": "ditch",
   "spotName": "Ditch Plains",
-  "generatedAt": "2026-07-25T10:37:05.661Z",
-  "headline": "Clean waist-high morning on a prime angle — log it early, then watch midweek light up.",
-  "today": "Small but well-shaped SE swell on the prime angle, and the NNE-to-NE cross-off holds through the morning so it'll be groomed. Log or fish on the early side; the tide range out here is tiny so don't overthink windows. Afternoon ENE goes cross and softens it — morning's your session.",
+  "generatedAt": "2026-07-26T10:46:41.074Z",
+  "headline": "Fun little offshore morning, then the good stuff lines up later in the week.",
+  "today": "Waist-to-chest ESE with N offshore through the morning — short period but clean, so grab a log or fish and enjoy the glassy early session. Wind swings cross ENE/E by afternoon and softens it up. Best window is dawn to late morning.",
   "daysToWatch": [
     {
       "day": "Wed",
-      "note": "This is the one. Well overhead-plus to 5.5ft on a prime SSE angle. Wind is cross to cross-on rather than clean, but that's a real swell — shortboard day, rearrange plans and be there early before it builds through onshore E."
+      "note": "Big on paper (to 6ft, prime angle) but 24mph SE onshore has it blown out. Watch the swell, not the surf — likely a washout."
     },
     {
       "day": "Thu",
-      "note": "Still solid at 3-4ft on a prime angle with NE cross-off at dawn, though it's a stiff 18mph. Early morning before the wind swings E is the play — shortboard."
+      "note": "Head-high-plus at a prime angle with cross-off wind, but it's screaming 27mph NNE. Big and rough — for the experienced only."
     },
     {
       "day": "Fri",
-      "note": "Overhead-ish 3.5-4ft at a longer 6.5s on a good angle, NNE cross-off at dawn easing to lighter ENE morning. Clean size — surf early before the afternoon SSE onshore turns it."
+      "note": "Head-high 6-7s prime SSE with light cross morning wind cleaning up. This is the day to rearrange plans for — shortboard."
+    },
+    {
+      "day": "Sat",
+      "note": "Still 3-4ft at a good angle with light ENE cross morning. Another fun one before the afternoon onshore."
     }
   ]
 }

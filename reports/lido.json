@@ -1,21 +1,21 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-07-25T10:37:05.661Z",
-  "headline": "Small SE swell on a prime angle — early log-only affair.",
-  "today": "Barely waist-high but it's a prime angle and the NE cross-off keeps the morning tidy. Log or groveler on the early incoming, because the afternoon E cross at 14mph will chop it up. Fun-size at best, skip if you need push.",
+  "generatedAt": "2026-07-26T10:46:41.074Z",
+  "headline": "Small short-period leftovers — log the early glass or sit it out.",
+  "today": "Only knee-to-waist and 4-5s, so it's marginal even on a good angle. Morning is light and clean, so if you go, go early with a log and milk anything you can. Onshore SSE kills it in the afternoon.",
   "daysToWatch": [
     {
       "day": "Wed",
-      "note": "Biggest day of the week to near 3.8ft on a good SSE angle, but cross wind all day keeps it textured. Worth a surf, manage expectations."
+      "note": "3-4ft SSE at a prime angle with N offshore all day. Best day of the stretch here — shortboard or fish."
     },
     {
       "day": "Thu",
-      "note": "Chest-high good-angle swell with NE cross-off through the morning — cleanest window of the week. Get it before the afternoon ESE cross-on."
+      "note": "Solid size but 20mph NNE cross-off will be textured and stiff. Surfable for the committed, not clean."
     },
     {
       "day": "Fri",
-      "note": "Light SE wind and near-glass early with 2.5-3ft at 6.5s — dawn patrol before the midday S onshore kills it."
+      "note": "Chest-high at 6-6.7s with light morning wind. Clean early window before the afternoon onshore."
     }
   ]
 }
