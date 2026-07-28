@@ -1,21 +1,17 @@
 {
   "spotId": "rockaway",
   "spotName": "Rockaway 67th St",
-  "generatedAt": "2026-07-27T12:27:32.584Z",
-  "headline": "Small E windswell, glassy early then onshore — log it in the morning or skip it.",
-  "today": "Barely knee-to-thigh at short period, but the E angle is workable and the wind is light SSW through morning so it'll be clean. Get the dawn to mid-morning window before the SSE onshore fills in around midday and kills it. Bring the log, nothing else will do much.",
+  "generatedAt": "2026-07-28T11:21:34.117Z",
+  "headline": "Small SE dribble on an onshore day — not much to work with.",
+  "today": "Swell's only knee-high and mostly short-period, and the wind is onshore from dawn, building from 10 to 20mph SSE through the day. There's no clean window here — it just gets worse as it goes. If you're desperate, dawn is the least-bad option before the S wind fills in, but honestly this is a skip.",
   "daysToWatch": [
     {
-      "day": "Tue",
-      "note": "SSE prime angle but only building small and onshore 17-20mph all day. Blown out — skip it."
-    },
-    {
       "day": "Wed",
-      "note": "The one to rearrange for. 3-3.6ft SE at good angle with WNW cross-off winds morning into midday. Short period but plenty of size — shortboard or fish, go early."
+      "note": "Swell jumps to chest-high plus (2.6-3.7ft) at a good SE angle with light cross winds early — dawn W turning to 5mph SW. That's the window. Grab the groveler or fish before the afternoon onshore kills it."
     },
     {
       "day": "Thu",
-      "note": "Leftover 2ft-ish with cross-off NW all morning. Fun cleanup day on the groveler."
+      "note": "Smaller (1.6-2ft) but clean with N/NNW offshore all day. Fun little log or groveler session, best on the morning tide."
     }
   ]
 }
