@@ -1,21 +1,21 @@
 {
   "spotId": "ditch",
   "spotName": "Ditch Plains",
-  "generatedAt": "2026-07-28T11:21:34.117Z",
-  "headline": "Junk today, but a clean solid day is loading for Thursday.",
-  "today": "Prime SE angle but it's small and the wind is cross-on to onshore all day at 13-14mph. Peaks are soft and the surface is textured — nothing worth the drive out east. Wait for the wind to swing north midweek.",
+  "generatedAt": "2026-07-29T11:29:09.105Z",
+  "headline": "Head-high-plus but straight-up blown out — big, messy, and onshore all day.",
+  "today": "There's real size showing, up to 7ft on the sets, but the wind is the story: 18-19mph ESE/SSE onshore from dawn on, so it's a windblown, disorganized mess. Short period on top of that means no shape to speak of. Skip it and save your energy for tomorrow.",
   "daysToWatch": [
     {
-      "day": "Wed",
-      "note": "Big jump on the swell model (up to 5-6ft) but the wind is 19mph SE cross-on/onshore in the morning — expect blown-out and messy. Afternoon eases to 10mph but stays onshore. High size, low quality."
-    },
-    {
       "day": "Thu",
-      "note": "The one to target. Solid 2.6-3.6ft at a prime angle with N offshore and cross-off winds all day. Clean and punchy — bring the shortboard and rearrange plans if you can."
+      "note": "This is the one — 3-4ft on the prime SSE angle with NE cross-off in the morning going full N offshore afternoon and evening. Clean and solid, rearrange plans if you can."
     },
     {
       "day": "Fri",
-      "note": "Still fun — chest-high (2.6-2.9ft) at a longer 6.3-6.6s with N offshore in the morning going light by evening. Another clean session, shortboard or fish."
+      "note": "Follows through at chest high with 7s period, offshore morning going light in the afternoon. Fun and clean, any board."
+    },
+    {
+      "day": "Mon",
+      "note": "Building past 3ft on the prime angle with light morning winds. Short period but worth a dawn look."
     }
   ]
 }
