@@ -1,17 +1,21 @@
 {
   "spotId": "rockaway",
   "spotName": "Rockaway 67th St",
-  "generatedAt": "2026-07-29T11:29:09.105Z",
-  "headline": "Chest-high SE swell but short and lumpy — grovel it early before the wind adds up.",
-  "today": "Solid size on paper at 3-plus feet, but it's all packed into 4-6 second periods so expect mushy, fast-closing sections rather than clean walls. Wind stays cross out of the W all day, lightest at dawn and building to 12mph by evening, so get it early around the morning high before it gets bumpy. Fish or groveler is the call — nothing here rewards a big board.",
+  "generatedAt": "2026-07-30T11:10:35.961Z",
+  "headline": "Small SSE windswell with clean offshore wind — a proper log-it day.",
+  "today": "Nothing big, 2 to 2.5ft at a short 6s from the SSE, but the wind is on our side all day — cross-off in the morning swinging fully offshore by afternoon and evening. It stays clean throughout, so surf whenever it suits you and lean on the outgoing tide toward that 2:49p low. Bring the log or the groveler and make the most of the glass.",
   "daysToWatch": [
     {
-      "day": "Thu",
-      "note": "Smaller at 2ft but longer 6-7s period and N offshore wind all morning — cleanest window of the stretch. Log or groveler and enjoy the glass."
+      "day": "Fri",
+      "note": "Best of the small stuff: 6.5-6.9s SE at a good angle with light WNW at dawn. Get the dawn patrol in before the S onshore fills in by afternoon."
+    },
+    {
+      "day": "Sun",
+      "note": "Onshore ramps to 21mph in the afternoon on top of a weak short-period swell. Blown out and junky — skip it."
     },
     {
       "day": "Mon",
-      "note": "Swell nudges back to 3ft with light early winds and cross-off through morning. Short period again but worth a dawn check."
+      "note": "Wind goes cross-off in the afternoon and glasses off light in the evening. Worth a late check if any of that short-period SSE fills in."
     }
   ]
 }

@@ -1,17 +1,21 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-07-29T11:29:09.105Z",
-  "headline": "Prime-angle SE swell at chest high, just short-period and cross-on — dawn patrol or bust.",
-  "today": "The angle is dialed for Lido and there's size to 3.5ft, but the 4-6s period keeps it soft and the WSW wind is cross-on and climbing after dawn. Best shot is the first light session before that 10mph morning bump ruins the texture. Fish or groveler, and don't expect much shape on the sets.",
+  "generatedAt": "2026-07-30T11:10:35.961Z",
+  "headline": "Prime-angle SSE and clean offshore wind — small but worth a paddle.",
+  "today": "The swell is only 2ft but it is coming from a prime SSE angle and the wind cooperates all day, cross-off then offshore into the evening. It will be clean and playful rather than powerful, so it is a log or fish situation. Work the tide windows and enjoy the glass.",
   "daysToWatch": [
     {
-      "day": "Thu",
-      "note": "Drops to 2ft but 6s period and N offshore into the afternoon — clean and fun on a log. Best window of the week here."
+      "day": "Fri",
+      "note": "Light WNW at dawn over a prime-angle 6.5s SSE. Early is the move before the S onshore takes over in the afternoon."
+    },
+    {
+      "day": "Sun",
+      "note": "Onshore builds to 17mph over a mostly short-period swell — junky and not worth it."
     },
     {
       "day": "Mon",
-      "note": "Building toward 3ft on a good angle with light morning winds. Short period but glassy early, worth targeting."
+      "note": "Swell nudges up toward 3ft and the wind goes offshore N in the afternoon with a light evening. The pick of the week if the size holds."
     }
   ]
 }

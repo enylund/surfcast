@@ -1,21 +1,21 @@
 {
   "spotId": "ditch",
   "spotName": "Ditch Plains",
-  "generatedAt": "2026-07-29T11:29:09.105Z",
-  "headline": "Head-high-plus but straight-up blown out — big, messy, and onshore all day.",
-  "today": "There's real size showing, up to 7ft on the sets, but the wind is the story: 18-19mph ESE/SSE onshore from dawn on, so it's a windblown, disorganized mess. Short period on top of that means no shape to speak of. Skip it and save your energy for tomorrow.",
+  "generatedAt": "2026-07-30T11:10:35.961Z",
+  "headline": "Solid prime-angle SSE and offshore wind — this is the day.",
+  "today": "Best conditions around: 3 to 3.6ft at 6s-plus from a prime SSE angle with cross-off to offshore N wind holding all day. It is clean and rideable on everything from shortboard to fish, just mind the low-tide windows around 4:34p. Rearrange your morning for this one.",
   "daysToWatch": [
     {
-      "day": "Thu",
-      "note": "This is the one — 3-4ft on the prime SSE angle with NE cross-off in the morning going full N offshore afternoon and evening. Clean and solid, rearrange plans if you can."
-    },
-    {
       "day": "Fri",
-      "note": "Follows through at chest high with 7s period, offshore morning going light in the afternoon. Fun and clean, any board."
+      "note": "Prime-angle 6.7s SSE still in the 3ft range with light W wind at dawn. Another clean one — get on it early before the SW cross-on creeps in."
     },
     {
       "day": "Mon",
-      "note": "Building past 3ft on the prime angle with light morning winds. Short period but worth a dawn look."
+      "note": "Bigger short-period pulse up to 3.9ft at a prime angle, but cross-on wind most of the day. The NW cross-off in the evening could clean it up for a late session."
+    },
+    {
+      "day": "Tue",
+      "note": "Plenty of size at 3.5ft but 19-21mph E/ESE cross-on wind trashes it. Big and messy — expectations low."
     }
   ]
 }
