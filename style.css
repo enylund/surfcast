@@ -128,6 +128,26 @@ h1 { font-size: 22px; margin: 0; letter-spacing: 0.5px; }
 .sess-gear { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12.5px; color: var(--text); margin-top: 6px; }
 .sess-comfort { color: var(--wc-cross-on); }
 .sess-comments { font-size: 13px; line-height: 1.5; margin-top: 8px; color: var(--text); font-style: italic; }
+.sess-actions { display: flex; gap: 8px; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--card-edge); }
+.sess-action {
+  background: none; color: var(--text-muted); border: 1px solid var(--card-edge);
+  border-radius: 6px; padding: 4px 12px; font-size: 12px; cursor: pointer;
+}
+.sess-action:hover { border-color: var(--accent); color: var(--text); }
+.sess-action.sess-del:hover { border-color: var(--wc-onshore); color: var(--wc-onshore); }
+.sess-action:disabled { opacity: 0.5; cursor: default; }
+.sess-deleted { font-size: 13px; color: var(--text-muted); font-style: italic; }
+
+/* unlock modal (for delete outside the form) */
+.sc-modal {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 100;
+  display: flex; align-items: center; justify-content: center; padding: 16px;
+}
+.sc-modal-box {
+  background: var(--card); border: 1px solid var(--card-edge); border-radius: 12px;
+  padding: 16px; max-width: 460px; width: 100%; display: flex; flex-direction: column; gap: 8px;
+}
+.sc-modal-box .lf-auth { margin: 0; }
 
 #tabs { display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap; }
 #tabs button {

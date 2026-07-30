@@ -4,6 +4,7 @@
 
 import { SPOTS } from "./config.js";
 import { renderSessionChart, renderSpotMap } from "./charts.js";
+import { setEditSession, ensureUnlocked, deleteSession } from "./store.js";
 
 const WX = {
   0: "clear", 1: "clear", 2: "partly cloudy", 3: "overcast", 45: "fog", 48: "fog",
@@ -147,6 +148,27 @@ function sessionCard(s) {
   }
 
   if (s.comments) card.append(el("div", "sess-comments", s.comments));
+
+  // Edit / Delete (both gated by the same password unlock)
+  const actions = el("div", "sess-actions");
+  const editBtn = el("button", "sess-action", "Edit");
+  editBtn.addEventListener("click", () => { setEditSession(s); location.hash = "log"; });
+  const delBtn = el("button", "sess-action sess-del", "Delete");
+  delBtn.addEventListener("click", async () => {
+    const label = `${s.spotName} · ${s.date} ${s.timeRange?.label || ""}`;
+    if (!confirm(`Delete this session?\n${label}`)) return;
+    if (!(await ensureUnlocked())) return;
+    delBtn.disabled = true; editBtn.disabled = true; delBtn.textContent = "Deleting…";
+    try {
+      await deleteSession(s.id);
+      card.replaceChildren(el("div", "sess-deleted", "Deleted — will drop off the live site within ~1 min."));
+    } catch (err) {
+      delBtn.disabled = false; editBtn.disabled = false; delBtn.textContent = "Delete";
+      alert(`Couldn't delete: ${err.message}`);
+    }
+  });
+  actions.append(editBtn, delBtn);
+  card.append(actions);
   return card;
 }
 

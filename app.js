@@ -5,6 +5,7 @@ import { getSpotData, nyNow, nyToday, compass, selfTest } from "./data.js";
 import { renderSwellChart, renderWindRow, renderTideChart, renderWeatherRow, renderSpotMap } from "./charts.js";
 import { loadSessions, renderSessionsView } from "./sessions.js";
 import { renderLogForm } from "./logform.js";
+import { setEditSession } from "./store.js";
 
 const $ = (sel) => document.querySelector(sel);
 const tabsEl = $("#tabs");
@@ -337,7 +338,11 @@ function route() {
 buildTabs();
 window.addEventListener("hashchange", route);
 $("#sessions-btn").addEventListener("click", () => { location.hash = "sessions"; });
-$("#log-btn").addEventListener("click", () => { location.hash = "log"; });
+$("#log-btn").addEventListener("click", () => {
+  setEditSession(null);
+  if (location.hash.slice(1) === "log") route(); // already on the form → force a blank re-render
+  else location.hash = "log";
+});
 $("#refresh").addEventListener("click", () => {
   const hash = location.hash.slice(1);
   if (hash === "sessions") renderSessions();
