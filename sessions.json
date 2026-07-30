@@ -9,9 +9,9 @@
       "end": "18:30",
       "label": "4:30p–6:30p"
     },
-    "loggedAt": "2026-07-30T01:31:09.454Z",
+    "loggedAt": "2026-07-30T02:09:27.534Z",
     "fingerprint": {
-      "capturedAt": "2026-07-30T01:31:09.453Z",
+      "capturedAt": "2026-07-30T02:09:27.533Z",
       "source": "open-meteo forecast+marine, noaa tide predictions",
       "swellHt_ft": 2.7,
       "swellPer_s": 5.3,
@@ -81,7 +81,7 @@
     },
     "comfort": {
       "tooCold": false,
-      "tooWarm": false
+      "tooWarm": true
     },
     "comments": "This tried to be fun. It was peaky and there was swell but it was lacking in juice. maybe could have been a lot more fun at low tide."
   },
