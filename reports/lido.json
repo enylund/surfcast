@@ -1,21 +1,17 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-07-30T11:10:35.961Z",
-  "headline": "Prime-angle SSE and clean offshore wind — small but worth a paddle.",
-  "today": "The swell is only 2ft but it is coming from a prime SSE angle and the wind cooperates all day, cross-off then offshore into the evening. It will be clean and playful rather than powerful, so it is a log or fish situation. Work the tide windows and enjoy the glass.",
+  "generatedAt": "2026-07-31T11:31:34.957Z",
+  "headline": "Small but prime-angle SSE and glassy at dawn — grab the log before the sea breeze.",
+  "today": "Prime angle at Lido but only pushing 2ft at 6.4s, so it's a morning-glass log session and nothing more. Dawn and morning are dead light with a NW touch, so surf it around the 9:22 high before the SW cross-on kicks in by afternoon. Fun for a longboard, skip it if you need real waves.",
   "daysToWatch": [
     {
-      "day": "Fri",
-      "note": "Light WNW at dawn over a prime-angle 6.5s SSE. Early is the move before the S onshore takes over in the afternoon."
-    },
-    {
-      "day": "Sun",
-      "note": "Onshore builds to 17mph over a mostly short-period swell — junky and not worth it."
-    },
-    {
       "day": "Mon",
-      "note": "Swell nudges up toward 3ft and the wind goes offshore N in the afternoon with a light evening. The pick of the week if the size holds."
+      "note": "Up to 5ft on the reading but morning and afternoon are hammered by 16-22mph cross-on. The 6mph NNE offshore in the evening could clean up leftovers — that's the only window worth chasing."
+    },
+    {
+      "day": "Tue",
+      "note": "Chest-high SSE at a good angle with NNE/NE cross-off dawn and morning. Best conditions of the week here — surf it early before the evening onshore."
     }
   ]
 }

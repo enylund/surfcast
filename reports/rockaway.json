@@ -1,21 +1,17 @@
 {
   "spotId": "rockaway",
   "spotName": "Rockaway 67th St",
-  "generatedAt": "2026-07-30T11:10:35.961Z",
-  "headline": "Small SSE windswell with clean offshore wind — a proper log-it day.",
-  "today": "Nothing big, 2 to 2.5ft at a short 6s from the SSE, but the wind is on our side all day — cross-off in the morning swinging fully offshore by afternoon and evening. It stays clean throughout, so surf whenever it suits you and lean on the outgoing tide toward that 2:49p low. Bring the log or the groveler and make the most of the glass.",
+  "generatedAt": "2026-07-31T11:31:34.957Z",
+  "headline": "Waist-high SSE at a fair angle, glassy morning before the sea breeze — log it early.",
+  "today": "Best window is dawn to late morning while the NW stays light and it's glassy over the incoming tide to the 9:38 high. It's only 2ft at 6.5s and a fair angle, so keep expectations low — log or groveler, nothing that needs push. Once the S onshore fills in around midday it goes soft and bumpy, so don't sleep in.",
   "daysToWatch": [
     {
-      "day": "Fri",
-      "note": "Best of the small stuff: 6.5-6.9s SE at a good angle with light WNW at dawn. Get the dawn patrol in before the S onshore fills in by afternoon."
-    },
-    {
-      "day": "Sun",
-      "note": "Onshore ramps to 21mph in the afternoon on top of a weak short-period swell. Blown out and junky — skip it."
-    },
-    {
       "day": "Mon",
-      "note": "Wind goes cross-off in the afternoon and glasses off light in the evening. Worth a late check if any of that short-period SSE fills in."
+      "note": "Biggest reading of the week, up to 5ft, but it's short-period and cross-on through the day. The 6-7mph NNE cross-off in the evening is your cleanest shot — worth a look if the size holds."
+    },
+    {
+      "day": "Tue",
+      "note": "Chest-high SSE at 5.5s with NNE/NE cross-off dawn through morning. Cleanest window of the week — get on it early before the SE swings onshore that evening."
     }
   ]
 }
