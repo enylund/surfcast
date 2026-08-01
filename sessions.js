@@ -2,7 +2,7 @@
 // and renders each logged session with its objective conditions fingerprint
 // alongside the subjective ratings.
 
-import { SPOTS } from "./config.js";
+import { SPOTS, DATA_SOURCE } from "./config.js";
 import { renderSessionChart, renderSpotMap } from "./charts.js";
 import { setEditSession, ensureUnlocked, deleteSession } from "./store.js";
 
@@ -34,8 +34,9 @@ function starsEl(n) {
 }
 
 export async function loadSessions() {
+  const url = DATA_SOURCE === "api" ? "/api/sessions" : "sessions.json";
   try {
-    const res = await fetch("sessions.json", { cache: "no-cache" });
+    const res = await fetch(url, { cache: "no-cache" });
     if (!res.ok) return [];
     return await res.json();
   } catch {
