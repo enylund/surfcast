@@ -6,7 +6,7 @@ export const TZ = "America/New_York";
 // then reads/writes via /api/sessions instead of committing sessions.json).
 //   "github" — commit sessions.json via GitHub API (current, works on Pages)
 //   "api"    — Vercel serverless function backed by Neon Postgres
-export const DATA_SOURCE = "github";
+export const DATA_SOURCE = "api";
 
 // GitHub-mode config (used while DATA_SOURCE === "github").
 export const REPO = "enylund/surfcast";
