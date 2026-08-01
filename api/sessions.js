@@ -10,7 +10,9 @@
 
 import { neon } from "@neondatabase/serverless";
 
-const sql = neon(process.env.DATABASE_URL);
+// The Vercel↔Neon integration may name the var DATABASE_URL or POSTGRES_URL.
+const DB_URL = process.env.DATABASE_URL || process.env.POSTGRES_URL || process.env.DATABASE_URL_UNPOOLED || process.env.POSTGRES_URL_NON_POOLING;
+const sql = neon(DB_URL);
 
 async function ensureTable() {
   await sql`create table if not exists sessions (

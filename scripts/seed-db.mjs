@@ -7,12 +7,13 @@ import fs from "node:fs";
 import { fileURLToPath } from "node:url";
 import { neon } from "@neondatabase/serverless";
 
-if (!process.env.DATABASE_URL) {
+const DB_URL = process.env.DATABASE_URL || process.env.POSTGRES_URL;
+if (!DB_URL) {
   console.error("Set DATABASE_URL (the Neon connection string) first.");
   process.exit(1);
 }
 
-const sql = neon(process.env.DATABASE_URL);
+const sql = neon(DB_URL);
 const file = fileURLToPath(new URL("../sessions.json", import.meta.url));
 
 async function main() {
