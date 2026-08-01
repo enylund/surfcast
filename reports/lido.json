@@ -1,17 +1,21 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-07-31T11:31:34.957Z",
-  "headline": "Small but prime-angle SSE and glassy at dawn — grab the log before the sea breeze.",
-  "today": "Prime angle at Lido but only pushing 2ft at 6.4s, so it's a morning-glass log session and nothing more. Dawn and morning are dead light with a NW touch, so surf it around the 9:22 high before the SW cross-on kicks in by afternoon. Fun for a longboard, skip it if you need real waves.",
+  "generatedAt": "2026-08-01T10:43:12.728Z",
+  "headline": "Prime-angle SSE but only knee-to-waist — glassy dawn or don't bother.",
+  "today": "The angle is bang-on for Lido but there's only 1.5ft at 6.5s behind it, so it's a log day at best. Get on it during the morning light SSW glass because the SSE onshore fills in by afternoon and shuts it down. Longest board you own, mid to high tide.",
   "daysToWatch": [
     {
       "day": "Mon",
-      "note": "Up to 5ft on the reading but morning and afternoon are hammered by 16-22mph cross-on. The 6mph NNE offshore in the evening could clean up leftovers — that's the only window worth chasing."
+      "note": "Sizey day topping out near 4.7ft on a good angle, but the wind is cross-on all day and hits 17mph by afternoon. Morning is the least messy — surf early."
     },
     {
       "day": "Tue",
-      "note": "Chest-high SSE at a good angle with NNE/NE cross-off dawn and morning. Best conditions of the week here — surf it early before the evening onshore."
+      "note": "Chest-high on a good angle with a light NW cross-off at dawn easing the morning. Cleanest window of the week — get there early."
+    },
+    {
+      "day": "Wed",
+      "note": "Onshore S wind all day. Bumpy and disorganized, one to sit out."
     }
   ]
 }
