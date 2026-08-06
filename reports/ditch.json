@@ -1,21 +1,21 @@
 {
   "spotId": "ditch",
   "spotName": "Ditch Plains",
-  "generatedAt": "2026-08-05T11:23:42.646Z",
-  "headline": "Prime SSE swell and a glassy morning — this is the day of the week.",
-  "today": "Best setup around: chest-to-head-high SSE at a prime angle with dawn WNW then light SSW keeping it clean well into the morning. Surf it before the S onshore fills in the afternoon around the 2:50p high. Fun-shape or shortboard depending on the set — the good windows don't come often at Ditch, so go.",
+  "generatedAt": "2026-08-06T11:26:20.134Z",
+  "headline": "Solid-for-here S swell to 3ft, but cross-on wind keeps it textured.",
+  "today": "Best size of the region at 2-3ft on a good angle, though the SSW is cross-on from dawn onward at 9-12mph so it stays bumpy. Work the morning around the incoming to the afternoon high before the wind adds up. Shortboard or fish — there's enough push to have fun if you're not fussy about texture.",
   "daysToWatch": [
     {
-      "day": "Sun",
-      "note": "Biggest of the run at 2.1-3.2ft with a cross-off dawn and morning — clean early before SW onshore takes over. Target the morning."
-    },
-    {
       "day": "Fri",
-      "note": "Decent size but evening SSW cranks to 20mph — blown out late. Morning WSW is the only calm patch."
+      "note": "Lightest morning wind of the run (6mph) with the swell still 2-2.8ft — cleaner dawn window before it builds."
     },
     {
-      "day": "Sat",
-      "note": "Plenty of size to 3.4ft but wind builds to 20mph cross-on by evening. Gets ragged fast after midday."
+      "day": "Sun",
+      "note": "Biggest swell of the stretch, 2.2-3.1ft. Cross wind manageable in the morning but ramps to 20mph by evening, so go early."
+    },
+    {
+      "day": "Wed",
+      "note": "NNW offshore at dawn with 2.2-2.7ft holding — cleanest day on the board. Get it before the wind swings around midday."
     }
   ]
 }
