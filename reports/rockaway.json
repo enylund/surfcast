@@ -1,17 +1,21 @@
 {
   "spotId": "rockaway",
   "spotName": "Rockaway 67th St",
-  "generatedAt": "2026-08-06T11:26:20.134Z",
-  "headline": "Waist-high SSE windswell with onshore building — dawn log session or nothing.",
-  "today": "Short-period SSE swell around waist-high on a fair angle, so nothing peeling but rideable early. Wind is cross-on at dawn and goes straight onshore and up to 11-14mph through the afternoon, so get it at first light around the incoming tide before it turns to mush. Log or a groveler, keep expectations low.",
+  "generatedAt": "2026-08-07T10:03:51.591Z",
+  "headline": "Short-period S junk at a marginal angle — dawn log session or skip it.",
+  "today": "Waist- to chest-high but it's 4-second S mush hitting the beach at a bad angle, so don't expect much shape. The one window is dawn to mid-morning while the wind is W and light-glassy; once the S onshore fills in around midday it's over. Log or groveler, ride the morning around that 8:48 low, keep expectations low.",
   "daysToWatch": [
     {
-      "day": "Tue",
-      "note": "Period nudges up toward 8s on a fair SSE angle — could push some cleaner sets in early before the cross-on fills in. Best of the stretch."
+      "day": "Sat",
+      "note": "Biggest of the run at 2-3ft but still short-period S at a marginal angle with cross-on wind all day — bigger, not better."
+    },
+    {
+      "day": "Sun",
+      "note": "WSW wind 11-14mph on it from dawn, and the angle's still marginal. Junky."
     },
     {
       "day": "Wed",
-      "note": "NW cross-off cleans it up but the swell is small and marginal in angle. Glassy-ish rights maybe, don't expect size."
+      "note": "Cross-off morning wind but the swell drops under 1.5ft — clean and basically flat."
     }
   ]
 }

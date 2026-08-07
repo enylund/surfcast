@@ -1,17 +1,21 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-08-06T11:26:20.134Z",
-  "headline": "Chest-high-ish SSE on a good angle but wind fights you all day.",
-  "today": "Best swell angle of the three spots today and pushing to 3ft on the sets, but the wind is cross-on early and full onshore by afternoon climbing to 15mph. Your window is dawn to mid-morning on the incoming — glassy it won't be, but it's the cleanest it gets. Fish or groveler to make the short-period stuff work.",
+  "generatedAt": "2026-08-07T10:03:51.591Z",
+  "headline": "Small S swell at a workable angle — early is the play before the sea breeze.",
+  "today": "Better angle here than Rockaway, so the 4-second S actually organizes into a few chest-high sets. Dawn is cross/light and cleanest; the SSW onshore builds by afternoon and blows it out. Fish or log early, don't sleep in.",
   "daysToWatch": [
     {
-      "day": "Tue",
-      "note": "A touch more period (near 6.7s) on the good S angle early before the cross turns onshore. Dawn is the play."
+      "day": "Sat",
+      "note": "Best of the week — 2-3ft at a good angle with only light SW cross-on in the morning. Fish or shortboard, get on it before the afternoon onshore."
+    },
+    {
+      "day": "Sun",
+      "note": "Similar size but 13mph+ WSW cross all day chops it up."
     },
     {
       "day": "Wed",
-      "note": "NW offshore/cross-off in the morning makes it clean, but size drops to knee-to-waist. Small and pretty if you want a mellow log."
+      "note": "Cross-off morning but swell fades under 1.5ft — clean and marginal."
     }
   ]
 }
