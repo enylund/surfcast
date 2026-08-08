@@ -53,6 +53,24 @@ export const SPOTS = [
       { name: "Montauk cam", url: "https://nybeachcams.com/long-island/montauk-surf-cam/" },
       { name: "Surfline Ditch ★", url: "https://www.surfline.com/surf-report/ditch-plains/5842041f4e65fad6a77089ec" },
     ] },
+  { id: "manasquan", name: "Manasquan Inlet", lat: 40.103, lon: -74.033, tideStation: "8532591", facing: 100,
+    // Right wedge off the north jetty; ideal E, works ENE–SSE, best on W offshore.
+    swell: { prime: [90, 120], good: [75, 140], fair: [70, 155], marginal: [55, 175] },
+    cams: [
+      { name: "SurfChex", url: "https://www.surfchex.com/manasquan-web-cam.php" },
+      { name: "NJ Beach Cams", url: "https://njbeachcams.com/central-new-jersey/manasquan-inlet-cam/" },
+      { name: "Surf-Forecast", url: "https://www.surf-forecast.com/breaks/Manasquan-Inlet/webcams/latest" },
+      { name: "Surfline ★", url: "https://www.surfline.com/surf-report/manasquan-inlet/5842041f4e65fad6a7708856" },
+    ] },
+  { id: "matunuck",  name: "Matunuck",        lat: 41.373, lon: -71.531, tideStation: "8455083", facing: 195,
+    // Deep Hole reef (a left); favors E swell, also works S/SE, best on NNE offshore.
+    swell: { prime: [85, 135], good: [70, 165], fair: [60, 195], marginal: [45, 215] },
+    cams: [
+      { name: "Ocean Mist", url: "https://surfmatunuck.com/pages/surf-cam" },
+      { name: "East Coast Cams", url: "https://www.eastcoastcams.com/rhode-island/south-kingstown/matunuck/" },
+      { name: "Surf-Forecast", url: "https://www.surf-forecast.com/breaks/Matunuck/webcams/latest" },
+      { name: "Surfline ★", url: "https://www.surfline.com/surf-report/matunuck/5842041f4e65fad6a7708e40" },
+    ] },
 ];
 
 // Wind class band edges: angular distance (degrees) between the wind's "from"
