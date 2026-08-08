@@ -1,21 +1,21 @@
 {
   "spotId": "ditch",
   "spotName": "Ditch Plains",
-  "generatedAt": "2026-08-07T10:03:51.591Z",
-  "headline": "Best spot of the day — chest-high S swell with light cross wind most of the day.",
-  "today": "Solid setup out east: 2-2.8ft of S swell at a good angle and the wind stays light 5-6mph cross right through the afternoon, so it stays clean and rideable much of the day. Fish or shortboard, and the incoming push toward the 4:53 high should have the most punch. Best all-around window of the three spots.",
+  "generatedAt": "2026-08-08T09:41:31.261Z",
+  "headline": "Chest-high-plus S swell with clean cross wind — best of the three today.",
+  "today": "Solid for the region with total faces to 3.3ft and a good angle, and the wind stays cross-to-cross-on and manageable most of the day. Morning WSW cross is the cleanest before it swings cross-on late afternoon around the 5:58 high. Shortboard or fish will actually have something to work with — this is the day.",
   "daysToWatch": [
     {
-      "day": "Sat",
-      "note": "Building to 3ft-plus with more period behind it, cross-on SW stays manageable in the morning. Fun size — surf before the wind grows into the evening."
-    },
-    {
       "day": "Sun",
-      "note": "Biggest at 2.4-3.2ft but the wind ramps from 12mph to 17mph SW as the day goes — dawn patrol only, then it deteriorates."
+      "note": "Still chest-high on a good angle with cross wind holding all day — another fun one, one of the better sessions of the week."
     },
     {
       "day": "Wed",
-      "note": "Cleanest wind of the stretch: NW offshore to light morning over chest-high swell. Worth an early look."
+      "note": "Swell fades under 2ft and dawn wind screams to 25mph W. Rough morning, though it lightens and goes offshore by evening."
+    },
+    {
+      "day": "Fri",
+      "note": "Flat at barely a foot and 20-25mph wind all day. Skip it."
     }
   ]
 }

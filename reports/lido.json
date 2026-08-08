@@ -1,21 +1,17 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-08-07T10:03:51.591Z",
-  "headline": "Small S swell at a workable angle — early is the play before the sea breeze.",
-  "today": "Better angle here than Rockaway, so the 4-second S actually organizes into a few chest-high sets. Dawn is cross/light and cleanest; the SSW onshore builds by afternoon and blows it out. Fish or log early, don't sleep in.",
+  "generatedAt": "2026-08-08T09:41:31.261Z",
+  "headline": "Waist- to chest-high windswell on a workable angle — morning log session.",
+  "today": "Better angle than Rockaway today and a touch more size, but it's still short-period S windswell so keep expectations in check. Dawn cross is the cleanest before the WSW goes cross-on midmorning and drifts onshore by evening — surf the early window around the 9:48 low. Log or fish will do the work.",
   "daysToWatch": [
     {
-      "day": "Sat",
-      "note": "Best of the week — 2-3ft at a good angle with only light SW cross-on in the morning. Fish or shortboard, get on it before the afternoon onshore."
-    },
-    {
       "day": "Sun",
-      "note": "Similar size but 13mph+ WSW cross all day chops it up."
+      "note": "Similar waist-high fun with a morning window before S onshore ramps up in the evening. Early is the move."
     },
     {
-      "day": "Wed",
-      "note": "Cross-off morning but swell fades under 1.5ft — clean and marginal."
+      "day": "Mon",
+      "note": "Drops under 2ft with onshore wind — the fun window closes here and it stays small through the week."
     }
   ]
 }
