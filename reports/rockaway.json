@@ -1,21 +1,17 @@
 {
   "spotId": "rockaway",
   "spotName": "Rockaway 67th St",
-  "generatedAt": "2026-08-08T09:41:31.261Z",
-  "headline": "Waist-high short-period S junk — grab the log early or wait it out.",
-  "today": "Marginal angle and 4-5s period means it's mushy and gutless, but there's enough push for a longboard session. Dawn and morning have the cleanest cross texture before the SSW cross-on fills in through the afternoon, so go early around the mid-morning low. Log or a big groveler, don't expect much shape.",
+  "generatedAt": "2026-08-08T15:16:27.063Z",
+  "headline": "Short-period south junk at a marginal angle — dawn log session or skip.",
+  "today": "Waist- to chest-high on the sets but it's 4-5s S swell hitting the wrong angle for 67th, so expect gutless and closed-out. Best shot is the dawn patrol with WSW cross before the SSW cross-on fills in for the afternoon. Grab the log, work the incoming tide toward that 4:27p high, and keep expectations low.",
   "daysToWatch": [
     {
       "day": "Sun",
-      "note": "Basically a repeat of today — same size, morning cross window before onshore builds by evening. Get it before noon."
+      "note": "Slightly more push at dawn but the wind ramps to onshore 12-17mph by afternoon and blows it out. Early only."
     },
     {
-      "day": "Mon",
-      "note": "Swell drops under 2ft and onshore takes over. Flat, junky stretch begins through midweek."
-    },
-    {
-      "day": "Fri",
-      "note": "Longer-period SE finally shows on a good angle, but it's tiny at under a foot and buried under 20mph wind. Watch it, don't count on it."
+      "day": "Wed",
+      "note": "Under a foot and W wind cranking to 15mph. Flat and junky, don't bother."
     }
   ]
 }
