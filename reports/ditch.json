@@ -1,17 +1,25 @@
 {
   "spotId": "ditch",
   "spotName": "Ditch Plains",
-  "generatedAt": "2026-08-08T15:16:27.063Z",
-  "headline": "Fun-size south swell with the most juice of the region — surfable most of the day.",
-  "today": "Best spot going with total waves pushing 3ft and a good S angle, even if the period's short. Wind stays cross-on to cross and manageable all day so there's no hard cutoff. Fish or shortboard if you've got punch, work it around the 5:58p high.",
+  "generatedAt": "2026-08-09T09:43:09.248Z",
+  "headline": "Chest-high-ish S swell — biggest and best of the region today, fish it.",
+  "today": "Ditch is the standout with a solid S angle pushing to 2.8ft, though the period's short so it's on the punchy side. Wind stays cross out of the WSW/W all day, never great but never a dealbreaker at this size. Grab a fish or groveler and work the tides through the day. Best call of the local spots by a mile today.",
   "daysToWatch": [
     {
-      "day": "Sun",
-      "note": "The pick of the week — chest-high sets, good angle, and W cross wind staying clean into the evening. Rearrange plans for this one."
+      "day": "Mon",
+      "note": "Drops to waist-high but dawn is near-glassy with light WNW before the onshore sneaks in. Worth an early check."
     },
     {
-      "day": "Mon",
-      "note": "Fun leftovers with a glassy light-wind window through the morning before SSW ramps to 16mph in the evening. Dawn to midday is the play."
+      "day": "Tue",
+      "note": "Waist-to-chest with cross-off WNW in the morning cleaning it up. Fun early window."
+    },
+    {
+      "day": "Thu",
+      "note": "Bumps back to 2.7ft but very short-period and windy by evening. Morning is the window before the W builds."
+    },
+    {
+      "day": "Sat",
+      "note": "Small and blown, WNW cross-off screaming at 20-27mph. Skip."
     }
   ]
 }

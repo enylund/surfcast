@@ -1,17 +1,21 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-08-08T15:16:27.063Z",
-  "headline": "Loggable south windswell, best at dawn before the wind turns.",
-  "today": "Best of the NYC beaches today with a decent S angle, but it's still short-period so you're looking at knee- to chest-high mush. Dawn has the cleanest WSW cross before it goes cross-on through the morning and onshore by evening. Log or groveler on the early low-to-mid tide, then it deteriorates.",
+  "generatedAt": "2026-08-09T09:43:09.248Z",
+  "headline": "Best angle in the area today but it's small and short-period — a fun log session.",
+  "today": "Swell's the same size as everywhere but Lido gets a better S angle, so expect the cleanest shape of the local beaches. WSW cross is lightest mid-morning before the SW cross-on builds through the afternoon and the SSE onshore ruins it by evening. Get on it early with a log around the morning tide push. Waist-high and playful, not much more.",
   "daysToWatch": [
     {
-      "day": "Sun",
-      "note": "A touch more size and better period at dawn, but S onshore builds to 19mph by evening. Get it early or not at all."
+      "day": "Tue",
+      "note": "Cross-off NW/W winds clean it up but the swell's dropped to knee-to-waist. Small and glassy, log territory."
     },
     {
-      "day": "Wed",
-      "note": "Sub-foot swell with W wind at 15mph all day. Flat, skip it."
+      "day": "Fri",
+      "note": "Flat and howling NW 15-17mph cross-off. Nothing to ride."
+    },
+    {
+      "day": "Sat",
+      "note": "Still flat with strong NW. Skip."
     }
   ]
 }

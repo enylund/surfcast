@@ -1,17 +1,21 @@
 {
   "spotId": "rockaway",
   "spotName": "Rockaway 67th St",
-  "generatedAt": "2026-08-08T15:16:27.063Z",
-  "headline": "Short-period south junk at a marginal angle — dawn log session or skip.",
-  "today": "Waist- to chest-high on the sets but it's 4-5s S swell hitting the wrong angle for 67th, so expect gutless and closed-out. Best shot is the dawn patrol with WSW cross before the SSW cross-on fills in for the afternoon. Grab the log, work the incoming tide toward that 4:27p high, and keep expectations low.",
+  "generatedAt": "2026-08-09T09:43:09.248Z",
+  "headline": "Waist-high SSE junk on a marginal angle — dawn patrol or don't bother.",
+  "today": "Short-period windswell at a bad angle for us, so it's mushy and shapeless. The WSW cross stays light through the morning before the SW cross-on fills in after noon and the SSY onshore trashes it by evening. Log or groveler at dawn around the outgoing tide is your only real shot. Nothing to rearrange your day for.",
   "daysToWatch": [
     {
-      "day": "Sun",
-      "note": "Slightly more push at dawn but the wind ramps to onshore 12-17mph by afternoon and blows it out. Early only."
+      "day": "Tue",
+      "note": "Cleanest winds of the week with cross-off WNW all day turning offshore by evening, but the swell's tiny at knee-to-waist. Glassy leftovers, log it."
     },
     {
-      "day": "Wed",
-      "note": "Under a foot and W wind cranking to 15mph. Flat and junky, don't bother."
+      "day": "Fri",
+      "note": "Flat and cranking NW cross-off 16-19mph. Skip it."
+    },
+    {
+      "day": "Sat",
+      "note": "Still flat, still windy out of the NW. Not worth checking."
     }
   ]
 }

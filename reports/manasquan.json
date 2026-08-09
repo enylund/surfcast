@@ -1,17 +1,21 @@
 {
   "spotId": "manasquan",
   "spotName": "Manasquan Inlet",
-  "generatedAt": "2026-08-08T15:16:27.063Z",
-  "headline": "Marginal angle but clean sheltered winds — worth a morning look.",
-  "today": "South swell is the wrong angle for the inlet but there's size to it and the wind is friendly, light at dawn going cross-off. That combo can make the sheltered corner work better than it reads on paper. Log or groveler on the morning, don't expect much shape.",
+  "generatedAt": "2026-08-09T09:43:09.248Z",
+  "headline": "Marginal angle but offshore wind — a decent glassy afternoon log.",
+  "today": "The S swell's a poor angle for the inlet, so shape is meh, but the wind turns offshore W by afternoon and stays clean into evening. Waist-to-chest and short-period. Wait for the offshore to set up midday and bring a log or groveler. Cleaner than it deserves to be.",
   "daysToWatch": [
     {
-      "day": "Sun",
-      "note": "Better size to 2.7ft with WSW cross-off all morning keeping it clean. Best window of the week here, go early."
+      "day": "Mon",
+      "note": "Offshore W at dawn on a waist-high swell — get in early before the cross-on fills. Clean small session."
     },
     {
-      "day": "Wed",
-      "note": "W offshore all day but only knee-high. Clean and rideable if you're desperate, otherwise flat."
+      "day": "Thu",
+      "note": "Offshore W morning cleans up a knee-to-chest short-period swell. Dawn window."
+    },
+    {
+      "day": "Fri",
+      "note": "Small and offshore but the swell's fading. Marginal at best, log only."
     }
   ]
 }
