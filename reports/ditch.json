@@ -1,25 +1,21 @@
 {
   "spotId": "ditch",
   "spotName": "Ditch Plains",
-  "generatedAt": "2026-08-09T09:43:09.248Z",
-  "headline": "Chest-high-ish S swell — biggest and best of the region today, fish it.",
-  "today": "Ditch is the standout with a solid S angle pushing to 2.8ft, though the period's short so it's on the punchy side. Wind stays cross out of the WSW/W all day, never great but never a dealbreaker at this size. Grab a fish or groveler and work the tides through the day. Best call of the local spots by a mile today.",
+  "generatedAt": "2026-08-10T10:20:05.457Z",
+  "headline": "Small clean S windswell today, and a prime-angle long-period pulse worth watching Thursday.",
+  "today": "Good-angle S at 1.4-1.8ft, short period so nothing to write home about, but cross-off dawn keeps it clean. Winds go cross to cross-on through the day, so morning is the play. Groveler or log, easy rippable stuff for the first sessions before it backs off.",
   "daysToWatch": [
     {
-      "day": "Mon",
-      "note": "Drops to waist-high but dawn is near-glassy with light WNW before the onshore sneaks in. Worth an early check."
-    },
-    {
       "day": "Tue",
-      "note": "Waist-to-chest with cross-off WNW in the morning cleaning it up. Fun early window."
+      "note": "Size nudges up to 2.4ft with cross W winds staying manageable through the morning. Best combo of size and cleanliness early in the week."
     },
     {
       "day": "Thu",
-      "note": "Bumps back to 2.7ft but very short-period and windy by evening. Morning is the window before the W builds."
+      "note": "Prime-angle SSE swell shows up at up to 9.7s and 2.5ft — the good direction Ditch wants. Cross-off in the morning is your window; afternoon SW builds to cross-on and 19mph by evening, so surf early."
     },
     {
-      "day": "Sat",
-      "note": "Small and blown, WNW cross-off screaming at 20-27mph. Skip."
+      "day": "Fri",
+      "note": "Longer-period S lines hold up to 2.3ft with light SSW wind midday. Clean fun window in the afternoon if Thursday's swell lingers."
     }
   ]
 }

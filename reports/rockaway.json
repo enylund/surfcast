@@ -1,21 +1,17 @@
 {
   "spotId": "rockaway",
   "spotName": "Rockaway 67th St",
-  "generatedAt": "2026-08-09T09:43:09.248Z",
-  "headline": "Waist-high SSE junk on a marginal angle — dawn patrol or don't bother.",
-  "today": "Short-period windswell at a bad angle for us, so it's mushy and shapeless. The WSW cross stays light through the morning before the SW cross-on fills in after noon and the SSY onshore trashes it by evening. Log or groveler at dawn around the outgoing tide is your only real shot. Nothing to rearrange your day for.",
+  "generatedAt": "2026-08-10T10:20:05.457Z",
+  "headline": "Short-period SSE slop, glassy early then onshore — log it before lunch or skip it.",
+  "today": "Marginal-angle SSE windswell at 3-5s, so it's soft and disorganized but there's waist-ish stuff to poke at. Dawn N offshore and light SSW through morning keep it clean; the SSE fills in onshore by afternoon and it goes to junk. Get your log wet around the morning low pushing toward the incoming, then bail.",
   "daysToWatch": [
     {
-      "day": "Tue",
-      "note": "Cleanest winds of the week with cross-off WNW all day turning offshore by evening, but the swell's tiny at knee-to-waist. Glassy leftovers, log it."
-    },
-    {
       "day": "Fri",
-      "note": "Flat and cranking NW cross-off 16-19mph. Skip it."
+      "note": "Small at 1.6ft but a SE good-angle line sneaks in at up to 9.9s, and afternoon goes offshore NNW with light evening. Cleanest water of the week even if it's tiny — glassy log session."
     },
     {
-      "day": "Sat",
-      "note": "Still flat, still windy out of the NW. Not worth checking."
+      "day": "Sun",
+      "note": "Bumps up to 3.6ft but it's marginal S angle at short period and afternoon S wind hits 15mph onshore. Bigger on paper, blown-out and junky in reality."
     }
   ]
 }

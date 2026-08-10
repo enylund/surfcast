@@ -1,25 +1,21 @@
 {
   "spotId": "matunuck",
   "spotName": "Matunuck",
-  "generatedAt": "2026-08-09T09:43:09.248Z",
-  "headline": "Knee-to-chest S swell, biggest early — beat the cross-on wind.",
-  "today": "Fair-angle S swell pushing near 2.9ft, the most size Matunuck's seen this stretch, but it's short-period and the SW cross-on builds through the day. Dawn is lightest at 5mph, so that's your window. Fish or groveler early before it gets textured. Fun if you're on it first thing.",
+  "generatedAt": "2026-08-10T10:20:05.457Z",
+  "headline": "Chest-high-ish fair-angle S, but onshore-leaning wind keeps it soft.",
+  "today": "Fair-angle S at up to 2ft, short period, with morning SSW onshore then SW cross-on building to 10mph in the afternoon. Never really cleans up, so it's a mushy groveler day. Dawn is your least-bad window before the wind fills.",
   "daysToWatch": [
     {
       "day": "Tue",
-      "note": "Waist-to-chest with lighter WNW cross in the morning. Early session before the afternoon SW cross-on."
-    },
-    {
-      "day": "Wed",
-      "note": "Small but light winds all day make it glassy. Log the mid-tide if you want a mellow one."
-    },
-    {
-      "day": "Thu",
-      "note": "Peaks near 3ft but very short-period and cross-wind. Morning before the W builds is the play."
+      "note": "Biggest of the stretch at up to 2.7ft, fair angle. Cross-on wind holds it back but early sessions before the afternoon SW ramp are worth it."
     },
     {
       "day": "Fri",
-      "note": "Dropping and windy with W/WNW cross 14-17mph. Marginal."
+      "note": "Up to 2.4ft with NNE offshore at dawn and light ENE morning — the cleanest window of the week. Get out early before the SE cross-on fills in."
+    },
+    {
+      "day": "Sun",
+      "note": "Drops to 1.2ft and SSW goes onshore 12-14mph all day. Flat and blown — skip it."
     }
   ]
 }

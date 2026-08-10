@@ -1,21 +1,17 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-08-09T09:43:09.248Z",
-  "headline": "Best angle in the area today but it's small and short-period — a fun log session.",
-  "today": "Swell's the same size as everywhere but Lido gets a better S angle, so expect the cleanest shape of the local beaches. WSW cross is lightest mid-morning before the SW cross-on builds through the afternoon and the SSE onshore ruins it by evening. Get on it early with a log around the morning tide push. Waist-high and playful, not much more.",
+  "generatedAt": "2026-08-10T10:20:05.457Z",
+  "headline": "Knee-to-thigh short-period S — sneak a morning log before the onshore.",
+  "today": "Good-angle S swell but only 3-4.5s and under 2ft, so it's small and mushy. Light N to SE wind at dawn and morning is your clean window; afternoon S goes onshore and kills it. Grab the log early and keep expectations low.",
   "daysToWatch": [
     {
-      "day": "Tue",
-      "note": "Cross-off NW/W winds clean it up but the swell's dropped to knee-to-waist. Small and glassy, log territory."
+      "day": "Wed",
+      "note": "Tiny at 1.3ft but N offshore in the morning cleans it up. Marginal size, decent conditions — dawn patrol only if you're desperate."
     },
     {
-      "day": "Fri",
-      "note": "Flat and howling NW 15-17mph cross-off. Nothing to ride."
-    },
-    {
-      "day": "Sat",
-      "note": "Still flat with strong NW. Skip."
+      "day": "Sun",
+      "note": "Size jumps toward 3ft but SSW wind ramps to 19mph onshore by afternoon. Blown out — not worth the trip."
     }
   ]
 }

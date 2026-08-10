@@ -1,21 +1,17 @@
 {
   "spotId": "manasquan",
   "spotName": "Manasquan Inlet",
-  "generatedAt": "2026-08-09T09:43:09.248Z",
-  "headline": "Marginal angle but offshore wind — a decent glassy afternoon log.",
-  "today": "The S swell's a poor angle for the inlet, so shape is meh, but the wind turns offshore W by afternoon and stays clean into evening. Waist-to-chest and short-period. Wait for the offshore to set up midday and bring a log or groveler. Cleaner than it deserves to be.",
+  "generatedAt": "2026-08-10T10:20:05.457Z",
+  "headline": "Short-period SSE at a bad angle — glassy dawn, then cross-on mush.",
+  "today": "Up to 2.6ft but it's marginal-angle SSE at short period, so it's more chop than shape. Light NW to ENE wind at dawn and morning gives you glass; afternoon SSE goes cross-on and it deteriorates. Fish or groveler on the morning low-to-incoming, don't overthink it.",
   "daysToWatch": [
     {
-      "day": "Mon",
-      "note": "Offshore W at dawn on a waist-high swell — get in early before the cross-on fills. Clean small session."
-    },
-    {
       "day": "Thu",
-      "note": "Offshore W morning cleans up a knee-to-chest short-period swell. Dawn window."
+      "note": "Marginal angle but a longer-period line touches 10s, and W-to-SW is offshore/cross-off in the morning. Worth a dawn look for the cleaner water."
     },
     {
       "day": "Fri",
-      "note": "Small and offshore but the swell's fading. Marginal at best, log only."
+      "note": "Prime ESE angle at up to 9.7s — the direction this inlet actually likes — but it's only 1.7ft and winds stay cross-on. Right swell, not enough size."
     }
   ]
 }
