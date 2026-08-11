@@ -1,17 +1,25 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-08-10T10:20:05.457Z",
-  "headline": "Knee-to-thigh short-period S — sneak a morning log before the onshore.",
-  "today": "Good-angle S swell but only 3-4.5s and under 2ft, so it's small and mushy. Light N to SE wind at dawn and morning is your clean window; afternoon S goes onshore and kills it. Grab the log early and keep expectations low.",
+  "generatedAt": "2026-08-11T10:03:24.577Z",
+  "headline": "Barely knee-high but a good angle — glassy morning log at best.",
+  "today": "Just 1.2-1.3ft at 4s, though it's coming from a favorable angle for Lido. Cross wind most of the day, going S onshore in the evening, so ride the morning if you ride anything. Longboard and low expectations.",
   "daysToWatch": [
     {
-      "day": "Wed",
-      "note": "Tiny at 1.3ft but N offshore in the morning cleans it up. Marginal size, decent conditions — dawn patrol only if you're desperate."
+      "day": "Fri",
+      "note": "Small and short-period but solid NNW offshore all day. Clean texture if the swell cooperates — a fun log session for the patient."
+    },
+    {
+      "day": "Sat",
+      "note": "Offshore N/NW morning going near-glassy midday. Still under a foot and a half, but the cleanest window of the week for a mellow log."
     },
     {
       "day": "Sun",
-      "note": "Size jumps toward 3ft but SSW wind ramps to 19mph onshore by afternoon. Blown out — not worth the trip."
+      "note": "Warning: wind cranks S onshore to 24mph by evening. Get it early or write it off — afternoon will be blown junk."
+    },
+    {
+      "day": "Mon",
+      "note": "Best of the stretch: 2.3-3ft from a good angle with offshore NNW building through the afternoon and evening. This is the day to target. Shortboard or fish."
     }
   ]
 }

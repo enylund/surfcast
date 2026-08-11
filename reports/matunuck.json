@@ -1,21 +1,21 @@
 {
   "spotId": "matunuck",
   "spotName": "Matunuck",
-  "generatedAt": "2026-08-10T10:20:05.457Z",
-  "headline": "Chest-high-ish fair-angle S, but onshore-leaning wind keeps it soft.",
-  "today": "Fair-angle S at up to 2ft, short period, with morning SSW onshore then SW cross-on building to 10mph in the afternoon. Never really cleans up, so it's a mushy groveler day. Dawn is your least-bad window before the wind fills.",
+  "generatedAt": "2026-08-11T10:03:24.577Z",
+  "headline": "Waist-high fair-angle windswell — decent little log day.",
+  "today": "Best of the NYC-area group today at 1.4-1.8ft, total to 2.3ft, though it's a fair angle on a short period. Cross wind hangs around all day so it'll be a touch textured — surf whenever it looks cleanest, morning likely your call. Log or fish.",
   "daysToWatch": [
     {
-      "day": "Tue",
-      "note": "Biggest of the stretch at up to 2.7ft, fair angle. Cross-on wind holds it back but early sessions before the afternoon SW ramp are worth it."
-    },
-    {
       "day": "Fri",
-      "note": "Up to 2.4ft with NNE offshore at dawn and light ENE morning — the cleanest window of the week. Get out early before the SE cross-on fills in."
+      "note": "Similar size, 1.4-1.7ft, but NW cross-off all day keeps it groomed. Solid fun little log session."
     },
     {
       "day": "Sun",
-      "note": "Drops to 1.2ft and SSW goes onshore 12-14mph all day. Flat and blown — skip it."
+      "note": "Warning: SW onshore builds to 16mph by evening on a dropping, small swell. Early morning light wind only, then it's junked."
+    },
+    {
+      "day": "Mon",
+      "note": "The one to watch: swell up to 4.1ft, total to 4.7ft, from a fair angle with N/NE offshore through morning and afternoon. Biggest and cleanest day by a mile — shortboard, rearrange plans."
     }
   ]
 }
