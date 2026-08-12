@@ -1,17 +1,21 @@
 {
   "spotId": "rockaway",
   "spotName": "Rockaway 67th St",
-  "generatedAt": "2026-08-11T10:03:24.577Z",
-  "headline": "Knee-high SSE junk on a short period — log it or skip it.",
-  "today": "Tiny 1.2-1.3ft at 4s from a marginal angle, so don't expect much shape. Best shot is the morning while the WNW cross-off keeps it semi-organized before the S onshore fills in for the evening. Longboard only, and even that's a stretch. Honestly a coffee-and-check day.",
+  "generatedAt": "2026-08-12T10:10:27.788Z",
+  "headline": "Ankle-to-knee S windswell on a marginal angle — dawn log session or skip.",
+  "today": "Tiny short-period S swell, wrong angle for the peninsula, but the NNW offshore holds through the morning so it'll at least be clean. Grab a log and surf the early window before the SSW cross-on fills in around midday and the SSE onshore junks it up by evening. Nothing worth rearranging your morning for.",
   "daysToWatch": [
     {
       "day": "Thu",
-      "note": "Swell drops to 0.7-0.9ft but the period stretches to 7-10s from a good SE angle. Small but clean-ish early on cross wind — worth a dawn log before the afternoon SSW cross-on messes it up."
+      "note": "Cleanest water of the stretch — SE at 7-10s is a good angle, just tiny at under a foot. NW cross-off morning is the window, log only."
+    },
+    {
+      "day": "Sun",
+      "note": "S onshore ramping to 23mph all day. Blown out, don't bother."
     },
     {
       "day": "Mon",
-      "note": "Size finally shows: 2.2-3ft with morning and afternoon offshore N winds. It's a marginal S angle so it'll be more of a beachbreak scramble than a peeler, but it's the day with actual waves. Shortboard or groveler."
+      "note": "Biggest of the week at 2-3ft with NW/NNW offshore, but short-period 4.6s on a marginal S angle so expect it soft and lumpy rather than lined up. Still your best size window — morning offshore is the call."
     }
   ]
 }
