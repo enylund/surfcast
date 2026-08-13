@@ -1,21 +1,21 @@
 {
   "spotId": "manasquan",
   "spotName": "Manasquan Inlet",
-  "generatedAt": "2026-08-12T10:10:27.788Z",
-  "headline": "Weak marginal-angle windswell — barely worth the paddle.",
-  "today": "Under a foot and a half on a poor S angle for the inlet, with light cross-off early giving way to E onshore by afternoon. If you go, go at dawn on a log and keep expectations low. Mostly a skip.",
+  "generatedAt": "2026-08-13T10:11:27.100Z",
+  "headline": "Marginal SSE mush today — small and cross-textured.",
+  "today": "Under 2ft on a marginal angle with cross-off wind that isn't quite enough to make it fun. Nothing worth prioritizing here. If you paddle out it's a longboard and low expectations.",
   "daysToWatch": [
     {
-      "day": "Sat",
-      "note": "E swell finally swings to a good angle for the inlet, up to 2ft, but ENE cross-on wind is on it early. Marginal but the best-angled day of the week — worth a look."
-    },
-    {
-      "day": "Sun",
-      "note": "S wind ramps to 17mph all day. Junky and cross, low priority."
+      "day": "Fri",
+      "note": "Prime ESE angle at 9s but tiny — cross-off dawn is clean and loggable early before the afternoon onshore fills in."
     },
     {
       "day": "Mon",
-      "note": "Biggest at 2.4-2.9ft with WNW offshore to cross-off wind. Short period and marginal angle so it'll be soft, but the cleanest size window — morning is the play."
+      "note": "Best of the week: 3-plus feet with W offshore into the afternoon. Short period and marginal angle temper it, but clean wind and real size make it the session to catch."
+    },
+    {
+      "day": "Wed",
+      "note": "Small but a good SE angle at 8s with offshore dawn — worth a quick clean longboard check early."
     }
   ]
 }

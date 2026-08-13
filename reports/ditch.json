@@ -1,21 +1,25 @@
 {
   "spotId": "ditch",
   "spotName": "Ditch Plains",
-  "generatedAt": "2026-08-12T10:10:27.788Z",
-  "headline": "Small clean S swell with light wind — a fun morning log.",
-  "today": "Just over a foot at short period, but the NNW offshore this morning and the light W wind through the afternoon keep it glassy and rideable. Best around the morning high through the midday low — bring the log and enjoy a mellow one. Not much size, but the conditions are the nicest of the day anywhere in range.",
+  "generatedAt": "2026-08-13T10:11:27.100Z",
+  "headline": "Small but rideable with clean afternoon wind — a fun log session.",
+  "today": "Mixed short and mid-period south energy to about 1.9ft, nothing pushy but workable. Morning is cross, then WNW goes cross-off in the afternoon and cleans it up — that's your window. Log or fish it.",
   "daysToWatch": [
     {
-      "day": "Thu",
-      "note": "Prime SE angle shows up but it's tiny at under a foot and the wind goes cross-on to onshore. Worth a peek if the long-period lines organize, otherwise log it soft."
+      "day": "Fri",
+      "note": "Clean and glassy — ESE at 9s with offshore morning going light. Small at 1.6ft but the quality's there for a mellow longboard session."
+    },
+    {
+      "day": "Sun",
+      "note": "Cross-on building to 22mph onshore by evening — bumpy and deteriorating, low priority."
     },
     {
       "day": "Mon",
-      "note": "Swell jumps into the 3-4ft range with NW offshore in the morning. The standout day — get there early before the afternoon cross-off texture. Shortboard weather."
+      "note": "The day to rearrange plans for: swell to 5-plus feet on a good south angle with NW cross-off through the morning. Get there early before the afternoon SW cross-on shows up. Shortboard weather."
     },
     {
       "day": "Tue",
-      "note": "Long-period S energy up to 11s and 2-plus feet, NE cross-off in the morning. Could be a fun clean one before the evening onshore."
+      "note": "Leftover 2-3ft with cross-off morning wind — solid follow-up session while it holds."
     }
   ]
 }

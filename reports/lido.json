@@ -1,17 +1,21 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-08-12T10:10:27.788Z",
-  "headline": "Knee-high, short and clean early — a morning longboard tide-and-go.",
-  "today": "Small S swell at a good angle for Lido but only 4-plus seconds, so it's log fuel at best. N offshore in the morning keeps it groomed; ride the early hours before the SSW onshore turns it to slop in the afternoon. Fun-size for a mellow paddle, nothing more.",
+  "generatedAt": "2026-08-13T10:11:27.100Z",
+  "headline": "Small short-period S junk with cross wind — marginal at best.",
+  "today": "Only 1.5ft at 3-4s, so it's soft and gutless despite the decent angle. Wind stays cross most of the day and doesn't help. Log the dawn if you're desperate, otherwise wait it out.",
   "daysToWatch": [
     {
+      "day": "Fri",
+      "note": "Tiny but clean — offshore dawn with a good angle, longboard-only glass before the SSE onshore arrives midday."
+    },
+    {
       "day": "Sun",
-      "note": "S onshore building 22-25mph. Blown out, write it off."
+      "note": "20-plus mph onshore all day — blown out, skip it."
     },
     {
       "day": "Mon",
-      "note": "The one to circle — 2.3-3ft on a good S angle with NW-to-N offshore all day. Short period so it won't be perfect, but clean and the size of the week. Shortboard or fish, work the morning."
+      "note": "The week's standout: 2-3ft on a good angle with light NW cross-off through the morning. Best window is early before the SW cross-on builds in the afternoon — shortboard or fish."
     }
   ]
 }
