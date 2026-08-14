@@ -1,21 +1,17 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-08-13T10:11:27.100Z",
-  "headline": "Small short-period S junk with cross wind — marginal at best.",
-  "today": "Only 1.5ft at 3-4s, so it's soft and gutless despite the decent angle. Wind stays cross most of the day and doesn't help. Log the dawn if you're desperate, otherwise wait it out.",
+  "generatedAt": "2026-08-14T10:06:41.896Z",
+  "headline": "Barely a foot of prime SE — basically flat.",
+  "today": "Prime angle on paper but there's only about a foot of it, so this is a flat-to-ankle day. Offshore NNW in the morning keeps it glassy if you want to log something tiny on the incoming before the 9:25 high. Otherwise skip it and save your energy for Monday.",
   "daysToWatch": [
     {
-      "day": "Fri",
-      "note": "Tiny but clean — offshore dawn with a good angle, longboard-only glass before the SSE onshore arrives midday."
+      "day": "Mon",
+      "note": "The one to circle — SSE stacks to 3ft-plus on a good angle with cross-off NW easing to light. Fun for most boards, ride the incoming through midday."
     },
     {
       "day": "Sun",
-      "note": "20-plus mph onshore all day — blown out, skip it."
-    },
-    {
-      "day": "Mon",
-      "note": "The week's standout: 2-3ft on a good angle with light NW cross-off through the morning. Best window is early before the SW cross-on builds in the afternoon — shortboard or fish."
+      "note": "S onshore builds to 14-16mph by afternoon with a small, short-period swell. Dawn only, then junk."
     }
   ]
 }

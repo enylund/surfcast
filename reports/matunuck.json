@@ -1,21 +1,21 @@
 {
   "spotId": "matunuck",
   "spotName": "Matunuck",
-  "generatedAt": "2026-08-13T10:11:27.100Z",
-  "headline": "Short-period SSW slop with onshore morning — junky and small.",
-  "today": "Around 2ft at 3-5s on a fair angle, and the morning onshore keeps it textured. Wind backs to cross-on later, marginally better but still weak. Log it if you're bored, otherwise pass.",
+  "generatedAt": "2026-08-14T10:06:41.896Z",
+  "headline": "Small short-period S — a soft, glassy dawn at best.",
+  "today": "Around a foot and a half of short-period S on a fair angle, so nothing with much punch. Morning is light-to-offshore and glassy, so log the incoming early before the SSE-S cross-on and onshore take over by afternoon. Low-priority day.",
   "daysToWatch": [
     {
-      "day": "Sun",
-      "note": "South onshore builds to 16mph through the day — bumpy and getting worse, not a target."
-    },
-    {
       "day": "Mon",
-      "note": "The standout: up toward 6ft with cross-off morning wind going light in the afternoon. Fair angle and short period, but the size and clean wind make it the day to clear your schedule. Shortboard."
+      "note": "S swell jumps toward 4ft-plus but it's short-period on a fair angle and dawn is a 17mph cross-on. Afternoon NE goes cross-off and evening N offshore — that's the cleanup window if the size lingers."
     },
     {
       "day": "Tue",
-      "note": "Holdover 2-plus feet with offshore dawn wind — a clean early session before the E cross fills in."
+      "note": "Fun morning: S to nearly 3ft with N offshore and cross-off before the afternoon onshore. Short-period and soft but worth a session. Go early."
+    },
+    {
+      "day": "Thu",
+      "note": "Prime ESE angle with glassy light wind all day, but the swell's only knee-high. Clean and mellow — log it if you want easy waves."
     }
   ]
 }
