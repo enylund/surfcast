@@ -1,21 +1,25 @@
 {
   "spotId": "ditch",
   "spotName": "Ditch Plains",
-  "generatedAt": "2026-08-14T10:06:41.896Z",
-  "headline": "Small long-period ESE, clean at dawn — a fun little log session.",
-  "today": "About a foot and a half of ESE at good period with cross-off NW early makes for a rideable, glassy dawn patrol. It'll be small and playful, best on the incoming before the 10:41 high, and the SE turns cross-on into the afternoon. Grab the log and don't oversleep.",
+  "generatedAt": "2026-08-15T09:29:31.854Z",
+  "headline": "Small, clean longer-period ESE — waist-high fun for the log crowd.",
+  "today": "About 1.5ft at a respectable 8.5s from a good ESE angle, so it's got some shape despite the size. Cross-off in the morning goes light by afternoon, so the wind isn't a problem — it's just small. Bring the log and enjoy an easy summer session.",
   "daysToWatch": [
     {
       "day": "Mon",
-      "note": "Wild card — S swell spikes toward 4ft-plus but dawn is a 24mph cross-on mess. Afternoon flips to NNW-N offshore and cleans up over the leftover size. That's your window if it holds."
+      "note": "Swell jumps to head-high-plus on a prime SSE angle, but 23-25mph S onshore hammers it all morning and afternoon. Wind backs off to 5mph NE cross-off in the evening — that's your only clean window, and it could be worth it."
     },
     {
       "day": "Tue",
-      "note": "Solid morning session: SSE to 2.5ft-plus on a prime angle with N offshore before the S cross-on shows up midday. Shortboard-able. Go early."
+      "note": "Chest-high shortish-period ESE with N offshore dawn into NE cross-off morning. Clean and surfable early — shortboard or fish."
     },
     {
       "day": "Wed",
-      "note": "Onshore S 15-18mph on a fair angle — expect bumpy and disorganized. Skip unless you're desperate."
+      "note": "SSW cross-on 15-19mph all day. Junk, skip it."
+    },
+    {
+      "day": "Thu",
+      "note": "Building S swell to 3.6ft with light and offshore-ish winds. Worth watching for a clean shortboard day."
     }
   ]
 }
