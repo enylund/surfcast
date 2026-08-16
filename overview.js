@@ -1,9 +1,9 @@
-// Overview homepage PROTOTYPE — at-a-glance scoreboard + 7-day heatmap + an
-// opinionated "worth the drive" verdict, across all spots. Standalone page
-// (overview.html); does not touch the live app. Reuses the existing data layer.
+// Overview homepage — at-a-glance scoreboard + 7-day heatmap + an opinionated
+// "worth the drive" verdict, across all spots. Rendered as the default view in
+// the app (app.js). Reuses the existing data layer.
 
-import { SPOTS, DATA_SOURCE } from "./config.js";
-import { getSpotData, nyToday, nyNow } from "./data.js";
+import { SPOTS } from "./config.js";
+import { getSpotData, nyNow } from "./data.js";
 
 // Rough drive times from NYC/Rockaway. Rockaway is "home".
 const DRIVE = {
@@ -146,7 +146,7 @@ function render(container, analyses, models) {
   for (const a of ordered) {
     const dv = driveVerdict(a, home);
     const rowLink = el("a", `ov-row ${a.spotId === HOME ? "ov-home" : ""}`);
-    rowLink.href = `index.html#${a.spotId}`;
+    rowLink.href = `#${a.spotId}`;
     const nameCol = el("div", "ov-name");
     nameCol.append(el("span", "ov-name-txt", spotName(a.spotId)));
     nameCol.append(el("span", "ov-drive", DRIVE[a.spotId]?.label || ""));
@@ -182,15 +182,12 @@ function render(container, analyses, models) {
   container.append(el("div", "ov-foot", "Prototype · score = size × period × swell angle × wind. Tap a spot for the full forecast."));
 }
 
-async function main() {
-  const root = document.getElementById("overview");
-  root.append(el("div", "ov-loading", "Reading the whole coast…"));
+export async function renderOverview(root) {
+  root.replaceChildren(el("div", "ov-loading", "Reading the whole coast…"));
   try {
     const models = await Promise.all(SPOTS.map((s) => getSpotData(s)));
-    const analyses = models.map(analyze);
-    render(root, analyses, models);
+    render(root, models.map(analyze), models);
   } catch (e) {
     root.replaceChildren(el("div", "ov-loading", `Couldn't load: ${e.message}`));
   }
 }
-main();

@@ -6,12 +6,14 @@ import { renderSwellChart, renderWindRow, renderTideChart, renderWeatherRow, ren
 import { loadSessions, renderSessionsView } from "./sessions.js";
 import { renderLogForm } from "./logform.js";
 import { setEditSession } from "./store.js";
+import { renderOverview } from "./overview.js";
 
 const $ = (sel) => document.querySelector(sel);
 const tabsEl = $("#tabs");
 const reportEl = $("#report");
 const sessionsEl = $("#sessions-view");
 const logEl = $("#log-view");
+const overviewEl = $("#overview-view");
 const nowEl = $("#now-card");
 const daysEl = $("#days");
 const errorsEl = $("#errors");
@@ -32,6 +34,11 @@ function spotFromHash() {
 }
 
 function buildTabs() {
+  const ov = document.createElement("button");
+  ov.textContent = "Overview";
+  ov.dataset.nav = "overview";
+  ov.addEventListener("click", () => { location.hash = "overview"; });
+  tabsEl.append(ov);
   for (const spot of SPOTS) {
     const btn = document.createElement("button");
     btn.textContent = spot.name;
@@ -39,11 +46,6 @@ function buildTabs() {
     btn.addEventListener("click", () => { location.hash = spot.id; });
     tabsEl.append(btn);
   }
-}
-
-function markActiveTab() {
-  for (const btn of tabsEl.children)
-    btn.classList.toggle("active", btn.dataset.spot === currentSpot.id);
 }
 
 function fmtClock(min) {
@@ -279,7 +281,7 @@ function renderDays(model, spot) {
 async function render(spot, { force = false } = {}) {
   const seq = ++renderSeq;
   currentSpot = spot;
-  markActiveTab();
+  setView("forecast", spot.id);
   skeleton();
   try {
     const [model, report] = await Promise.all([getSpotData(spot, { force }), loadReport(spot)]);
@@ -308,15 +310,21 @@ async function render(spot, { force = false } = {}) {
   }
 }
 
-// Toggle between forecast / session-log / log-form views.
-function setView(mode) {
+// Toggle between overview / forecast / session-log / log-form views, and set the
+// active nav tab (Overview or a spot; sessions/log dim the spot tabs).
+function setView(mode, key) {
   const forecast = mode === "forecast";
+  overviewEl.hidden = mode !== "overview";
   for (const el of [nowEl, reportEl, errorsEl, daysEl]) el.hidden = !forecast;
   sessionsEl.hidden = mode !== "sessions";
   logEl.hidden = mode !== "log";
   $("#sessions-btn").classList.toggle("active", mode === "sessions");
   $("#log-btn").classList.toggle("active", mode === "log");
-  for (const btn of tabsEl.children) btn.classList.toggle("dimmed", !forecast);
+  for (const btn of tabsEl.children) {
+    const active = (btn.dataset.nav === "overview" && mode === "overview") || (btn.dataset.spot && btn.dataset.spot === key);
+    btn.classList.toggle("active", !!active);
+    btn.classList.toggle("dimmed", mode === "sessions" || mode === "log");
+  }
 }
 
 async function renderSessions() {
@@ -327,11 +335,17 @@ async function renderSessions() {
   renderSessionsView(sessionsEl, sessions);
 }
 
+function showOverview() {
+  renderSeq++; // cancel any in-flight forecast render
+  setView("overview", "overview");
+  renderOverview(overviewEl);
+}
+
 function route() {
   const hash = location.hash.slice(1);
   if (hash === "sessions") return renderSessions();
   if (hash === "log") { renderSeq++; setView("log"); return renderLogForm(logEl); }
-  setView("forecast");
+  if (hash === "" || hash === "overview") return showOverview();
   render(spotFromHash());
 }
 
@@ -346,11 +360,13 @@ $("#log-btn").addEventListener("click", () => {
 $("#refresh").addEventListener("click", () => {
   const hash = location.hash.slice(1);
   if (hash === "sessions") renderSessions();
+  else if (hash === "" || hash === "overview") showOverview();
   else if (hash !== "log") render(currentSpot, { force: true });
 });
 
-// Keep the now-marker and "Today" boundary honest without user interaction.
-setInterval(() => { if (currentSpot && !["sessions", "log"].includes(location.hash.slice(1))) render(currentSpot); }, 5 * 60 * 1000);
+// Keep the now-marker and "Today" boundary honest without user interaction (only
+// while viewing a spot forecast).
+setInterval(() => { if (currentSpot && SPOTS.some((s) => s.id === location.hash.slice(1))) render(currentSpot); }, 5 * 60 * 1000);
 
 if (new URLSearchParams(location.search).has("debug")) selfTest();
 route();

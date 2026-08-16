@@ -230,6 +230,61 @@ h1 { font-size: 22px; margin: 0; letter-spacing: 0.5px; }
 }
 .report-meta { margin-top: 12px; font-size: 11px; color: var(--text-muted); }
 
+/* ------- overview (homepage) ------- */
+.ov-loading { color: var(--text-muted); padding: 40px 4px; font-size: 15px; }
+.ov-h { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin: 20px 2px 8px; }
+.sc-fire { --sc: var(--wc-offshore); }
+.sc-good { --sc: var(--wc-cross-off); }
+.sc-fun  { --sc: var(--wc-cross); }
+.sc-marg { --sc: var(--wc-cross-on); }
+.sc-flat { --sc: var(--wc-onshore); }
+.ov-score { display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+  min-width: 42px; padding: 4px 8px; border-radius: 8px; background: color-mix(in srgb, var(--sc) 20%, transparent); border: 1px solid var(--sc); }
+.ov-score-num { font-size: 16px; font-weight: 700; color: var(--sc); line-height: 1; }
+.ov-score-lg { min-width: 66px; padding: 8px 12px; }
+.ov-score-lg .ov-score-num { font-size: 26px; }
+.ov-score-verdict { font-size: 11px; color: var(--sc); margin-top: 2px; }
+.ov-banner { border: 1px solid var(--sc); background: color-mix(in srgb, var(--sc) 12%, var(--card)); border-radius: 12px; padding: 12px 16px; margin: 8px 0; }
+.ov-banner-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); }
+.ov-banner-main { font-size: 17px; font-weight: 650; margin-top: 3px; color: var(--text); }
+.ov-weekend-row { display: flex; gap: 10px; }
+.ov-weekend-card { flex: 1; background: var(--card); border: 1px solid var(--card-edge); border-radius: 12px; padding: 12px; text-align: center; }
+.ov-weekend-day { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+.ov-weekend-card .ov-score { margin: 0 auto; }
+.ov-weekend-spot { font-size: 14px; font-weight: 600; margin-top: 8px; }
+.ov-weekend-when { font-size: 12px; color: var(--text-muted); }
+.ov-row { display: grid; grid-template-columns: 1.3fr 1.6fr auto 1fr 1.6fr; gap: 10px; align-items: center;
+  background: var(--card); border: 1px solid var(--card-edge); border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; text-decoration: none; color: var(--text); }
+.ov-row:hover { border-color: var(--accent); }
+.ov-home { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--card)); }
+.ov-name-txt { font-weight: 650; font-size: 14px; display: block; }
+.ov-drive { font-size: 11px; color: var(--text-muted); }
+.ov-now { display: flex; flex-direction: column; gap: 2px; }
+.ov-now-swell { font-size: 13px; }
+.ov-now-wind { font-size: 11px; }
+.ov-dim { color: var(--text-muted); }
+.ov-weekbest { display: flex; flex-direction: column; }
+.ov-weekbest-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); }
+.ov-weekbest-val { font-size: 13px; }
+.ov-verdict { font-size: 12px; }
+.ov-verdict-go { color: var(--wc-offshore); font-weight: 600; }
+.ov-verdict-maybe { color: var(--wc-cross-off); }
+.ov-verdict-no { color: var(--text-muted); }
+.ov-verdict-home { color: var(--accent); }
+.ov-grid { display: grid; grid-template-columns: 1.1fr repeat(7, 1fr); gap: 4px; }
+.ov-grid-corner, .ov-grid-daylabel, .ov-grid-spot { font-size: 11px; color: var(--text-muted); display: flex; align-items: center; }
+.ov-grid-daylabel { justify-content: center; }
+.ov-grid-spot { font-size: 12px; color: var(--text); }
+.ov-cell { text-align: center; padding: 8px 0; border-radius: 6px; font-size: 13px; font-weight: 650;
+  background: color-mix(in srgb, var(--sc) 22%, transparent); color: var(--sc); border: 1px solid color-mix(in srgb, var(--sc) 45%, transparent); }
+.ov-foot { font-size: 11px; color: var(--text-muted); margin: 18px 2px; }
+@media (max-width: 560px) {
+  .ov-row { grid-template-columns: 1fr auto; grid-auto-rows: auto; }
+  .ov-now, .ov-weekbest, .ov-verdict { grid-column: 1 / -1; }
+  .ov-grid { font-size: 10px; }
+  .ov-cell { font-size: 11px; padding: 6px 0; }
+}
+
 /* ------- day cards ------- */
 .day-card {
   background: var(--card); border: 1px solid var(--card-edge); border-radius: 12px;
