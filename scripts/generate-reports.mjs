@@ -113,16 +113,18 @@ function buildDigest(spot, marine, wind, hilo) {
   return `## ${spot.name} (id: ${spot.id}; beach faces ${spot.facing}deg true)\n${lines.join("\n")}`;
 }
 
-const SYSTEM_PROMPT = `You are the forecaster for a personal surf app covering three NYC-area beach breaks: Rockaway 67th St, Lido Beach, and Ditch Plains (Montauk). You write short daily reports from an hourly forecast digest.
+const SYSTEM_PROMPT = `You are the forecaster for a personal surf app covering five East Coast beach breaks: Rockaway 67th St and Lido Beach (Long Island), Ditch Plains (Montauk), Manasquan Inlet (New Jersey), and Matunuck (Rhode Island). Rockaway is the user's home break; the others are drives (Lido ~45min, Manasquan ~1.5hr, Ditch ~2.5hr, Matunuck ~3hr) they'll only make for a clearly better day. You write short daily reports from an hourly forecast digest.
 
 Voice: a local forecaster talking to fellow surfers. Casual, direct, practical, a little dry. Reference board choice (log, groveler, fish, shortboard), tide windows, and wind timing. Recommend the best window of the day when there is one. Be honest when it's flat, junky, or blown out — never oversell. No emoji, no exclamation marks.
 
-Calibration for these spots (model swell heights, ft): under ~1.5ft at short period (<6s) is flat to barely surfable; ~2ft at 6-8s is loggable; 2-3ft at 8s+ is fun for most boards; 3ft+ at 9s+ is a solid day worth rearranging plans for. Short-period S windswell is typical summer junk; SE/ESE swells at longer periods are the good ones. Wind classes in the digest (offshore/cross-off/cross/cross-on/onshore/light) are computed per beach orientation — trust them. Light wind = glassy. Each swell line also carries a direction-quality tag (prime/good/fair/marginal/poor angle) computed from that spot's swell windows, deliberately stringent: "prime" is the narrow peeling window (e.g. ESE at Rockaway) and is rare — a prime angle at decent period and size is THE day to flag; "marginal" and "poor" angles mean junk regardless of size.
+Calibration for these spots (model swell heights, ft): under ~1.5ft at short period (<6s) is flat to barely surfable; ~2ft at 6-8s is loggable; 2-3ft at 8s+ is fun for most boards; 3ft+ at 9s+ is a solid day worth rearranging plans for. Short-period S windswell is typical summer junk; SE/ESE swells at longer periods are the good ones. Wind classes in the digest (offshore/cross-off/cross/cross-on/onshore/light) are computed per beach orientation — trust them. Light wind = glassy, and a LIGHT onshore (under ~7mph) is still clean and nearly as good as offshore — don't write off a small-but-glassy dawn or dusk just because the wind is technically onshore. Each swell line also carries a direction-quality tag (prime/good/fair/marginal/poor angle) computed from that spot's swell windows, deliberately stringent: "prime" is the narrow peeling window (e.g. ESE at Rockaway) and is rare — a prime angle at decent period and size is THE day to flag; "marginal" and "poor" angles mean junk regardless of size.
 
 For each spot produce:
 - headline: one punchy sentence summarizing today (e.g. "Knee-high windswell leftovers — log it or skip it.").
 - today: 2-4 sentences on how today plays out, morning vs afternoon, best window, board call.
 - daysToWatch: only upcoming days (not today) genuinely worth flagging — good days to target AND clear warnings (e.g. blown out, flat spell). 0-4 entries per spot; skip unremarkable days. day is the short weekday label from the digest (e.g. "Wed").
+
+Also produce a "dashboard" object with one field, summary: a 2-3 sentence bird's-eye read of the whole week across ALL five spots, written for the app's homepage. Lead with where and when it's best, say plainly whether the home break (Rockaway) is enough or whether a drive to another spot is worth it and which day, and give the overall vibe (building, fading, flat spell, weekend outlook). Same dry local voice.
 
 Base everything strictly on the digest. Do not invent swells, storms, or buoy readings not present in the data.`;
 
@@ -151,8 +153,14 @@ const SCHEMA = {
         additionalProperties: false,
       },
     },
+    dashboard: {
+      type: "object",
+      properties: { summary: { type: "string" } },
+      required: ["summary"],
+      additionalProperties: false,
+    },
   },
-  required: ["reports"],
+  required: ["reports", "dashboard"],
   additionalProperties: false,
 };
 
@@ -193,10 +201,14 @@ async function main() {
   if (response.stop_reason === "refusal") throw new Error("Model refused the request");
   const text = response.content.find((b) => b.type === "text")?.text;
   if (!text) throw new Error(`No text block in response (stop_reason: ${response.stop_reason})`);
-  const { reports } = JSON.parse(text);
+  const { reports, dashboard } = JSON.parse(text);
 
   fs.mkdirSync(OUT_DIR, { recursive: true });
   const generatedAt = new Date().toISOString();
+  if (dashboard?.summary) {
+    fs.writeFileSync(`${OUT_DIR}dashboard.json`, JSON.stringify({ generatedAt, ...dashboard }, null, 2) + "\n");
+    console.log(`wrote reports/dashboard.json — "${dashboard.summary.slice(0, 60)}..."`);
+  }
   for (const spot of SPOTS) {
     const report = reports.find((r) => r.spotId === spot.id);
     if (!report) {

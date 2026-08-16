@@ -6,14 +6,14 @@ import { renderSwellChart, renderWindRow, renderTideChart, renderWeatherRow, ren
 import { loadSessions, renderSessionsView } from "./sessions.js";
 import { renderLogForm } from "./logform.js";
 import { setEditSession } from "./store.js";
-import { renderOverview } from "./overview.js";
+import { renderDashboard } from "./dashboard.js";
 
 const $ = (sel) => document.querySelector(sel);
 const tabsEl = $("#tabs");
 const reportEl = $("#report");
 const sessionsEl = $("#sessions-view");
 const logEl = $("#log-view");
-const overviewEl = $("#overview-view");
+const dashboardEl = $("#dashboard-view");
 const nowEl = $("#now-card");
 const daysEl = $("#days");
 const errorsEl = $("#errors");
@@ -28,16 +28,20 @@ let currentSpot = null;
 let renderSeq = 0; // ignore stale async renders after quick tab switches
 const expandedSpots = new Set(); // spots showing the full week this session
 
-function spotFromHash() {
-  const id = location.hash.slice(1);
+// Hash is "spotId" or "spotId/YYYY-MM-DD" (deep link to a day from the dashboard).
+function parseHash() {
+  const [seg, day] = location.hash.slice(1).split("/");
+  return { seg, day: day || null };
+}
+function spotFromId(id) {
   return SPOTS.find((s) => s.id === id) || SPOTS[0];
 }
 
 function buildTabs() {
   const ov = document.createElement("button");
-  ov.textContent = "Overview";
-  ov.dataset.nav = "overview";
-  ov.addEventListener("click", () => { location.hash = "overview"; });
+  ov.textContent = "Dashboard";
+  ov.dataset.nav = "dashboard";
+  ov.addEventListener("click", () => { location.hash = "dashboard"; });
   tabsEl.append(ov);
   for (const spot of SPOTS) {
     const btn = document.createElement("button");
@@ -235,6 +239,7 @@ function renderDays(model, spot) {
   visibleDays.forEach((day, i) => {
     const card = document.createElement("div");
     card.className = "day-card";
+    card.id = `d-${day.date}`; // scroll target for dashboard deep links
 
     const h2 = document.createElement("h2");
     h2.textContent = dayTitle(day.date, i);
@@ -278,7 +283,21 @@ function renderDays(model, spot) {
   }
 }
 
-async function render(spot, { force = false } = {}) {
+function scrollToDay(date) {
+  const bring = () => {
+    const card = document.getElementById(`d-${date}`);
+    if (!card) return;
+    card.scrollIntoView({ behavior: "smooth", block: "start" });
+    card.classList.add("flash");
+    setTimeout(() => card.classList.remove("flash"), 1600);
+  };
+  // Two passes: once layout is up, then again after the Now-card map settles so a
+  // late reflow doesn't leave the target off-screen.
+  setTimeout(bring, 120);
+  setTimeout(() => { const c = document.getElementById(`d-${date}`); if (c) c.scrollIntoView({ block: "start" }); }, 700);
+}
+
+async function render(spot, { force = false, day = null } = {}) {
   const seq = ++renderSeq;
   currentSpot = spot;
   setView("forecast", spot.id);
@@ -286,10 +305,13 @@ async function render(spot, { force = false } = {}) {
   try {
     const [model, report] = await Promise.all([getSpotData(spot, { force }), loadReport(spot)]);
     if (seq !== renderSeq) return; // user switched tabs mid-fetch
+    // A deep-linked day beyond the default window needs the week expanded first.
+    if (day && model.days.findIndex((d) => d.date === day) >= DEFAULT_VISIBLE_DAYS) expandedSpots.add(spot.id);
     renderErrors(model, spot);
     renderNowCard(model, spot);
     renderReport(report);
     renderDays(model, spot);
+    if (day) scrollToDay(day);
     updatedEl.textContent = `updated ${new Date(model.fetchedAt).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}`;
     if (new URLSearchParams(location.search).has("debug")) {
       console.log("model", model);
@@ -310,18 +332,18 @@ async function render(spot, { force = false } = {}) {
   }
 }
 
-// Toggle between overview / forecast / session-log / log-form views, and set the
-// active nav tab (Overview or a spot; sessions/log dim the spot tabs).
+// Toggle between dashboard / forecast / session-log / log-form views, and set the
+// active nav tab (Dashboard or a spot; sessions/log dim the spot tabs).
 function setView(mode, key) {
   const forecast = mode === "forecast";
-  overviewEl.hidden = mode !== "overview";
+  dashboardEl.hidden = mode !== "dashboard";
   for (const el of [nowEl, reportEl, errorsEl, daysEl]) el.hidden = !forecast;
   sessionsEl.hidden = mode !== "sessions";
   logEl.hidden = mode !== "log";
   $("#sessions-btn").classList.toggle("active", mode === "sessions");
   $("#log-btn").classList.toggle("active", mode === "log");
   for (const btn of tabsEl.children) {
-    const active = (btn.dataset.nav === "overview" && mode === "overview") || (btn.dataset.spot && btn.dataset.spot === key);
+    const active = (btn.dataset.nav === "dashboard" && mode === "dashboard") || (btn.dataset.spot && btn.dataset.spot === key);
     btn.classList.toggle("active", !!active);
     btn.classList.toggle("dimmed", mode === "sessions" || mode === "log");
   }
@@ -335,18 +357,18 @@ async function renderSessions() {
   renderSessionsView(sessionsEl, sessions);
 }
 
-function showOverview() {
+function showDashboard() {
   renderSeq++; // cancel any in-flight forecast render
-  setView("overview", "overview");
-  renderOverview(overviewEl);
+  setView("dashboard", "dashboard");
+  renderDashboard(dashboardEl);
 }
 
 function route() {
-  const hash = location.hash.slice(1);
-  if (hash === "sessions") return renderSessions();
-  if (hash === "log") { renderSeq++; setView("log"); return renderLogForm(logEl); }
-  if (hash === "" || hash === "overview") return showOverview();
-  render(spotFromHash());
+  const { seg, day } = parseHash();
+  if (seg === "sessions") return renderSessions();
+  if (seg === "log") { renderSeq++; setView("log"); return renderLogForm(logEl); }
+  if (seg === "" || seg === "dashboard") return showDashboard();
+  render(spotFromId(seg), { day });
 }
 
 buildTabs();
@@ -358,15 +380,15 @@ $("#log-btn").addEventListener("click", () => {
   else location.hash = "log";
 });
 $("#refresh").addEventListener("click", () => {
-  const hash = location.hash.slice(1);
-  if (hash === "sessions") renderSessions();
-  else if (hash === "" || hash === "overview") showOverview();
-  else if (hash !== "log") render(currentSpot, { force: true });
+  const { seg } = parseHash();
+  if (seg === "sessions") renderSessions();
+  else if (seg === "" || seg === "dashboard") showDashboard();
+  else if (seg !== "log") render(currentSpot, { force: true });
 });
 
 // Keep the now-marker and "Today" boundary honest without user interaction (only
 // while viewing a spot forecast).
-setInterval(() => { if (currentSpot && SPOTS.some((s) => s.id === location.hash.slice(1))) render(currentSpot); }, 5 * 60 * 1000);
+setInterval(() => { if (currentSpot && SPOTS.some((s) => s.id === parseHash().seg)) render(currentSpot); }, 5 * 60 * 1000);
 
 if (new URLSearchParams(location.search).has("debug")) selfTest();
 route();
