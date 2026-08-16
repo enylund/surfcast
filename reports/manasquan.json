@@ -1,21 +1,17 @@
 {
   "spotId": "manasquan",
   "spotName": "Manasquan Inlet",
-  "generatedAt": "2026-08-15T09:29:31.854Z",
-  "headline": "Prime ESE angle but only knee-high and crossed-up — nothing day.",
-  "today": "The direction is dialed but at 1.6ft with N cross winds turning onshore by evening, there's no real punch here. No standout window today. One for the log if you're desperate, otherwise a rest day.",
+  "generatedAt": "2026-08-16T09:30:18.586Z",
+  "headline": "Tiny longer-period SE — dawn log session only.",
+  "today": "Sub-foot with a bit of period on a good angle, and the wind goes SE/SSE cross-on by mid-morning. Light NNW at dawn is the window if you want to log a few. Nothing to rearrange your day for.",
   "daysToWatch": [
     {
       "day": "Mon",
-      "note": "Best setup of the week — 1.8-3.4ft at a fair SSE angle with light and cross-off winds all day. Clean and rideable, bring the fish or shortboard."
+      "note": "Deceptive — nearly 4ft but on a marginal SSE angle, so expect junk regardless of size. Wind's manageable but the direction kills it."
     },
     {
-      "day": "Tue",
-      "note": "Waist-to-chest E swell on a good angle, but cross to onshore winds keep it average. Early is your window."
-    },
-    {
-      "day": "Thu",
-      "note": "Poor angle at short period despite some size — wonky and not worth chasing."
+      "day": "Sat",
+      "note": "The standout. Up to 3.3ft at 8.9s on a prime ESE angle. Wind's cross NE-ish so it won't be glassy, but this is the day to prioritize. Shortboard."
     }
   ]
 }

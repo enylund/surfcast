@@ -1,21 +1,17 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-08-15T09:29:31.854Z",
-  "headline": "Barely a foot of prime SSE — glassy and pointless, one for the loggers.",
-  "today": "Prime angle on paper but 0.7ft doesn't do much. Morning has the cleanest wind with NNE offshore to cross-off before the SE cross-on and SSE onshore build through the afternoon. Log-only if you're that committed, otherwise wait it out.",
+  "generatedAt": "2026-08-16T09:30:18.586Z",
+  "headline": "Prime angle but no swell — glassy and flat.",
+  "today": "Prime SSE direction is wasted on sub-foot short-period mush. Dawn cross-off is glassy but there's nothing to ride, and it goes onshore hard by afternoon. Not worth waxing up.",
   "daysToWatch": [
     {
       "day": "Mon",
-      "note": "Solid 2.2-3.9ft on a good ESE angle with WNW cross-off holding most of the day after a cross-on dawn. Clearly the day to surf — fish or shortboard."
+      "note": "Best day of the stretch. Up to 3.7ft at 6.6s on a prime angle with light NE morning wind. Shortboard, mid-morning, before the tide and evening breeze shift."
     },
     {
-      "day": "Tue",
-      "note": "Waist-high leftovers with N offshore in the morning; small but clean groveler window before the S onshore."
-    },
-    {
-      "day": "Wed",
-      "note": "Prime SSE angle but only knee-high, and S onshore builds to 13-16mph by afternoon. Early glass at best, then blown."
+      "day": "Sat",
+      "note": "Waist-to-chest SE on a prime angle, dawn cross-off. Short period keeps it soft but it's rideable early — fish or groveler."
     }
   ]
 }
