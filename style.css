@@ -295,16 +295,18 @@ h1 { font-size: 22px; margin: 0; letter-spacing: 0.5px; }
 .ov-grid-corner, .ov-grid-daylabel, .ov-grid-spot { font-size: 11px; color: var(--text-muted); display: flex; align-items: center; }
 .ov-grid-daylabel { justify-content: center; }
 .ov-grid-spot { font-size: 12px; color: var(--text); }
-.ov-cell { display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px 0;
-  border-radius: 6px; font-size: 13px; font-weight: 650; text-decoration: none;
+.ov-cell2 { display: flex; gap: 3px; }
+.ov-half { flex: 1; min-width: 0; display: flex; align-items: center; justify-content: center; text-align: center;
+  padding: 8px 0; border-radius: 6px; font-size: 13px; font-weight: 650; text-decoration: none;
   background: color-mix(in srgb, var(--sc) 22%, transparent); color: var(--sc); border: 1px solid color-mix(in srgb, var(--sc) 45%, transparent); }
-.ov-cell:hover { background: color-mix(in srgb, var(--sc) 42%, transparent); }
+.ov-half:hover { background: color-mix(in srgb, var(--sc) 42%, transparent); }
 .ov-foot { font-size: 11px; color: var(--text-muted); margin: 18px 2px; }
 @media (max-width: 560px) {
   .ov-row { grid-template-columns: 1fr; }
   .ov-cur { border-right: none; border-bottom: 1px solid var(--card-edge); }
   .ov-grid { font-size: 10px; }
-  .ov-cell { font-size: 11px; padding: 6px 0; }
+  .ov-cell2 { flex-direction: column; gap: 2px; } /* stack am over pm so 2-digit scores stay legible */
+  .ov-half { font-size: 11px; padding: 5px 0; }
 }
 
 /* ------- day cards ------- */

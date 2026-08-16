@@ -73,13 +73,18 @@ function analyze(model) {
   const now = nyNow();
   const days = model.days.map((d, i) => {
     const rise = d.sunrise ?? 5 * 60, set = d.sunset ?? 21 * 60;
-    let peak = 0, peakHr = null;
+    // Morning vs afternoon windows split at noon — the two often play out very
+    // differently (offshore dawn vs blown-out midday, or a glassy evening).
+    const am = { peak: 0, hr: null }, pm = { peak: 0, hr: null };
     for (const h of d.hours) {
       if (h.min < rise || h.min > set) continue;
       const sc = hourScore(h);
-      if (sc > peak) { peak = sc; peakHr = h; }
+      const w = h.min < 12 * 60 ? am : pm;
+      if (sc > w.peak) { w.peak = sc; w.hr = h; }
     }
-    return { i, date: d.date, label: dayLabel(d.date, i), peak, peakHr,
+    const peak = Math.max(am.peak, pm.peak);
+    const peakHr = am.peak >= pm.peak ? am.hr : pm.hr;
+    return { i, date: d.date, label: dayLabel(d.date, i), am, pm, peak, peakHr,
       weekday: new Date(`${d.date}T12:00:00Z`).getUTCDay() };
   });
   const today = model.days.find((d) => d.date === now.date);
@@ -190,18 +195,23 @@ function render(container, analyses, models, ai) {
   }
   container.append(board);
 
-  // --- 7-day heatmap (every cell links to that spot+day) ---
+  // --- 7-day heatmap: each day split into a morning + afternoon pill ---
   const heat = el("div", "ov-heat");
   heat.append(el("h3", "ov-h", "Next 7 days"));
+  heat.append(el("div", "ov-subhead", "Each day split into morning · afternoon — the two windows often differ."));
   const grid = el("div", "ov-grid");
   grid.append(el("div", "ov-grid-corner", ""));
   for (const d of home.days) grid.append(el("div", "ov-grid-daylabel", d.label));
   for (const a of ordered) {
     grid.append(el("div", "ov-grid-spot", spotName(a.spotId)));
     for (const d of a.days) {
-      const cell = el("a", `ov-cell ${scoreClass(d.peak)}`, String(d.peak));
-      cell.href = dayHref(a.spotId, d.date);
-      cell.title = `${spotName(a.spotId)} · ${d.label}: ${verdict(d.peak)} (${d.peak})${d.peakHr ? " ~" + fmtTime(d.peakHr.min) : ""}`;
+      const cell = el("div", "ov-cell2");
+      for (const [key, label, w] of [["am", "morning", d.am], ["pm", "afternoon", d.pm]]) {
+        const half = el("a", `ov-half ${scoreClass(w.peak)}`, String(w.peak));
+        half.href = dayHref(a.spotId, d.date);
+        half.title = `${spotName(a.spotId)} · ${d.label} ${label}: ${verdict(w.peak)} (${w.peak})${w.hr ? " ~" + fmtTime(w.hr.min) : ""}`;
+        cell.append(half);
+      }
       grid.append(cell);
     }
   }
