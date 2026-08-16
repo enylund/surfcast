@@ -198,10 +198,18 @@ function render(container, analyses, models, ai) {
   // --- 7-day heatmap: each day split into a morning + afternoon pill ---
   const heat = el("div", "ov-heat");
   heat.append(el("h3", "ov-h", "Next 7 days"));
-  heat.append(el("div", "ov-subhead", "Each day split into morning · afternoon — the two windows often differ."));
+  heat.append(el("div", "ov-subhead", "Morning and afternoon often play out very differently."));
   const grid = el("div", "ov-grid");
   grid.append(el("div", "ov-grid-corner", ""));
   for (const d of home.days) grid.append(el("div", "ov-grid-daylabel", d.label));
+  // rule line under the day labels + tiny am/pm markers aligned to the two pills
+  grid.append(el("div", "ov-grid-corner", ""));
+  for (let k = 0; k < home.days.length; k++) {
+    const sub = el("div", "ov-ampm");
+    sub.append(el("span", "ov-ampm-l", "am"));
+    sub.append(el("span", "ov-ampm-l", "pm"));
+    grid.append(sub);
+  }
   for (const a of ordered) {
     grid.append(el("div", "ov-grid-spot", spotName(a.spotId)));
     for (const d of a.days) {

@@ -295,6 +295,8 @@ h1 { font-size: 22px; margin: 0; letter-spacing: 0.5px; }
 .ov-grid-corner, .ov-grid-daylabel, .ov-grid-spot { font-size: 11px; color: var(--text-muted); display: flex; align-items: center; }
 .ov-grid-daylabel { justify-content: center; }
 .ov-grid-spot { font-size: 12px; color: var(--text); }
+.ov-ampm { display: flex; gap: 3px; padding-top: 4px; border-top: 1px solid var(--card-edge); }
+.ov-ampm-l { flex: 1; text-align: center; font-size: 9px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); }
 .ov-cell2 { display: flex; gap: 3px; }
 .ov-half { flex: 1; min-width: 0; display: flex; align-items: center; justify-content: center; text-align: center;
   padding: 8px 0; border-radius: 6px; font-size: 13px; font-weight: 650; text-decoration: none;
@@ -306,6 +308,7 @@ h1 { font-size: 22px; margin: 0; letter-spacing: 0.5px; }
   .ov-cur { border-right: none; border-bottom: 1px solid var(--card-edge); }
   .ov-grid { font-size: 10px; }
   .ov-cell2 { flex-direction: column; gap: 2px; } /* stack am over pm so 2-digit scores stay legible */
+  .ov-ampm { flex-direction: column; gap: 0; } /* match the stacked pills: am over pm */
   .ov-half { font-size: 11px; padding: 5px 0; }
 }
 
