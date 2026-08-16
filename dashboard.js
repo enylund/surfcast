@@ -166,14 +166,15 @@ function render(container, analyses, models, ai) {
     const dv = driveVerdict(a, home);
     const row = el("div", `ov-row ${a.spotId === HOME ? "ov-home" : ""}`);
 
-    // NOW zone → the spot's forecast (defaults to today)
+    // NOW zone → the spot's forecast (defaults to today). "Now" sits on top to
+    // mirror the "This week's best" label in the outlook zone.
     const nowA = el("a", "ov-cur");
     nowA.href = `#${a.spotId}`;
+    nowA.append(el("span", "ov-zone-label", "Now"));
     const head = el("div", "ov-cur-head");
     head.append(el("span", "ov-name-txt", spotName(a.spotId)));
     head.append(el("span", "ov-drive", DRIVE[a.spotId]?.label || ""));
     nowA.append(head);
-    nowA.append(el("span", "ov-zone-label", "Now"));
     const curLine = el("div", "ov-cur-line");
     curLine.append(nowCell(a));
     curLine.append(scoreBadge(a.now.score));
