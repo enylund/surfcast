@@ -1,13 +1,17 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-08-16T12:50:27.195Z",
-  "headline": "Barely knee-high and going onshore — skip today.",
-  "today": "Tiny SSE dribble, glassy at dawn but not really surfable, and the S onshore builds all afternoon into evening. Nothing here worth the paddle. Save your energy for tomorrow.",
+  "generatedAt": "2026-08-17T09:46:49.622Z",
+  "headline": "Dawn's blown, then it cleans into a fun fish session.",
+  "today": "Dawn is onshore and messy at 13mph, so don't bother early. Give it until mid-morning when the W cross fills in and the short-period SSE goes rideable at chest-high-plus — fish it around the midday high. It stays soft and short-period all day, but the wind cooperates from late morning on.",
   "daysToWatch": [
     {
-      "day": "Mon",
-      "note": "The day this week near home — prime SSE angle to 3.6ft with NE going light and glassy through the morning. Fish or shortboard, get there early before the afternoon shift."
+      "day": "Tue",
+      "note": "NNW offshore prime-angle dawn — small but glassy, worth a quick log."
+    },
+    {
+      "day": "Sat",
+      "note": "Prime SE angle, light SE at dawn — cleanest local window of the weekend."
     }
   ]
 }
