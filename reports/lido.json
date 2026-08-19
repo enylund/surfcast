@@ -1,13 +1,17 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-08-18T09:37:00.675Z",
-  "headline": "Clean little prime-angle windswell at dawn, gone junky by afternoon.",
-  "today": "Prime SSE angle but small at 1.8ft and short period. Dawn and morning are near-glassy with light NW/WSW, so grab the early window before the S onshore ramps up in the afternoon. Log it and don't overthink the board.",
+  "generatedAt": "2026-08-19T09:37:47.861Z",
+  "headline": "Knee-high prime-angle dribble — glassy dawn log or skip it.",
+  "today": "Small SSE at a prime angle but only around 1.5ft, so it's a longboard-only affair. Morning is glass with W wind under 5mph — get it early. Onshore SSW builds through the afternoon and it fizzles.",
   "daysToWatch": [
     {
       "day": "Sat",
-      "note": "Light SE dawn and a prime angle with a touch more period — clean but tiny. A dawn log session at best."
+      "note": "Some size shows on an ESE swell but 16mph E cross wind runs all day. Junky."
+    },
+    {
+      "day": "Sun",
+      "note": "Around 2.4ft on a prime SSE angle with light morning wind, though the period is short. Best clean window of the weekend — log the early tide."
     }
   ]
 }

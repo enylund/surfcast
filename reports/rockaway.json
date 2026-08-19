@@ -1,13 +1,17 @@
 {
   "spotId": "rockaway",
   "spotName": "Rockaway 67th St",
-  "generatedAt": "2026-08-18T09:37:00.675Z",
-  "headline": "Waist-high SSE windswell with a glassy morning — log it early or skip it.",
-  "today": "Small short-period slop on tap, but the dawn and morning winds are light NNW then W, so it'll be clean and rideable before the S onshore fills in around midday. Get your session in early on the pushing tide off the 6:10a low. Log or groveler, nothing more.",
+  "generatedAt": "2026-08-19T09:37:47.861Z",
+  "headline": "Small SE windswell, glassy at dawn — log it before the sea breeze fills in.",
+  "today": "Waist-high at best on a decent SE angle, and the morning is the move: NW then WNW keeps it light and clean through the low around 7am. Log or groveler, work the incoming tide before the H at 1:28p. Afternoon S wind goes onshore and 9mph-plus by lunch, so it junks up after — dawn patrol or bust.",
   "daysToWatch": [
     {
       "day": "Sat",
-      "note": "Prime ESE angle finally shows with longer-period sets and a glassy light dawn, but it's only knee-to-waist. Worth a dawn log if you're local, not much else."
+      "note": "Swell jumps to 3ft-plus on a prime ESE angle at up to 9.8s, but E cross wind blows 15mph all day. Size is there, cleanliness isn't."
+    },
+    {
+      "day": "Sun",
+      "note": "Still 2.5ft with a good SE angle and much lighter wind — dawn E cross at 6mph and a softer morning. The cleaner of the weekend days here."
     }
   ]
 }
