@@ -1,17 +1,21 @@
 {
   "spotId": "ditch",
   "spotName": "Ditch Plains",
-  "generatedAt": "2026-08-19T09:37:47.861Z",
-  "headline": "Chest-high prime angle but the wind's on it — small and soft.",
-  "today": "Prime SSE angle and a bit of size to 2.3ft, but the wind's onshore/cross-on from dawn onward, so it never really cleans up. Longboard the morning if you're local, otherwise not worth the 2.5hr. Fading through the day.",
+  "generatedAt": "2026-08-20T09:38:21.557Z",
+  "headline": "Clean waist-high peelers this morning — nice if you're already out here.",
+  "today": "Best conditions of the region this morning actually — 2ft at 7s on a prime angle with a light N offshore through mid-morning, then it goes light and variable. Fun little log session but it's a 2.5hr drive for waist-high, so this is a locals-only day. Don't burn the tank on it.",
   "daysToWatch": [
     {
+      "day": "Tue",
+      "note": "1-1.9ft but the S swell stretches to 9s at a prime angle and NW is cross-off through the morning. Cleanest Ditch day of the stretch, though still on the small side for the drive."
+    },
+    {
       "day": "Sun",
-      "note": "2.8ft on a prime SSE angle with cross-off NNE/NE wind in the morning — clean and rideable. Short period, but the best clean-and-size combo of the run. Worth the drive."
+      "note": "Biggest raw size at 3ft but it's short-period S and the wind swings onshore by afternoon. Morning's your only shot and it's marginal — not worth the haul."
     },
     {
       "day": "Mon",
-      "note": "Biggest day at nearly 3ft with NNW offshore at dawn going cross-off. Short-period S energy but glassy and overhead-ish — the standout morning of the week here."
+      "note": "Decent size on a prime S angle but W blows 18-19mph cross all day. Junk."
     }
   ]
 }
