@@ -1,21 +1,17 @@
 {
   "spotId": "rockaway",
   "spotName": "Rockaway 67th St",
-  "generatedAt": "2026-08-20T09:38:21.557Z",
-  "headline": "Waist-high SE leftovers this morning, clean but small — log it early.",
-  "today": "Dawn's got a light WNW breeze going cross-off and it drops to a glassy 4mph W through mid-morning, so the window is right at first light through the morning tide before the SE cross-on fills in around midday. Only 1.2-1.4ft at 6s, so it's a log or nothing session — bring the biggest board you own. Skip the afternoon once that SE onshore turns it junky.",
+  "generatedAt": "2026-08-21T09:40:30.287Z",
+  "headline": "Small ESE windswell on the prime angle — clean and offshore, log it early.",
+  "today": "Prime ESE direction but the period's short at 4-5s, so you're looking at waist-high peelers, not much punch. Upside is the wind stays offshore N all day, so it's glassy dawn to dusk — no rush, just pick your tide. Grab the log or the groveler and enjoy a mellow home-break session; the incoming push toward the 3:15p high should have the most shape.",
   "daysToWatch": [
     {
-      "day": "Fri",
-      "note": "Small at 0.7-1.1ft but that ESE line hits 9.9s at a prime angle and NNE cross-off holds all day. Clean and hollow-ish if it shows, worth a dawn look."
+      "day": "Wed",
+      "note": "Prime ESE angle again with a hair more period, but it's tiny and the wind swings onshore SSE hard by afternoon. Dawn is your only clean window."
     },
     {
-      "day": "Sat",
-      "note": "The day. ESE swell fills to 4.5ft at 12.5s on a prime angle and the wind goes light SE 3mph in the afternoon. Morning's a touch cross, afternoon glasses off — this is the one to build your weekend around, no drive needed."
-    },
-    {
-      "day": "Mon",
-      "note": "Small SSE and W wind ramps to 18mph — cross and messy. Don't bother."
+      "day": "Thu",
+      "note": "Prime angle and size to nearly 3ft, but onshore S most of the day. Wind goes light in the evening if you want to gamble on a dusk cleanup."
     }
   ]
 }
