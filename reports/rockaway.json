@@ -1,17 +1,21 @@
 {
   "spotId": "rockaway",
   "spotName": "Rockaway 67th St",
-  "generatedAt": "2026-08-23T09:31:16.815Z",
-  "headline": "Small SE swell on a prime angle but cross-on all day — dawn log session at best.",
-  "today": "There's a prime SE angle in the water with a hint of longer period, but it's only knee-to-thigh and the wind never gets better than a 7mph ESE cross-on in the morning. Best you'll do is a glassy-ish dawn or the mid-morning window around the 10:34 low before the SW cross-on fills in. Grab the log, keep expectations low, and don't rush out of bed.",
+  "generatedAt": "2026-08-24T09:52:04.960Z",
+  "headline": "Waist-high SSE windswell, clean early then onshore — a dawn log session.",
+  "today": "Short-period stuff at 2ft and change, fair angle, but the morning's the play: dawn cross-off and a light SSW behind it keep it glassy through the early low. Ride the log or a groveler and get it before the SSE onshore fills in around midday. Afternoon goes soft and bumpy, not worth it.",
   "daysToWatch": [
     {
-      "day": "Thu",
-      "note": "Prime ESE swell up to 2.8ft with a 7mph cross-on dawn — surf early, because the wind cranks to 17mph onshore by afternoon and trashes it."
+      "day": "Wed",
+      "note": "Prime SE angle at 6-8s but only knee-high — dawn cross-off is clean if you just want to slide the log. Onshore ramps up hard by afternoon."
     },
     {
-      "day": "Sat",
-      "note": "Small at 1-1.4ft but clean NNW offshore all morning — worth a dawn check on the log if you want a mellow glassy one."
+      "day": "Thu",
+      "note": "That prime SE angle and a 3.6ft total wave, but 15-19mph S onshore all day torches it. Blown out — skip."
+    },
+    {
+      "day": "Fri",
+      "note": "Biggest of the week at pushing 3ft, though short-period and mushy. Light morning wind gives a clean-ish window before the SSE onshore builds."
     }
   ]
 }
