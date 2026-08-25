@@ -1,17 +1,21 @@
 {
   "spotId": "matunuck",
   "spotName": "Matunuck",
-  "generatedAt": "2026-08-24T09:52:04.960Z",
-  "headline": "Knee-to-chest S swell, glassy dawn before the onshore drifts in.",
-  "today": "Solid size at 3ft, fair angle and short-period, with a light W dawn making it glassy early. The onshore stays light (6-7mph) so it doesn't get wrecked, but the clean window is the first couple hours. Fish or log depending on push; ride the early tide. Fades soft and textured through the day.",
+  "generatedAt": "2026-08-25T09:39:16.323Z",
+  "headline": "Short-period south slop under cross-on wind — skip it today.",
+  "today": "2.5ft but it's 4-second south junk and the SW wind is cross-on from morning on. Weak and textured, not worth the drive. Save it for Saturday.",
   "daysToWatch": [
     {
+      "day": "Thu",
+      "note": "Prime SE angle to 2.6ft but SSW turns onshore through the day — dawn is the only semi-clean window and it's marginal."
+    },
+    {
       "day": "Fri",
-      "note": "Short-period S back to 2ft-plus with a near-calm dawn — glassy early before the afternoon onshore. Loggable morning."
+      "note": "Bumps to 2.7ft but S onshore 10-11mph — bumpy and disorganized, likely a pass."
     },
     {
       "day": "Sat",
-      "note": "Dawn N offshore cleans up a waist-high fair-angle swell — small and short window, but the wind's right early."
+      "note": "The day here. 2-plus feet SSE at a good angle with N offshore through the morning. Clean and worth the drive early — fish or shortboard before the afternoon cross-on shift."
     }
   ]
 }

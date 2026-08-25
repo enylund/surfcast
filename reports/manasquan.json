@@ -1,17 +1,21 @@
 {
   "spotId": "manasquan",
   "spotName": "Manasquan Inlet",
-  "generatedAt": "2026-08-24T09:52:04.960Z",
-  "headline": "Waist-high SSE, cleanest wind of the group — dawn is fine.",
-  "today": "Under-2ft short-period SSE, fair angle, but Manasquan gets the friendly wind today: light early, then SW cross-off through the afternoon so it never really blows out. Small and fast, so a log or groveler all day, best on the morning tide. Nothing special, but rideable and clean.",
+  "generatedAt": "2026-08-25T09:39:16.323Z",
+  "headline": "Small but clean SE with offshore afternoon — fun little log session.",
+  "today": "1.8ft SE at a good angle, and the wind cooperates: light W dawn, cross-off morning, straight offshore W in the afternoon and evening. Nothing big but it'll be clean and rideable all day, best in the afternoon once the W offshore sets up. Log or groveler.",
   "daysToWatch": [
     {
-      "day": "Wed",
-      "note": "Long-period ESE lines in the mix (up to 13s) on the good angle, with a light NW dawn — could be a sneaky clean little one. Small, so log it. Wind swings onshore by evening."
+      "day": "Thu",
+      "note": "Biggest swell of the week, SE to 3.7ft at a good angle with S wind only cross here, not straight onshore like the LI beaches. The pick of the week for size — fish or shortboard, worth the drive."
     },
     {
-      "day": "Thu",
-      "note": "Prime ESE angle and a 3.6ft total wave, but 10-14mph S cross all day keeps it disorganized. Marginal call — clean it up in your head before making the drive."
+      "day": "Fri",
+      "note": "2.7ft SSE with light SW cross-off winds all day. Shorter period and fair angle but clean and surfable — solid backup to Thursday."
+    },
+    {
+      "day": "Sat",
+      "note": "Chest-high SE at a good angle under N cross winds. Clean-ish, another fun option if you're already out this way."
     }
   ]
 }
