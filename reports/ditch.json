@@ -1,17 +1,21 @@
 {
   "spotId": "ditch",
   "spotName": "Ditch Plains",
-  "generatedAt": "2026-08-26T09:46:11.447Z",
-  "headline": "Small and clean at dawn, fading by afternoon — Saturday's the one to circle.",
-  "today": "A little SSE bump around 1.1-1.4ft on a prime angle, cleanest with the NW cross-off dawn and light morning before SW cross-on sneaks in. Fun-size longboard peelers if you happen to be out east, but not worth the 2.5hr from home. Save the drive.",
+  "generatedAt": "2026-08-27T19:41:39.677Z",
+  "headline": "Good angle and size today, but onshore all day makes it a mush-fest.",
+  "today": "There's 1.5-2ft in the water at a good SE angle, but the SSE onshore blows 12-13mph through the whole daylight window, so it'll be bumpy and disorganized. Not worth the 2.5-hour drive. Sit tight — tomorrow is the reason to come out here.",
   "daysToWatch": [
     {
-      "day": "Sat",
-      "note": "The pick of the week for a drive: 1.7-2.2ft on a prime SSE angle, NE cross-off in the morning going glassy light by afternoon. Clean and rideable — worth the trip."
+      "day": "Fri",
+      "note": "This is the day to make the drive. Prime SSE angle, 2-2.6ft, and near-glassy dawn and morning (2-3mph). Get there early, shortboard or fish; the S onshore is light but creeps in by afternoon."
     },
     {
-      "day": "Fri",
-      "note": "Biggest at 2.6-3ft prime angle but short period and SSW cross-on all day. Punchy and messy — surfable if you're already out there, not a target."
+      "day": "Sat",
+      "note": "Backup day — N offshore dawn to morning cleans up a 1.9-2.1ft prime swell. Clean and fun early before the SSW cross-on evening. Worth it if you can't make Friday."
+    },
+    {
+      "day": "Sun",
+      "note": "Warning: swell drops under 1.7ft and SW wind ramps to 21mph by evening. Blown out, skip it."
     }
   ]
 }
