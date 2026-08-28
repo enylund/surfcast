@@ -1,21 +1,17 @@
 {
   "spotId": "ditch",
   "spotName": "Ditch Plains",
-  "generatedAt": "2026-08-27T19:41:39.677Z",
-  "headline": "Good angle and size today, but onshore all day makes it a mush-fest.",
-  "today": "There's 1.5-2ft in the water at a good SE angle, but the SSE onshore blows 12-13mph through the whole daylight window, so it'll be bumpy and disorganized. Not worth the 2.5-hour drive. Sit tight — tomorrow is the reason to come out here.",
+  "generatedAt": "2026-08-28T20:46:27.063Z",
+  "headline": "Prime angle, glassy all day — the pick of the East Coast today.",
+  "today": "Best call anywhere this morning: 2-2.6ft SSE at a prime Ditch angle with light winds essentially all day. No wind window to chase, it stays clean dawn to dusk. Worth the drive if you can swing it — fish or shortboard will work, log the smaller sets. Tides are weak so mid-tide is fine.",
   "daysToWatch": [
     {
-      "day": "Fri",
-      "note": "This is the day to make the drive. Prime SSE angle, 2-2.6ft, and near-glassy dawn and morning (2-3mph). Get there early, shortboard or fish; the S onshore is light but creeps in by afternoon."
-    },
-    {
       "day": "Sat",
-      "note": "Backup day — N offshore dawn to morning cleans up a 1.9-2.1ft prime swell. Clean and fun early before the SSW cross-on evening. Worth it if you can't make Friday."
+      "note": "N offshore morning holds the prime SSE swell clean into the afternoon lull. Another solid Montauk day if you missed Friday."
     },
     {
-      "day": "Sun",
-      "note": "Warning: swell drops under 1.7ft and SW wind ramps to 21mph by evening. Blown out, skip it."
+      "day": "Thu",
+      "note": "Biggest of the week at 3.5ft but a marginal SSW angle and onshore-to-cross wind most of the day. Only the evening NW cleans it up briefly."
     }
   ]
 }
