@@ -1,13 +1,17 @@
 {
   "spotId": "matunuck",
   "spotName": "Matunuck",
-  "generatedAt": "2026-08-29T14:15:06.082Z",
-  "headline": "Chest-high SSE, clean only for the morning window.",
-  "today": "Decent SSE swell to 2.6ft at a good angle, with offshore N wind through the morning before S cross-on and onshore ruin it by afternoon. Get it early on the push to the 9:14a high — fish or shortboard. Ditch has the same swell better organized and a shorter drive, so only make this haul if Rhode Island's your thing.",
+  "generatedAt": "2026-08-30T14:20:34.308Z",
+  "headline": "Glassy dawn then SW cross-on takes over — not a 3hr day.",
+  "today": "Light WSW at dawn gives a short clean window before the SW cross-on stacks up to 13mph and stays there. Good angle and some size on the sets early, but you'd need to be local to catch the good part. Not worth the drive.",
   "daysToWatch": [
     {
+      "day": "Mon",
+      "note": "Cross-off in the morning with a fair S angle up to 2.8ft — cleanest Matunuck gets midweek, but short-period."
+    },
+    {
       "day": "Wed",
-      "note": "Short-period S junk with cross-off NE wind at 14mph — groomed but weak and wrong-angle. Not worth it."
+      "note": "Prime ESE angle and size, but 15mph ESE cross wind all day chops it up."
     }
   ]
 }

@@ -1,13 +1,17 @@
 {
   "spotId": "rockaway",
   "spotName": "Rockaway 67th St",
-  "generatedAt": "2026-08-29T14:15:06.082Z",
-  "headline": "Clean little SE windswell with offshore mornings — grab the log.",
-  "today": "Best conditions of the region are right here early: SE swell to a touch over 2ft at a good angle, offshore NNW-N through morning, then glassing off under a light W by afternoon. It's small and short-period so bring the log or a groveler and work the outgoing tide off the 9:07a high. Nothing serious, but a fun, clean home session — no reason to drive.",
+  "generatedAt": "2026-08-30T14:20:34.308Z",
+  "headline": "Waist-high SE with a touch of period — dawn log session before the sea breeze.",
+  "today": "Best of it is the early window while the WSW is still light cross and the swell's got a bit of period (up to 8s, 2.8ft on the sets). Once the SSW cross-on fills in mid-morning it goes soft and textured, and by evening the S onshore closes it out. Log or groveler, ride the incoming toward the 9:47 high, don't expect much after lunch.",
   "daysToWatch": [
     {
-      "day": "Sun",
-      "note": "Swell nudges to 3ft with a bit more period early, but wind swings SSW cross-on by mid-morning and full S onshore afternoon. Dawn patrol only."
+      "day": "Wed",
+      "note": "Longer period SE at a good angle (up to 9.3s) but SSE onshore/cross-on sits on it all day — clean-ish only at dawn."
+    },
+    {
+      "day": "Sat",
+      "note": "NW offshore all day and a good SE angle, but the swell's small and short-period. Glassy dawn log at best."
     }
   ]
 }
