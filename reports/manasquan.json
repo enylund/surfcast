@@ -1,17 +1,21 @@
 {
   "spotId": "manasquan",
   "spotName": "Manasquan Inlet",
-  "generatedAt": "2026-08-30T14:20:34.308Z",
-  "headline": "Light dawn wind and some period — the pick of the region this morning.",
-  "today": "Best setup around today: light WSW at dawn going cross-off, a good SE angle, and up to 8s on the sets. Fish or log the morning through toward the 9:33 high before the SSW cross comes up in the afternoon. This is the cleanest quality window of the day anywhere on the board.",
+  "generatedAt": "2026-08-31T16:53:16.241Z",
+  "headline": "Small and mixed today, but the tank fills up midweek — Thursday is the clean one.",
+  "today": "Just 1-2ft of SSE at a fair angle with light winds bending onshore by afternoon. Dawn NW cross-off is the tidy window on the push to the 10:12 high, longboard fare only. Save your energy for later in the week.",
   "daysToWatch": [
     {
       "day": "Thu",
-      "note": "W offshore in the afternoon backing off to light NW evening, good SE angle — the drive-worthy window this week if it holds."
+      "note": "This is the drive: 1.6-2.4ft ESE at a prime angle with light W offshore 5-7mph all morning. Clean and rideable — fish or shortboard, best on the morning tide. Worth the 90 minutes."
     },
     {
-      "day": "Sat",
-      "note": "Light and glassy all day with a prime ESE angle, but small and short-period. Clean but tiny."
+      "day": "Wed",
+      "note": "Prime ESE angle with a 9s pulse, total to 3.2ft, but 11mph ENE cross-on to onshore keeps it textured. Dawn's your best shot."
+    },
+    {
+      "day": "Sun",
+      "note": "Biggest swell of the week at 2.2-3.3ft, 6s+ prime ESE, total to 5.4ft — but NE cross-on 12-13mph works against it. Dawn before wind builds if you want size."
     }
   ]
 }
