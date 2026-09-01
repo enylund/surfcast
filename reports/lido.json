@@ -1,13 +1,17 @@
 {
   "spotId": "lido",
   "spotName": "Lido Beach",
-  "generatedAt": "2026-08-31T16:53:16.241Z",
-  "headline": "Tiny and short-period today — a dawn log session at best.",
-  "today": "Under 1.5ft of SSE with a light N dawn keeping it glassy, then SE cross-on moves in for the afternoon. If you want a mellow longboard roll, be out early on the push to the 10:04 high. Otherwise nothing here worth setting an alarm for.",
+  "generatedAt": "2026-09-01T14:01:40.191Z",
+  "headline": "Flat and onshore today; Wednesday brings something to ride.",
+  "today": "Barely a foot of SSE at short period with a light dawn that goes onshore by mid-morning. Glassy but tiny at first light on the incoming — log it if you're already local, otherwise nothing to chase. This is a wait day.",
   "daysToWatch": [
     {
       "day": "Wed",
-      "note": "SE at a prime angle with a 9s pulse, total to 2.8ft. Dawn 11mph NE cross-off is the window before E wind takes over. Rockaway's the better call same day, but this works if you're closer."
+      "note": "E swell to 2ft-plus but only a fair angle here and short period, with dawn NE cross-off. Fun on a groveler early, though Rockaway is the better call for the same swell."
+    },
+    {
+      "day": "Thu",
+      "note": "1.6-2.4ft on a prime angle but short-period and cross-on most of the day. Marginal — surfable early if the wind stays light."
     }
   ]
 }
