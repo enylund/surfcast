@@ -1,17 +1,21 @@
 {
   "spotId": "manasquan",
   "spotName": "Manasquan Inlet",
-  "generatedAt": "2026-09-01T14:01:40.191Z",
-  "headline": "Quiet today, but a clean stacked-swell Thursday is coming.",
-  "today": "Just over a foot of short-period SE at a fair angle with light morning wind going cross. Small and soft — a longboard tide-window session at best. The good stuff is a couple days out.",
+  "generatedAt": "2026-09-02T13:25:13.535Z",
+  "headline": "Waist-to-head windswell, but the wind's on it today — better days are coming.",
+  "today": "Plenty of size at 2-3ft-plus on a good E angle, but it's cross-on to onshore most of the day with a short 4-5s period. Evening lightens to 6mph E if you want a glassy sunset dribble. Save your energy for later in the week.",
   "daysToWatch": [
     {
-      "day": "Wed",
-      "note": "Prime E swell fills in to 4ft on the sets at 8s-plus, but the wind's cross-on NE all day so it'll be textured. Rideable and sizey early."
+      "day": "Mon",
+      "note": "The pick of the week — 2.5-3ft E at a real 6-7s period with cross-off NNW at dawn. Clean and organized, worth the 1.5-hour drive. Shortboard or fish on the early tide."
+    },
+    {
+      "day": "Sun",
+      "note": "Biggest reading anywhere, 3-4ft on a prime E angle, but cross-on NE all day keeps it bumpy. Still ridable and worth a look if Monday doesn't line up."
     },
     {
       "day": "Thu",
-      "note": "This is the drive day. Still 3ft-plus on a prime angle with light NW dawn going offshore W all afternoon — clean and workable. Shortboard, worth the trip from the island."
+      "note": "Chest-high ESE with cross-off SW wind — cleanest of the early-week days if you can't wait."
     }
   ]
 }
