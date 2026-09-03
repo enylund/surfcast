@@ -1,17 +1,17 @@
 {
   "spotId": "matunuck",
   "spotName": "Matunuck",
-  "generatedAt": "2026-09-02T13:25:13.535Z",
-  "headline": "Prime SE angle at 3ft with offshore dawn — but it's a 3-hour reach for short-period.",
-  "today": "Best it looks all week here: 2-2.5ft SE on a prime angle with offshore NNE at dawn going cross-off through morning. The 4s period keeps it soft, so it's a nice local session but hard to justify from afar. Log the dawn before the wind turns cross.",
+  "generatedAt": "2026-09-03T13:23:13.243Z",
+  "headline": "Short-period SSE junk on an onshore — leave it.",
+  "today": "Size looks tempting to 3.2ft but it's short-period SSE and the wind is onshore SW most of the day. Windswell slop, not worth the trip. If you're local, maybe a dawn poke before it fully deteriorates, otherwise skip.",
   "daysToWatch": [
     {
-      "day": "Thu",
-      "note": "Bigger at 2-3ft but onshore S/SW all day — blown out top to bottom. Skip."
+      "day": "Fri",
+      "note": "Prime SE angle, cleaner at 1.1 to 1.4ft with cross wind. Small but organized — log it if you're nearby."
     },
     {
-      "day": "Fri",
-      "note": "Light morning wind but the swell's fading to waist-high. Marginal at best."
+      "day": "Sun",
+      "note": "Prime ESE angle with solid N offshore all day, though short period keeps it around 2ft. Cleanest window of the week here."
     }
   ]
 }
