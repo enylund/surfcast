@@ -1,17 +1,21 @@
 {
   "spotId": "matunuck",
   "spotName": "Matunuck",
-  "generatedAt": "2026-09-03T13:23:13.243Z",
-  "headline": "Short-period SSE junk on an onshore — leave it.",
-  "today": "Size looks tempting to 3.2ft but it's short-period SSE and the wind is onshore SW most of the day. Windswell slop, not worth the trip. If you're local, maybe a dawn poke before it fully deteriorates, otherwise skip.",
+  "generatedAt": "2026-09-04T13:17:47.006Z",
+  "headline": "Waist-high prime-angle dribble — log it if you're passing through.",
+  "today": "Prime SE angle but short period and barely waist-high, so it's a mushy longboard roll at best. Dawn's a touch cross-on, cleaner cross-off by mid-morning around the incoming tide. Nothing to drive three hours for.",
   "daysToWatch": [
     {
-      "day": "Fri",
-      "note": "Prime SE angle, cleaner at 1.1 to 1.4ft with cross wind. Small but organized — log it if you're nearby."
+      "day": "Sun",
+      "note": "Prime E angle with offshore wind through morning, but still small and short-period. Log-only."
     },
     {
-      "day": "Sun",
-      "note": "Prime ESE angle with solid N offshore all day, though short period keeps it around 2ft. Cleanest window of the week here."
+      "day": "Wed",
+      "note": "Goes flat — under a foot with building SW wind. Skip."
+    },
+    {
+      "day": "Thu",
+      "note": "Numbers look big but it's junk short-period S at a fair angle under 20mph cross wind. Not worth it."
     }
   ]
 }
