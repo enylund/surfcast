@@ -1,21 +1,21 @@
 {
   "spotId": "manasquan",
   "spotName": "Manasquan Inlet",
-  "generatedAt": "2026-09-04T13:17:47.006Z",
-  "headline": "Small and clean today, but the real swell is loading up for Mon-Tue.",
-  "today": "Fun-size 1.4-1.8ft on a good SE angle with offshore wind at dawn and again in the evening — get the early glass before the NW cross builds. Log or fish the incoming tide toward the 1:51p high. Fine session, but the week here is all about what's coming.",
+  "generatedAt": "2026-09-05T12:30:17.867Z",
+  "headline": "Clean little ESE prime swell — dawn patrol reward.",
+  "today": "Prime ESE angle with a longer-period component sneaking in and light WNW offshore at dawn before the N cross builds. It's only waist-high, but the early glass is legit — grab the log or fish and be in by first light around the outgoing tide. Once the cross fills in mid-morning it goes sideways and dull.",
   "daysToWatch": [
     {
-      "day": "Sun",
-      "note": "Swell fills in to 3ft+ on a prime E angle, but NE cross-on keeps it bumpy. Surfable, better days behind it."
-    },
-    {
       "day": "Mon",
-      "note": "3-3.3ft solid on a prime E angle with cross-off dawn wind. Shortboard day — the drive starts making sense."
+      "note": "Best day on the board here: near 2ft E at prime angle, decent period, and light cross-off to glassy-light winds. Worth the drive for a fun small day — fish or groveler."
     },
     {
-      "day": "Tue",
-      "note": "The one to rearrange plans for: 2.2-2.9ft at 7s+ prime E angle with offshore-to-light wind all day. Cleanest, longest-period day of the week anywhere. Make the drive."
+      "day": "Wed",
+      "note": "Swell fades and SW wind builds through the day — junky and getting worse."
+    },
+    {
+      "day": "Thu",
+      "note": "Size shows up (2.5ft-plus) with offshore WNW wind, but it's a poor S angle — wrong direction, so expect it to be lumpy and closed-out despite the wind. Manage expectations."
     }
   ]
 }

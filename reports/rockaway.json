@@ -1,21 +1,17 @@
 {
   "spotId": "rockaway",
   "spotName": "Rockaway 67th St",
-  "generatedAt": "2026-09-04T13:17:47.006Z",
-  "headline": "Small, clean SE windswell — dawn patrol log session, nothing more.",
-  "today": "Waist-high at best but a decent SE angle and cross-off wind all day keep it clean, so it's rideable if you're not picky. Grab the log and work the pushing tide toward the 2:03p high; the morning's fine too, just tiny. Don't drive anywhere for this, but it's a fun coffee session at the home break.",
+  "generatedAt": "2026-09-05T12:30:17.867Z",
+  "headline": "Waist-high ESE at the right angle, clean and small — a dawn log session.",
+  "today": "Prime ESE angle but only knee-to-waist and short-to-medium period, so nobody's getting shacked. Good news is NNW offshore holds all day and never gets above 10, so it's glassy from dawn through the evening high. Bring the log or a longer groveler, work the incoming push toward the 3pm high, and keep expectations low. Best window is honestly whenever you can get in — it's clean start to finish.",
   "daysToWatch": [
     {
       "day": "Mon",
-      "note": "Best home-break day of the week — 2-2.5ft with a good E angle and offshore wind all morning. Groveler or log, fish the tides around the 5:15p high."
-    },
-    {
-      "day": "Tue",
-      "note": "Prime ESE angle at 7s and clean cross-off through morning. Surf early — S wind swings onshore and ramps to 17mph by evening."
+      "note": "Small ESE at prime angle with light-to-offshore N wind all day and glassy 3mph evening. Same log-it-or-skip-it size, but clean."
     },
     {
       "day": "Thu",
-      "note": "Bigger on paper but marginal SSE angle and 19-25mph wind. Blown out, skip."
+      "note": "More size on tap (2-3ft) but it's short-period S at a marginal angle with 15-17mph cross wind. Junky — skip unless you're desperate."
     }
   ]
 }
